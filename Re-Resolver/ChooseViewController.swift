@@ -70,17 +70,24 @@ NewChoiceDelegate {
     }
     */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    
+    // Swipe to delete rows
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
+            let choicesIndex = indexPath.row
+            choices.removeAtIndex(choicesIndex)
+            
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            
+            // disable the button if all choices were deleted
+            if choices.count == 0  {
+                chooseButton.enabled = false
+                chooseButton.alpha = 0.2
+            }
+        }
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
@@ -133,6 +140,7 @@ NewChoiceDelegate {
         
         // make sure the choose button is enabled, as we now have at least 1 item
         chooseButton.enabled = true
+        chooseButton.alpha = 1
         
     }
     
