@@ -59,6 +59,9 @@
                                 <state key="normal" title="Ask" backgroundImage="reresolvr_button_300pt">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Iqz-Sm-0Hs" kind="show" id="Oa6-hi-aV6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -121,6 +124,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V2n-fd-Uzw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1764" y="406"/>
+        </scene>
+        <!--Ask-->
+        <scene sceneID="2UQ-Ld-30P">
+            <objects>
+                <viewController id="Iqz-Sm-0Hs" customClass="ResolverAskViewController" customModule="Re_Resolver" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NB0-Au-xHO"/>
+                        <viewControllerLayoutGuide type="bottom" id="ucM-fg-RKM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gGv-75-6iU" customClass="ResolverGradientView" customModule="Re_Resolver" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="xzR-t7-VWA">
+                                <rect key="frame" x="150" y="240" width="300" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="LpF-X9-cez"/>
+                                    <constraint firstAttribute="width" constant="300" id="a5F-yu-lvO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" backgroundImage="reresolvr_button_300pt">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="askButtonPressed:" destination="Iqz-Sm-0Hs" eventType="touchUpInside" id="p4n-1x-eAy"/>
+                                    <action selector="chooseButtonPressed:" destination="knh-vu-5sK" eventType="touchUpInside" id="qBw-Z5-oAo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xzR-t7-VWA" firstAttribute="centerX" secondItem="gGv-75-6iU" secondAttribute="centerX" id="lZw-g5-Zo1"/>
+                            <constraint firstItem="xzR-t7-VWA" firstAttribute="centerY" secondItem="gGv-75-6iU" secondAttribute="centerY" constant="40" id="oPo-nT-EBk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ask" id="8TC-4i-4Wx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VOq-8Q-iKp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1089" y="1105"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7NV-6R-Yd7">

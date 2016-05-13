@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37643A381CE6500400052DB7 /* ResolverAskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37643A371CE6500400052DB7 /* ResolverAskViewController.swift */; };
 		376A88351CE62D6A008C7659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376A88341CE62D6A008C7659 /* AppDelegate.swift */; };
 		376A88371CE62D6A008C7659 /* ResolverMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376A88361CE62D6A008C7659 /* ResolverMenuViewController.swift */; };
 		376A883A1CE62D6A008C7659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376A88381CE62D6A008C7659 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37643A371CE6500400052DB7 /* ResolverAskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResolverAskViewController.swift; sourceTree = "<group>"; };
 		376A88311CE62D69008C7659 /* Re-Resolver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Re-Resolver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		376A88341CE62D6A008C7659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		376A88361CE62D6A008C7659 /* ResolverMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverMenuViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				376A88341CE62D6A008C7659 /* AppDelegate.swift */,
 				376A88361CE62D6A008C7659 /* ResolverMenuViewController.swift */,
 				376A88381CE62D6A008C7659 /* Main.storyboard */,
+				37643A371CE6500400052DB7 /* ResolverAskViewController.swift */,
 				376A884A1CE64556008C7659 /* ResolverChooseViewController.swift */,
 				376A88481CE638A2008C7659 /* ResolverGradientView.swift */,
 				376A883B1CE62D6A008C7659 /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 			files = (
 				376A88491CE638A2008C7659 /* ResolverGradientView.swift in Sources */,
 				376A88371CE62D6A008C7659 /* ResolverMenuViewController.swift in Sources */,
+				37643A381CE6500400052DB7 /* ResolverAskViewController.swift in Sources */,
 				376A88351CE62D6A008C7659 /* AppDelegate.swift in Sources */,
 				376A884B1CE64556008C7659 /* ResolverChooseViewController.swift in Sources */,
 			);
@@ -294,6 +298,7 @@
 				376A88451CE62D6A008C7659 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
