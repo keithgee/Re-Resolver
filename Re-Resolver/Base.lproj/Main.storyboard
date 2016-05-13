@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Resolver Menu View Controller-->
+        <!--Menu-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ResolverMenuViewController" customModule="Re_Resolver" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,7 +80,7 @@
                             <constraint firstItem="qHR-2a-E8z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xxf-n1-U4P"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="1nq-mJ-tD6"/>
+                    <navigationItem key="navigationItem" title="Menu" id="1nq-mJ-tD6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
