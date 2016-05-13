@@ -140,23 +140,6 @@
             </objects>
             <point key="canvasLocation" x="277" y="406"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="o5G-iM-4jK">
-            <objects>
-                <viewController id="EhE-zi-OEh" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ai8-C4-QK2"/>
-                        <viewControllerLayoutGuide type="bottom" id="Tup-zA-7EU"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="R1d-lo-e8m">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kDY-pP-YYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
         <image name="reresolvr_button_300pt" width="600" height="128"/>
