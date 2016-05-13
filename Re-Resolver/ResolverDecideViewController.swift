@@ -1,5 +1,5 @@
 //
-//  ResolverChooseViewController.swift
+//  ResolverDecideViewController.swift
 //  Re-Resolver
 //
 //  Created by Keith Gilbertson on 5/13/16.
@@ -11,17 +11,17 @@ import UIKit
 // This controller is for the screen that lets a user press
 // a button that responds "Yes" or "No"
 
-class ResolverChooseViewController: UIViewController {
+class ResolverDecideViewController: UIViewController {
 
-    @IBAction func chooseButtonPressed(button: UIButton) {
+    @IBAction func decideButtonPressed(button: UIButton) {
         
-        button.setTitle(chooseAnswer(), forState: .Normal)
+        button.setTitle(decideAnswer(), forState: .Normal)
     }
   
     
     
     // TODO: Test to make sure this is about 50% yes/no
-    private func chooseAnswer() -> String  {
+    private func decideAnswer() -> String  {
         
         let answers = ["Yes", "No"]
         return answers[(Int)(arc4random() % 2)]
