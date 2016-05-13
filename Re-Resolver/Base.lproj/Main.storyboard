@@ -83,7 +83,7 @@
             </objects>
             <point key="canvasLocation" x="1089" y="406"/>
         </scene>
-        <!--Choose-->
+        <!--Decide-->
         <scene sceneID="UNV-O3-NaX">
             <objects>
                 <viewController id="knh-vu-5sK" customClass="ResolverChooseViewController" customModule="Re_Resolver" customModuleProvider="target" sceneMemberID="viewController">
@@ -116,7 +116,7 @@
                             <constraint firstItem="onJ-4k-u3N" firstAttribute="centerX" secondItem="P9S-ts-qh9" secondAttribute="centerX" id="zSJ-fA-rcT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Choose" id="3zF-Y4-Gmw"/>
+                    <navigationItem key="navigationItem" title="Decide" id="3zF-Y4-Gmw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V2n-fd-Uzw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
