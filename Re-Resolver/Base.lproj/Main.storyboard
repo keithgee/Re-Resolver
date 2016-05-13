@@ -347,4 +347,5 @@
         <image name="reresolvr_button_300pt" width="600" height="128"/>
         <image name="resolver_logo" width="596" height="125"/>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
