@@ -198,7 +198,7 @@
                     <navigationItem key="navigationItem" title="Choose" id="ZSK-VR-PMP">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="u8Y-6R-w3E">
                             <connections>
-                                <segue destination="3ox-f8-JdB" kind="show" id="CaK-5P-DI7"/>
+                                <segue destination="3ox-f8-JdB" kind="show" identifier="AddChoice" id="CaK-5P-DI7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

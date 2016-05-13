@@ -9,7 +9,10 @@
 import UIKit
 
 // This controller handles the main "Choice" functionality
-class ChooseViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ChooseViewController: UIViewController,
+UITableViewDataSource,
+UITableViewDelegate,
+NewChoiceDelegate {
     
     var choices =  ["Pizza",
                     "Chinese",
@@ -106,7 +109,31 @@ class ChooseViewController: UIViewController, UITableViewDataSource, UITableView
             let resultsController = segue.destinationViewController as! ChoiceResultsViewController
             
             resultsController.choices = choices
+        } else if segue.identifier == "AddChoice"  {
+            let addChoiceController = segue.destinationViewController as! NewChoiceViewController
+            
+            addChoiceController.delegate = self
         }
+
+        
+        
+        
+    }
+    
+    
+    // MARK: NewChoiceDelegate
+    // Used when choice added on the "New choice" screen
+    func choiceAdded(choice: String) {
+        
+        let numberOfChoicesBeforeAddition = choices.count
+        choices.append(choice)
+       
+        let indexPath = NSIndexPath(forRow: numberOfChoicesBeforeAddition, inSection: 0)
+        tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        
+        // make sure the choose button is enabled, as we now have at least 1 item
+        chooseButton.enabled = true
+        
     }
     
 
