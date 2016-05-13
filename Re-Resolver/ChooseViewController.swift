@@ -10,17 +10,16 @@ import UIKit
 
 // This controller handles the main "Choice" functionality
 class ChooseViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     var choices =  ["Pizza",
                     "Chinese",
                     "Other"]
     
-    
+  
+    @IBOutlet weak var chooseButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -29,6 +28,15 @@ class ChooseViewController: UIViewController, UITableViewDataSource, UITableView
     }
 
    
+    override func viewWillAppear(animated: Bool) {
+        
+        // it doesn't make sense to "Choose" when
+        // we have entered any choices
+        if choices.count == 0 {
+            chooseButton.enabled = false
+            chooseButton.alpha = 0.2
+        }
+    }
     // MARK: - Table view data source
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -36,7 +44,7 @@ class ChooseViewController: UIViewController, UITableViewDataSource, UITableView
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return choices.count
     }
     
     

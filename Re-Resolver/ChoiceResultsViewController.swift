@@ -18,9 +18,12 @@ class ChoiceResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+  
+        // if we somehow got to this screen without any
+        // choices entered, don't do anything
+        if (choices.count > 0)  {
         choiceButton.setTitle(chooseChoice(), forState: .Normal)
-
+        }
        
     }
 
