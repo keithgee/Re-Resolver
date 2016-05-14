@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Menu-->
@@ -24,7 +25,7 @@
                                     <constraint firstAttribute="height" constant="64" id="fRT-MX-Nws"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHR-2a-E8z">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHR-2a-E8z">
                                 <rect key="frame" x="150" y="132" width="300" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="TEq-Rd-Wva"/>
@@ -38,7 +39,7 @@
                                     <segue destination="knh-vu-5sK" kind="show" id="BCd-hc-fwC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrX-Fm-NZa">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrX-Fm-NZa">
                                 <rect key="frame" x="150" y="216" width="300" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="2lg-O8-Nse"/>
@@ -52,7 +53,7 @@
                                     <segue destination="8P0-yB-YBp" kind="show" id="jrN-1c-waG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IB-l3-GxU">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IB-l3-GxU">
                                 <rect key="frame" x="150" y="300" width="300" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="wSe-ok-fdz"/>
@@ -66,6 +67,12 @@
                                     <segue destination="Iqz-Sm-0Hs" kind="show" id="Oa6-hi-aV6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6te-AY-xK4">
+                                <rect key="frame" x="32" y="566" width="22" height="22"/>
+                                <connections>
+                                    <segue destination="cXY-o0-P0T" kind="show" id="EBi-q2-WCm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -75,8 +82,10 @@
                             <constraint firstItem="6IB-l3-GxU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P2W-rE-yMc"/>
                             <constraint firstItem="MrX-Fm-NZa" firstAttribute="leading" secondItem="pAx-R3-NYc" secondAttribute="leading" id="Phv-jI-b8s"/>
                             <constraint firstItem="pAx-R3-NYc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RYO-Bq-GAE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6te-AY-xK4" secondAttribute="bottom" constant="12" id="U4J-Vc-nXi"/>
                             <constraint firstItem="qHR-2a-E8z" firstAttribute="top" secondItem="pAx-R3-NYc" secondAttribute="bottom" constant="40" id="dSu-iv-oe3"/>
                             <constraint firstItem="pAx-R3-NYc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="et9-Cq-XF4"/>
+                            <constraint firstItem="6te-AY-xK4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="jd4-du-nYx"/>
                             <constraint firstItem="6IB-l3-GxU" firstAttribute="leading" secondItem="pAx-R3-NYc" secondAttribute="leading" id="srw-xQ-l83"/>
                             <constraint firstItem="MrX-Fm-NZa" firstAttribute="top" secondItem="qHR-2a-E8z" secondAttribute="bottom" constant="20" id="t6m-iA-2E6"/>
                             <constraint firstItem="pAx-R3-NYc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uWH-Kc-KIn"/>
@@ -283,6 +292,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jgi-q4-cqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2553" y="1196"/>
+        </scene>
+        <!--Instructions-->
+        <scene sceneID="gzb-d5-cwh">
+            <objects>
+                <viewController id="cXY-o0-P0T" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T9P-Ns-EH1"/>
+                        <viewControllerLayoutGuide type="bottom" id="e3z-Lp-RxF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sC1-LV-2Q5" customClass="ResolverGradientView" customModule="Re_Resolver" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lQA-dr-PZZ">
+                                <rect key="frame" x="20" y="80" width="560" height="512"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Re-Resolver Information
+
+Re-Resolver is a preservation attempt to revive Resolver - a once highly-rated decision making app created in Iceland - from oblivion by system updates. The code is open source.
+
+Ask - Ask a question and then press the widget for a Yes/No answer.
+
+Decide - Ask a question and then press the widget to get a wordy answer that may be positive, negative, or ambiguous in tone.
+
+Choose - Use the + button to add options. Press the choose button and Re-Resolver will pick one of the options.
+
+Disclaimer
+
+Re-Resolver does not contain any decision-making intelligence; it relies on a process that is statistically similar to randomness. Do not use Re-Resolver for important decisions.
+
+As with nearly all software, Re-Resolver contains bugs. Do not ever rely on technology for anything critical.</mutableString>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lQA-dr-PZZ" firstAttribute="trailing" secondItem="sC1-LV-2Q5" secondAttribute="trailingMargin" id="6BP-ID-ai8"/>
+                            <constraint firstItem="e3z-Lp-RxF" firstAttribute="top" secondItem="lQA-dr-PZZ" secondAttribute="bottom" constant="8" id="OHq-cR-CmI"/>
+                            <constraint firstItem="lQA-dr-PZZ" firstAttribute="top" secondItem="T9P-Ns-EH1" secondAttribute="bottom" constant="16" id="epf-41-ajn"/>
+                            <constraint firstItem="lQA-dr-PZZ" firstAttribute="leading" secondItem="sC1-LV-2Q5" secondAttribute="leadingMargin" id="qB9-IX-q9k"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Instructions" id="VOi-TB-aOH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cSb-2M-kvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="373" y="1254"/>
         </scene>
         <!--Ask-->
         <scene sceneID="2UQ-Ld-30P">
