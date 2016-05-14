@@ -21,9 +21,7 @@ UITableViewDataSource,
 UITableViewDelegate,
 NewChoiceDelegate {
     
-    var choices =  ["Pizza",
-                    "Chinese",
-                    "Other"]
+    var choices =  [String]()
     
   
     @IBOutlet weak var chooseButton: UIButton!
@@ -35,6 +33,11 @@ NewChoiceDelegate {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        print("Documents folder is \(documentsDirectory())")
+        print("Data file path is \(dataFilePath())")
+        
+        loadChoices()
     }
 
    
@@ -76,6 +79,9 @@ NewChoiceDelegate {
             
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             
+            // save modified list to storage
+            saveChoices()
+            
             // disable the button if all choices were deleted
             if choices.count == 0  {
                 chooseButton.enabled = false
@@ -105,7 +111,7 @@ NewChoiceDelegate {
     }
     
     
-    // MARK: NewChoiceDelegate
+    // MARK: - NewChoiceDelegate
     // Used when choice added on the "New choice" screen
     func choiceAdded(choice: String) {
         
@@ -115,11 +121,43 @@ NewChoiceDelegate {
         let indexPath = NSIndexPath(forRow: numberOfChoicesBeforeAddition, inSection: 0)
         tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
         
+        // write modified list to phone storage
+        saveChoices()
+        
         // make sure the choose button is enabled, as we now have at least 1 item
         chooseButton.enabled = true
         chooseButton.alpha = 1
         
     }
     
+    // MARK: - Save and load choices
+    // code here adapted from iOS Apprentice - Matthjis Hollemans
+    func documentsDirectory() -> String  {
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        return paths[0]
+    }
+    
+    func dataFilePath() -> String  {
+        return (documentsDirectory() as NSString).stringByAppendingPathComponent("Choices.plist")
+    }
+    
+    func saveChoices()  {
+        let data = NSMutableData()
+        let archiver = NSKeyedArchiver(forWritingWithMutableData: data)
+        archiver.encodeObject(choices, forKey: "Choices")
+        archiver.finishEncoding()
+        data.writeToFile(dataFilePath(), atomically: true)
+    }
+    
+    func loadChoices() {
+        let path = dataFilePath()
+        
+        if NSFileManager.defaultManager().fileExistsAtPath(path)  {
+            if let data = NSData(contentsOfFile: path)  {
+                let unarchiver = NSKeyedUnarchiver(forReadingWithData: data)
+                choices = unarchiver.decodeObjectForKey("Choices") as! [String]
+            }
+        }
+    }
 
 }
