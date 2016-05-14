@@ -16,9 +16,13 @@ class ResolverAskViewController: UIViewController {
         button.setTitle(chooseAnswer(), forState: .Normal)
     }
     
-    // These answers were all stolen from Magic 8 ball
+    // Most of these answers were all stolen from Magic 8 ball
     // https://en.wikipedia.org/wiki/Magic_8-Ball
-    // TODO: Replace with genuine Resolver answers
+    //
+    // Just a few were taken from Amanda's demonstration video
+    // of Resolver
+    //
+    // TODO: Replace all with genuine Resolver answers
     private func chooseAnswer() -> String  {
         
         let answers = ["It is certain",
@@ -30,7 +34,7 @@ class ResolverAskViewController: UIViewController {
                        "Most likely",
                        "Outlook good",
                        "Yes",
-                       "Signs point to  yes",
+                       "Signs point to yes",
                        "Reply hazy try again",
                        "Ask again later",
                        "Better not tell you now",
@@ -40,7 +44,13 @@ class ResolverAskViewController: UIViewController {
                        "My reply is no",
                        "My sources say no",
                        "Outlook not so good",
-                       "Very doubtful"]
+                       "Very doubtful",
+                       
+                       // Below are genuine Resolver answers
+                       "Oh Yeah!",
+                       "According to NASA the answer is no.",
+                       "Nope, Sorry!"
+                       ]
         
         return answers[(Int)(arc4random() % (UInt32)(answers.count))]
     }
