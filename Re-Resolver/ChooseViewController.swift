@@ -8,7 +8,14 @@
 
 import UIKit
 
-// This controller handles the main "Choice" functionality
+// This controller handles the main Choice functionality
+//
+// It displays a table with all of the choices in it.
+// This controller acts as a delegate for the NewChoiceViewController,
+// and updates the table when a new choice is entered on that screen.
+//
+// When the "Choose" button is pressed, another screen is displayed
+// that shows a random selection from the table of choices.
 class ChooseViewController: UIViewController,
 UITableViewDataSource,
 UITableViewDelegate,
@@ -40,8 +47,8 @@ NewChoiceDelegate {
             chooseButton.alpha = 0.2
         }
     }
+    
     // MARK: - Table view data source
-
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -55,22 +62,11 @@ NewChoiceDelegate {
         let cell = tableView.dequeueReusableCellWithIdentifier("choiceCell", forIndexPath: indexPath)
 
         // Configure the cell...
-
-        
         cell.textLabel?.text = choices[indexPath.row]
         return cell
     }
     
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    
     // Swipe to delete rows
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
@@ -88,23 +84,6 @@ NewChoiceDelegate {
         }
     }
     
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -112,18 +91,16 @@ NewChoiceDelegate {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-        if segue.identifier == "ChoiceResults"  {
+        
+        if segue.identifier == "ChoiceResults"  {  // Show results after clicking "Choose" button
             let resultsController = segue.destinationViewController as! ChoiceResultsViewController
             
             resultsController.choices = choices
-        } else if segue.identifier == "AddChoice"  {
+        } else if segue.identifier == "AddChoice"  {  // Enter another choice
             let addChoiceController = segue.destinationViewController as! NewChoiceViewController
             
             addChoiceController.delegate = self
         }
-
-        
-        
         
     }
     
