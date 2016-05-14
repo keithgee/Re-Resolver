@@ -70,6 +70,7 @@ NewChoiceDelegate {
     }
     
 
+
     // Swipe to delete rows
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
@@ -90,6 +91,7 @@ NewChoiceDelegate {
         }
     }
     
+       
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -110,6 +112,7 @@ NewChoiceDelegate {
         
     }
     
+
     
     // MARK: - NewChoiceDelegate
     // Used when choice added on the "New choice" screen
