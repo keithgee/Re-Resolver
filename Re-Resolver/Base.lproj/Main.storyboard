@@ -36,7 +36,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="knh-vu-5sK" kind="show" id="BCd-hc-fwC"/>
+                                    <segue destination="x4Y-t4-eoT" kind="show" identifier="DecideSegue" id="Ifc-yP-Dfa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrX-Fm-NZa">
@@ -64,7 +64,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Iqz-Sm-0Hs" kind="show" id="Oa6-hi-aV6"/>
+                                    <segue destination="x4Y-t4-eoT" kind="show" identifier="AskSegue" id="hNu-Qj-7nf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6te-AY-xK4">
@@ -96,46 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1089" y="406"/>
-        </scene>
-        <!--Decide-->
-        <scene sceneID="UNV-O3-NaX">
-            <objects>
-                <viewController id="knh-vu-5sK" customClass="ResolverDecideViewController" customModule="Re_Resolver" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fXJ-18-YuY"/>
-                        <viewControllerLayoutGuide type="bottom" id="kog-pH-nEa"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="P9S-ts-qh9" customClass="ResolverGradientView" customModule="Re_Resolver" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onJ-4k-u3N">
-                                <rect key="frame" x="150" y="240" width="300" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="Kae-2d-e1P"/>
-                                    <constraint firstAttribute="width" constant="300" id="bWH-nu-bug"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" backgroundImage="reresolvr_button_300pt">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="decideButtonPressed:" destination="knh-vu-5sK" eventType="touchUpInside" id="axQ-Vn-vXB"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="onJ-4k-u3N" firstAttribute="centerY" secondItem="P9S-ts-qh9" secondAttribute="centerY" constant="40" id="BAX-lS-9GB"/>
-                            <constraint firstItem="onJ-4k-u3N" firstAttribute="centerX" secondItem="P9S-ts-qh9" secondAttribute="centerX" id="zSJ-fA-rcT"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Decide" id="3zF-Y4-Gmw"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="V2n-fd-Uzw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1764" y="406"/>
+            <point key="canvasLocation" x="-191" y="-1458"/>
         </scene>
         <!--Choose-->
         <scene sceneID="ibD-bT-xv7">
@@ -160,7 +121,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="x4Y-t4-eoT" kind="show" identifier="ChoiceResults" id="vjz-8n-dpz"/>
+                                    <segue destination="x4Y-t4-eoT" kind="show" identifier="ChoiceResults" id="WTS-Xr-Ql2"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pbU-eN-Vzo">
@@ -218,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hHq-ab-fFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1862" y="1196"/>
+            <point key="canvasLocation" x="678" y="-1458"/>
         </scene>
         <!--Choice Results View Controller-->
         <scene sceneID="Boo-dC-c6G">
@@ -232,7 +193,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upK-TA-daT">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="upK-TA-daT">
                                 <rect key="frame" x="150" y="240" width="300" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="KJt-1f-g0w"/>
@@ -242,6 +203,9 @@
                                 <state key="normal" backgroundImage="reresolvr_button_300pt">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="choiceButtonPressed:" destination="x4Y-t4-eoT" eventType="touchUpInside" id="fPG-kc-wgy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -256,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akY-Xf-r7N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1862" y="1960"/>
+            <point key="canvasLocation" x="391" y="-493"/>
         </scene>
         <!--New choice-->
         <scene sceneID="YUk-Ie-dVU">
@@ -291,7 +255,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jgi-q4-cqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2553" y="1196"/>
+            <point key="canvasLocation" x="1461" y="-1458"/>
         </scene>
         <!--Instructions-->
         <scene sceneID="gzb-d5-cwh">
@@ -340,47 +304,7 @@ As with nearly all software, Re-Resolver contains bugs. Do not ever rely on tech
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cSb-2M-kvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="373" y="1254"/>
-        </scene>
-        <!--Ask-->
-        <scene sceneID="2UQ-Ld-30P">
-            <objects>
-                <viewController id="Iqz-Sm-0Hs" customClass="ResolverAskViewController" customModule="Re_Resolver" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NB0-Au-xHO"/>
-                        <viewControllerLayoutGuide type="bottom" id="ucM-fg-RKM"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gGv-75-6iU" customClass="ResolverGradientView" customModule="Re_Resolver" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="xzR-t7-VWA">
-                                <rect key="frame" x="150" y="240" width="300" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="LpF-X9-cez"/>
-                                    <constraint firstAttribute="width" constant="300" id="a5F-yu-lvO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" backgroundImage="reresolvr_button_300pt">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="askButtonPressed:" destination="Iqz-Sm-0Hs" eventType="touchUpInside" id="p4n-1x-eAy"/>
-                                    <action selector="chooseButtonPressed:" destination="knh-vu-5sK" eventType="touchUpInside" id="qBw-Z5-oAo"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="xzR-t7-VWA" firstAttribute="centerX" secondItem="gGv-75-6iU" secondAttribute="centerX" id="lZw-g5-Zo1"/>
-                            <constraint firstItem="xzR-t7-VWA" firstAttribute="centerY" secondItem="gGv-75-6iU" secondAttribute="centerY" constant="40" id="oPo-nT-EBk"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Ask" id="8TC-4i-4Wx"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VOq-8Q-iKp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1066" y="1254"/>
+            <point key="canvasLocation" x="-907" y="-610"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7NV-6R-Yd7">
@@ -398,12 +322,15 @@ As with nearly all software, Re-Resolver contains bugs. Do not ever rely on tech
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LGv-vF-y28" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="277" y="406"/>
+            <point key="canvasLocation" x="-1003" y="-1458"/>
         </scene>
     </scenes>
     <resources>
         <image name="reresolvr_button_300pt" width="600" height="128"/>
         <image name="resolver_logo" width="596" height="125"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="WTS-Xr-Ql2"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

@@ -11,8 +11,7 @@ import UIKit
 
 // This is the controller for the main menu screen of Re-Resolver.
 // 
-// There's not much customization here as events were setup in
-// the storyboard, but this controller is responsible for hiding
+// This controller is responsible for hiding
 // the top navigation bar when the view appears, and allowing it
 // to display again when the view disappears.
 //
@@ -39,5 +38,22 @@ class ResolverMenuViewController: UIViewController {
         return .LightContent
     }
 
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "DecideSegue"  {
+            let choiceResultsController = segue.destinationViewController as! ChoiceResultsViewController
+            choiceResultsController.menuTitle = "Decide"
+            choiceResultsController.choiceList = ResolverConstants.decideChoices
+            
+        }  else if segue.identifier == "AskSegue"  {
+            let choiceResultsController = segue.destinationViewController as! ChoiceResultsViewController
+            choiceResultsController.menuTitle = "Ask"
+            choiceResultsController.choiceList = ResolverConstants.askChoices
+        }
+        
+        // No preparation necessary for segue to "Choose" screens
+        
+    }
 }
 
