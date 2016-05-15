@@ -20,8 +20,21 @@ class ChoiceList  {
         self.choices = choices
     }
     
+    // MARK: operations on ChoiceList
+    func choose() -> String  {
+        
+        let numChoices = UInt32(choices.count)
+        
+        if numChoices == 0  {  // handle empty list
+            return ""
+        }  else  {
+            let randomIndex = Int(arc4random() % numChoices)
+            return choices[randomIndex]
+        }
+    }
+    
+    
     // MARK: - Save and load features
-
     // code here adapted from iOS Apprentice - Matthjis Hollemans
     func documentsDirectory() -> String  {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
@@ -33,6 +46,7 @@ class ChoiceList  {
         return (documentsDirectory() as NSString).stringByAppendingPathComponent("Choices.plist")
     }
     
+    // Save choices to a data file
     func saveChoices()  {
         let data = NSMutableData()
         let archiver = NSKeyedArchiver(forWritingWithMutableData: data)
@@ -41,6 +55,10 @@ class ChoiceList  {
         data.writeToFile(dataFilePath(), atomically: true)
     }
     
+    // Replace data in the choices array with data
+    // from a file.
+    // If the file doesn't exist, nothing will happen
+    // and no error is returned
     func loadChoices() {
         let path = dataFilePath()
         
@@ -51,6 +69,7 @@ class ChoiceList  {
             }
         }
     }
+  
 
 }
 

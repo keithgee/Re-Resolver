@@ -29,7 +29,7 @@ class ChoiceResultsViewController: UIViewController {
     
     @IBAction func choiceButtonPressed(button: UIButton) {
         
-        button.setTitle(chooseChoice(), forState: .Normal)
+        button.setTitle(choiceList.choose(), forState: .Normal)
     }
     
     override func viewDidLoad() {
@@ -41,22 +41,13 @@ class ChoiceResultsViewController: UIViewController {
         
         if displayResultImmediately == true  {
     
-            // if we somehow got to this screen without any
-            // choices entered, don't try to select a choice
+            // Check that there are choices before displaying one!
             if choiceList.choices.count > 0  {
-                choiceButton.setTitle(chooseChoice(), forState: .Normal)
+                choiceButton.setTitle(choiceList.choose(), forState: .Normal)
             }
             
             choiceButton.enabled = false
         }
         
     }
-
-    private func chooseChoice() -> String  {
-        return choiceList.choices[(Int)(arc4random() % (UInt32)(choiceList.choices.count))]
-    }
-
-   
-
-   
 }
