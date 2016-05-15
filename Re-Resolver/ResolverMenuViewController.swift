@@ -44,46 +44,12 @@ class ResolverMenuViewController: UIViewController {
         if segue.identifier == "DecideSegue"  {
             let choiceResultsController = segue.destinationViewController as! ChoiceResultsViewController
             choiceResultsController.menuTitle = "Decide"
-            choiceResultsController.choices = ["Yes", "No"]
+            choiceResultsController.choices = ResolverConstants.decideChoices.choices
             
         }  else if segue.identifier == "AskSegue"  {
             let choiceResultsController = segue.destinationViewController as! ChoiceResultsViewController
             choiceResultsController.menuTitle = "Ask"
-            
-            // Most of these answers were all stolen from Magic 8 ball
-            // https://en.wikipedia.org/wiki/Magic_8-Ball
-            //
-            // Just a few were taken from Amanda's demonstration video
-            // of Resolver
-            //
-            // TODO: Replace all with genuine Resolver answers
-            choiceResultsController.choices =
-                ["It is certain",
-                 "It is decidedly so",
-                 "Without a doubt",
-                 "Yes, definitely",
-                 "You may rely on it",
-                 "As I see it, yes",
-                 "Most likely",
-                 "Outlook good",
-                 "Yes",
-                 "Signs point to yes",
-                 "Reply hazy try again",
-                 "Ask again later",
-                 "Better not tell you now",
-                 "Cannot predict now",
-                 "Concentrate and ask again",
-                 "Don't count on it",
-                 "My reply is no",
-                 "My sources say no",
-                 "Outlook not so good",
-                 "Very doubtful",
-                           
-                 // Below are genuine Resolver answers
-                 "Oh Yeah!",
-                 "According to NASA the answer is no.",
-                 "Nope, Sorry!"
-            ]
+            choiceResultsController.choices = ResolverConstants.askChoices.choices
         }
         
         // No preparation necessary for segue to "Choose" screens
