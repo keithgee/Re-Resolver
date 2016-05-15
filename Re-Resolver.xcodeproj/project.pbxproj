@@ -19,6 +19,7 @@
 		37C8A09A1CE8B7A100AE3B1F /* ChoiceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8A0991CE8B7A100AE3B1F /* ChoiceList.swift */; };
 		37C8A09C1CE8B8D400AE3B1F /* ResolverConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8A09B1CE8B8D400AE3B1F /* ResolverConstants.swift */; };
 		37C8A09E1CE8DC0000AE3B1F /* RecentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8A09D1CE8DC0000AE3B1F /* RecentTableViewController.swift */; };
+		37C8A0A01CE9293F00AE3B1F /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C8A09F1CE9293F00AE3B1F /* InstructionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		37C8A0991CE8B7A100AE3B1F /* ChoiceList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceList.swift; sourceTree = "<group>"; };
 		37C8A09B1CE8B8D400AE3B1F /* ResolverConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResolverConstants.swift; sourceTree = "<group>"; };
 		37C8A09D1CE8DC0000AE3B1F /* RecentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentTableViewController.swift; sourceTree = "<group>"; };
+		37C8A09F1CE9293F00AE3B1F /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				376A88341CE62D6A008C7659 /* AppDelegate.swift */,
 				376A88361CE62D6A008C7659 /* ResolverMenuViewController.swift */,
 				376A88381CE62D6A008C7659 /* Main.storyboard */,
+				37C8A09F1CE9293F00AE3B1F /* InstructionsViewController.swift */,
 				37C8A09D1CE8DC0000AE3B1F /* RecentTableViewController.swift */,
 				3713D2271CE66A8F006C4261 /* ChooseViewController.swift */,
 				3713D2251CE6675F006C4261 /* NewChoiceViewController.swift */,
@@ -160,6 +163,7 @@
 				37C8A09C1CE8B8D400AE3B1F /* ResolverConstants.swift in Sources */,
 				376A88491CE638A2008C7659 /* ResolverGradientView.swift in Sources */,
 				37C8A09E1CE8DC0000AE3B1F /* RecentTableViewController.swift in Sources */,
+				37C8A0A01CE9293F00AE3B1F /* InstructionsViewController.swift in Sources */,
 				376A88371CE62D6A008C7659 /* ResolverMenuViewController.swift in Sources */,
 				3713D2281CE66A8F006C4261 /* ChooseViewController.swift in Sources */,
 				3713D2261CE6675F006C4261 /* NewChoiceViewController.swift in Sources */,

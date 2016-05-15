@@ -96,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-191" y="-1458"/>
+            <point key="canvasLocation" x="-39" y="-3758"/>
         </scene>
         <!--Choose-->
         <scene sceneID="ibD-bT-xv7">
@@ -179,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hHq-ab-fFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="678" y="-1458"/>
+            <point key="canvasLocation" x="830" y="-3758"/>
         </scene>
         <!--Choice Results View Controller-->
         <scene sceneID="Boo-dC-c6G">
@@ -220,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akY-Xf-r7N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="391" y="-493"/>
+            <point key="canvasLocation" x="543" y="-2793"/>
         </scene>
         <!--Recent Table View Controller-->
         <scene sceneID="D8e-Ba-NhC">
@@ -257,7 +257,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pH0-8u-eiE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2294" y="-1466"/>
+            <point key="canvasLocation" x="2446" y="-3766"/>
         </scene>
         <!--New choice-->
         <scene sceneID="YUk-Ie-dVU">
@@ -298,12 +298,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jgi-q4-cqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1510" y="-1466"/>
+            <point key="canvasLocation" x="1662" y="-3766"/>
         </scene>
         <!--Instructions-->
         <scene sceneID="gzb-d5-cwh">
             <objects>
-                <viewController id="cXY-o0-P0T" sceneMemberID="viewController">
+                <viewController id="cXY-o0-P0T" customClass="InstructionsViewController" customModule="Re_Resolver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="T9P-Ns-EH1"/>
                         <viewControllerLayoutGuide type="bottom" id="e3z-Lp-RxF"/>
@@ -344,10 +344,13 @@ As with nearly all software, Re-Resolver contains bugs. Do not ever rely on tech
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Instructions" id="VOi-TB-aOH"/>
+                    <connections>
+                        <outlet property="textView" destination="lQA-dr-PZZ" id="A36-CL-vt1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cSb-2M-kvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-907" y="-610"/>
+            <point key="canvasLocation" x="-755" y="-2910"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7NV-6R-Yd7">
@@ -365,7 +368,7 @@ As with nearly all software, Re-Resolver contains bugs. Do not ever rely on tech
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LGv-vF-y28" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1003" y="-1458"/>
+            <point key="canvasLocation" x="-851" y="-3758"/>
         </scene>
     </scenes>
     <resources>
