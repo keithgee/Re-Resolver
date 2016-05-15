@@ -23,7 +23,7 @@ import UIKit
 class ChoiceResultsViewController: UIViewController {
     
     @IBOutlet weak var choiceButton: UIButton!
-    var choices: [String]!                 // list of options from which to pick
+    var choiceList: ChoiceList!                 // list of options from which to pick
     var menuTitle: String?                 // title for navigation bar
     var displayResultImmediately = false   // used in Choice feature
     
@@ -43,7 +43,7 @@ class ChoiceResultsViewController: UIViewController {
     
             // if we somehow got to this screen without any
             // choices entered, don't try to select a choice
-            if choices.count > 0  {
+            if choiceList.choices.count > 0  {
                 choiceButton.setTitle(chooseChoice(), forState: .Normal)
             }
             
@@ -53,7 +53,7 @@ class ChoiceResultsViewController: UIViewController {
     }
 
     private func chooseChoice() -> String  {
-        return choices[(Int)(arc4random() % (UInt32)(choices.count))]
+        return choiceList.choices[(Int)(arc4random() % (UInt32)(choiceList.choices.count))]
     }
 
    

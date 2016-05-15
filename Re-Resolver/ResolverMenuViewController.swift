@@ -44,12 +44,12 @@ class ResolverMenuViewController: UIViewController {
         if segue.identifier == "DecideSegue"  {
             let choiceResultsController = segue.destinationViewController as! ChoiceResultsViewController
             choiceResultsController.menuTitle = "Decide"
-            choiceResultsController.choices = ResolverConstants.decideChoices.choices
+            choiceResultsController.choiceList = ResolverConstants.decideChoices
             
         }  else if segue.identifier == "AskSegue"  {
             let choiceResultsController = segue.destinationViewController as! ChoiceResultsViewController
             choiceResultsController.menuTitle = "Ask"
-            choiceResultsController.choices = ResolverConstants.askChoices.choices
+            choiceResultsController.choiceList = ResolverConstants.askChoices
         }
         
         // No preparation necessary for segue to "Choose" screens
