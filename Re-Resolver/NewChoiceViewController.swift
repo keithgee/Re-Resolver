@@ -17,7 +17,8 @@ protocol NewChoiceDelegate  {
     func choiceAdded(choice: String)
 }
 
-class NewChoiceViewController: UIViewController, UITextFieldDelegate {
+class NewChoiceViewController: UIViewController, UITextFieldDelegate,
+RecentItemDelegate {
 
     @IBOutlet weak var textField: UITextField!
     var delegate: NewChoiceDelegate?
@@ -41,8 +42,19 @@ class NewChoiceViewController: UIViewController, UITextFieldDelegate {
         navigationController?.popViewControllerAnimated(true)
         return true
     }
-    func textFieldDidEndEditing(textField: UITextField) {
-        print("Finished editing")
-    }
    
+    // MARK: RecentItemDelegate
+    // Set the text in the field to whatever
+    // recent item was selected from the table
+    func recentItemSelected(item: String)  {
+        textField.text = item
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "RecentSegue"  {
+            let recentController = segue.destinationViewController as! RecentTableViewController
+            recentController.delegate = self
+        }
+    }
 }

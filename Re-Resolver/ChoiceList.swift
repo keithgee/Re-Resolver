@@ -73,7 +73,7 @@ class ChoiceList  {
     }
     
     // Save choices to the dataFile, if set
-    func saveChoices()  {
+    func save()  {
         
         guard dataFileName != nil else {
             return
@@ -90,7 +90,7 @@ class ChoiceList  {
     // from a file.
     // If the file doesn't exist, nothing will happen
     // and no error is returned
-    func loadChoices() {
+    func load() {
         
         guard dataFileName != nil else {
             return

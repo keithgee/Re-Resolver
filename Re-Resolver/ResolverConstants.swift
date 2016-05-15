@@ -60,6 +60,6 @@ struct ResolverConstants  {
     
     // MARK: data file names
     static let currentChoicesFileName = "Choices.plist"
-    
+    static let recentChoicesFileName = "Recent.plist"
     
 }
