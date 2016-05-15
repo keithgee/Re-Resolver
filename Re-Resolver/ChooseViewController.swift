@@ -102,8 +102,9 @@ NewChoiceDelegate {
         
         if segue.identifier == "ChoiceResults"  {  // Show results after clicking "Choose" button
             let resultsController = segue.destinationViewController as! ChoiceResultsViewController
-            
             resultsController.choices = choices
+            resultsController.displayResultImmediately = true
+            
         } else if segue.identifier == "AddChoice"  {  // Enter another choice
             let addChoiceController = segue.destinationViewController as! NewChoiceViewController
             

@@ -10,21 +10,18 @@
 		3713D2261CE6675F006C4261 /* NewChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3713D2251CE6675F006C4261 /* NewChoiceViewController.swift */; };
 		3713D2281CE66A8F006C4261 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3713D2271CE66A8F006C4261 /* ChooseViewController.swift */; };
 		3713D22A1CE675E9006C4261 /* ChoiceResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3713D2291CE675E9006C4261 /* ChoiceResultsViewController.swift */; };
-		37643A381CE6500400052DB7 /* ResolverAskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37643A371CE6500400052DB7 /* ResolverAskViewController.swift */; };
 		376A88351CE62D6A008C7659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376A88341CE62D6A008C7659 /* AppDelegate.swift */; };
 		376A88371CE62D6A008C7659 /* ResolverMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376A88361CE62D6A008C7659 /* ResolverMenuViewController.swift */; };
 		376A883A1CE62D6A008C7659 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376A88381CE62D6A008C7659 /* Main.storyboard */; };
 		376A883C1CE62D6A008C7659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 376A883B1CE62D6A008C7659 /* Assets.xcassets */; };
 		376A883F1CE62D6A008C7659 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376A883D1CE62D6A008C7659 /* LaunchScreen.storyboard */; };
 		376A88491CE638A2008C7659 /* ResolverGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376A88481CE638A2008C7659 /* ResolverGradientView.swift */; };
-		376A884B1CE64556008C7659 /* ResolverDecideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376A884A1CE64556008C7659 /* ResolverDecideViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3713D2251CE6675F006C4261 /* NewChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewChoiceViewController.swift; sourceTree = "<group>"; };
 		3713D2271CE66A8F006C4261 /* ChooseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
 		3713D2291CE675E9006C4261 /* ChoiceResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceResultsViewController.swift; sourceTree = "<group>"; };
-		37643A371CE6500400052DB7 /* ResolverAskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResolverAskViewController.swift; sourceTree = "<group>"; };
 		376A88311CE62D69008C7659 /* Re-Resolver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Re-Resolver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		376A88341CE62D6A008C7659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		376A88361CE62D6A008C7659 /* ResolverMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverMenuViewController.swift; sourceTree = "<group>"; };
@@ -33,7 +30,6 @@
 		376A883E1CE62D6A008C7659 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		376A88401CE62D6A008C7659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		376A88481CE638A2008C7659 /* ResolverGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResolverGradientView.swift; sourceTree = "<group>"; };
-		376A884A1CE64556008C7659 /* ResolverDecideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResolverDecideViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +68,6 @@
 				3713D2271CE66A8F006C4261 /* ChooseViewController.swift */,
 				3713D2251CE6675F006C4261 /* NewChoiceViewController.swift */,
 				3713D2291CE675E9006C4261 /* ChoiceResultsViewController.swift */,
-				37643A371CE6500400052DB7 /* ResolverAskViewController.swift */,
-				376A884A1CE64556008C7659 /* ResolverDecideViewController.swift */,
 				376A88481CE638A2008C7659 /* ResolverGradientView.swift */,
 				376A883B1CE62D6A008C7659 /* Assets.xcassets */,
 				376A883D1CE62D6A008C7659 /* LaunchScreen.storyboard */,
@@ -158,9 +152,7 @@
 				376A88371CE62D6A008C7659 /* ResolverMenuViewController.swift in Sources */,
 				3713D2281CE66A8F006C4261 /* ChooseViewController.swift in Sources */,
 				3713D2261CE6675F006C4261 /* NewChoiceViewController.swift in Sources */,
-				37643A381CE6500400052DB7 /* ResolverAskViewController.swift in Sources */,
 				376A88351CE62D6A008C7659 /* AppDelegate.swift in Sources */,
-				376A884B1CE64556008C7659 /* ResolverDecideViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
