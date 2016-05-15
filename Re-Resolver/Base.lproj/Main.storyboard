@@ -222,6 +222,43 @@
             </objects>
             <point key="canvasLocation" x="391" y="-493"/>
         </scene>
+        <!--Recent Table View Controller-->
+        <scene sceneID="D8e-Ba-NhC">
+            <objects>
+                <tableViewController id="m24-Wb-tmy" customClass="RecentTableViewController" customModule="Re_Resolver" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="JGi-0E-WaC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecentCell" textLabel="S4J-tx-nwW" style="IBUITableViewCellStyleDefault" id="KeX-ZZ-b9f">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KeX-ZZ-b9f" id="Hr4-3V-YGD">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Recent Choice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S4J-tx-nwW">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="m24-Wb-tmy" id="dll-2a-kFU"/>
+                            <outlet property="delegate" destination="m24-Wb-tmy" id="YbL-1X-qki"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pH0-8u-eiE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2294" y="-1466"/>
+        </scene>
         <!--New choice-->
         <scene sceneID="YUk-Ie-dVU">
             <objects>
@@ -248,14 +285,20 @@
                             <constraint firstItem="Oaw-Oo-BK3" firstAttribute="top" secondItem="2gc-Zh-HKm" secondAttribute="bottom" constant="100" id="g67-U1-dCa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="New choice" id="BCP-to-1Yf"/>
+                    <navigationItem key="navigationItem" title="New choice" id="BCP-to-1Yf">
+                        <barButtonItem key="rightBarButtonItem" title="Recent" id="mXe-NT-Xzj">
+                            <connections>
+                                <segue destination="m24-Wb-tmy" kind="show" identifier="RecentSegue" id="rst-lz-3vN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="textField" destination="Oaw-Oo-BK3" id="laP-EC-RcQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jgi-q4-cqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1461" y="-1458"/>
+            <point key="canvasLocation" x="1510" y="-1466"/>
         </scene>
         <!--Instructions-->
         <scene sceneID="gzb-d5-cwh">

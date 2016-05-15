@@ -21,8 +21,9 @@ UITableViewDataSource,
 UITableViewDelegate,
 NewChoiceDelegate {
     
-    var choiceList =  ChoiceList(choices: [String]())
     
+    var choiceList =  ChoiceList(choices: [String]()) // current choices
+    var recentList = ChoiceList(choices: [String]())  // recent choices
   
     @IBOutlet weak var chooseButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
@@ -36,7 +37,11 @@ NewChoiceDelegate {
         
         // set the data file name for load/save functionality
         choiceList.dataFileName = ResolverConstants.currentChoicesFileName
-        choiceList.loadChoices()
+        choiceList.load()
+        
+        // we also need the list of recent choices to update when we add a choice
+        recentList.dataFileName = ResolverConstants.recentChoicesFileName
+        recentList.load()
     }
 
    
@@ -71,6 +76,8 @@ NewChoiceDelegate {
 
 
     // Swipe to delete rows
+    // This deletes a row from the current choices table,
+    // but leaves the row in the recent table
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
@@ -80,7 +87,7 @@ NewChoiceDelegate {
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             
             // save modified list to storage
-            choiceList.saveChoices()
+            choiceList.save()
             
             // disable the button if all choices were deleted
             if choiceList.choices.count == 0  {
@@ -120,13 +127,20 @@ NewChoiceDelegate {
         
         let numberOfChoicesBeforeAddition = choiceList.choices.count
         choiceList.choices.append(choice)
-       
+        
+        // update current choices table
         let indexPath = NSIndexPath(forRow: numberOfChoicesBeforeAddition, inSection: 0)
         tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
         
         // write modified list to phone storage
-        choiceList.saveChoices()
+        choiceList.save()
         
+        // also update the recent list if necessary
+        if !recentList.choices.contains(choice)  {
+            recentList.choices.append(choice)
+            recentList.save()
+        }
+      
         // make sure the choose button is enabled, as we now have at least 1 item
         chooseButton.enabled = true
         chooseButton.alpha = 1
