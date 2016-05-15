@@ -9,10 +9,14 @@
 import Foundation
 
 // This file contains data used in the application,
-// such as the list of responses to the
-// "Decide" and "Ask" features.
+// such as:
+//
+//   -list of responses to the "Decide" and "Ask" features.
+//   - filenames used to load and save data
+//
 struct ResolverConstants  {
     
+    // MARK: lists of choices
     // For the "Decide" feature
     static let decideChoices = ChoiceList(choices: ["Yes", "No"])
     
@@ -51,7 +55,11 @@ struct ResolverConstants  {
             "According to NASA the answer is no.",
             "Nope, Sorry!"
         ]
-        
     )
+    
+    
+    // MARK: data file names
+    static let currentChoicesFileName = "Choices.plist"
+    
     
 }

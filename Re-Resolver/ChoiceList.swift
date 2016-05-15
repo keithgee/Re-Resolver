@@ -9,12 +9,36 @@
 import Foundation
 
 // This class represents a list of choices
-// and includes functionality to load and save itself
-// to device storage.
+//
+// The list of choices can select a single
+// choice from itself.
+//
+// The list also includes functionality to load
+// and save itself to device storage.
+//
+// Although this class was added as part of a refactor,
+// it is itself a candidate for a future refactor due to
+// some oddities:
+//
+// - Load/Save functionality is available only
+//    when the dataFileName property is set
+//
+// - The "choices" property, an Array of strings,
+//   is an exposed implementation detail that clients
+//   access directly
+//
+// - Though the class supports loading and saving,
+//   control and timing of loading and saving
+//   is left up to the calling class.
+//   An alternate implementation of this class might
+//   have saves performed automatially when the list is
+//   modified, and automatically load contents 
+//   upon initialization
 class ChoiceList  {
     
     
     var choices: [String] = []
+    var dataFileName: String?
     
     init  (choices: [String]) {
         self.choices = choices
@@ -35,19 +59,26 @@ class ChoiceList  {
     
     
     // MARK: - Save and load features
-    // code here adapted from iOS Apprentice - Matthjis Hollemans
-    func documentsDirectory() -> String  {
+    // code here adapted from:
+    // iOS Apprentice, 4th edition - Matthjis Hollemans
+    // The book is available from http://raywenderlich.com
+    private func documentsDirectory() -> String  {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
         return paths[0]
     }
     
     
-    func dataFilePath() -> String  {
-        return (documentsDirectory() as NSString).stringByAppendingPathComponent("Choices.plist")
+    private func dataFilePath() -> String  {
+        return (documentsDirectory() as NSString).stringByAppendingPathComponent(dataFileName!)
     }
     
-    // Save choices to a data file
+    // Save choices to the dataFile, if set
     func saveChoices()  {
+        
+        guard dataFileName != nil else {
+            return
+        }
+        
         let data = NSMutableData()
         let archiver = NSKeyedArchiver(forWritingWithMutableData: data)
         archiver.encodeObject(choices, forKey: "Choices")
@@ -60,6 +91,11 @@ class ChoiceList  {
     // If the file doesn't exist, nothing will happen
     // and no error is returned
     func loadChoices() {
+        
+        guard dataFileName != nil else {
+            return
+        }
+        
         let path = dataFilePath()
         
         if NSFileManager.defaultManager().fileExistsAtPath(path)  {

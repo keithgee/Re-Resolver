@@ -34,7 +34,9 @@ NewChoiceDelegate {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-       choiceList.loadChoices()
+        // set the data file name for load/save functionality
+        choiceList.dataFileName = ResolverConstants.currentChoicesFileName
+        choiceList.loadChoices()
     }
 
    
