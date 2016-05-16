@@ -13,7 +13,7 @@ import UIKit
 // which allows the user to enter a new choice from the keybaord
 
 
-protocol NewChoiceDelegate  {
+protocol NewChoiceDelegate: class  {
     func choiceAdded(choice: String)
 }
 
@@ -21,7 +21,7 @@ class NewChoiceViewController: UIViewController, UITextFieldDelegate,
 RecentItemDelegate {
 
     @IBOutlet weak var textField: UITextField!
-    var delegate: NewChoiceDelegate?
+    weak var delegate: NewChoiceDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()

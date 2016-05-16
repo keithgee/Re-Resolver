@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol RecentItemDelegate  {
+protocol RecentItemDelegate: class  {
     func recentItemSelected(item: String)
 }
 
 class RecentTableViewController: UITableViewController {
 
     // This allows the "New Choice" screen to get a recent choice
-    var delegate: RecentItemDelegate?
+    weak var delegate: RecentItemDelegate?
     
     var choiceList = ChoiceList(choices: [String]())
     
