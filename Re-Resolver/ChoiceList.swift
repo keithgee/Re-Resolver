@@ -52,7 +52,7 @@ class ChoiceList  {
         if numChoices == 0  {  // handle empty list
             return ""
         }  else  {
-            let randomIndex = Int(arc4random() % numChoices)
+            let randomIndex = Int(arc4random_uniform(numChoices))
             return choices[randomIndex]
         }
     }
