@@ -16,10 +16,12 @@ import UIKit
 // blank when the view loads, and for 
 // button presses to select and display a new answer.
 //
-// If displayResultImmediately vis set to
+// Shaking the device will also display a new answer.
+//
+// If displayResultImmediately is set to
 // true, the button title displays a result as
 // soon as the view loads, and button presses
-// are disabled.
+// and shaking are disabled.
 class ChoiceResultsViewController: UIViewController {
     
     @IBOutlet weak var choiceButton: UIButton!
@@ -47,7 +49,30 @@ class ChoiceResultsViewController: UIViewController {
             }
             
             choiceButton.enabled = false
+        } else  {
+            becomeFirstResponder()
         }
         
+    }
+    
+    // we don't enable shake events for "Choose" functionality,
+    // but we do for other types
+    override func canBecomeFirstResponder() -> Bool {
+        return displayResultImmediately ? false : true
+    }
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        
+        if !displayResultImmediately  {
+            if motion == .MotionShake  && choiceList.choices.count > 0  {
+                choiceButton.titleLabel?.textColor = UIColor.redColor()
+                
+                // Added an animation to give feedback that the shake was recognized.
+                UIView.transitionWithView(choiceButton.titleLabel!, duration: 1.0, options: .TransitionFlipFromLeft,
+                                          animations: {
+                                            self.choiceButton.setTitle(self.choiceList.choose(), forState: .Normal)
+                    }, completion: nil )
+            }
+        }
     }
 }
