@@ -35,11 +35,7 @@ NewChoiceDelegate {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        // set the data file name for load/save functionality
-        choiceList.dataFileName = ResolverConstants.currentChoicesFileName
-        choiceList.load()
-        
-        // we also need the list of recent choices to update when we add a choice
+        // set the data file name for load/save recents functionality
         recentList.dataFileName = ResolverConstants.recentChoicesFileName
         recentList.load()
     }
@@ -86,9 +82,6 @@ NewChoiceDelegate {
             
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             
-            // save modified list to storage
-            choiceList.save()
-            
             // disable the button if all choices were deleted
             if choiceList.choices.count == 0  {
                 chooseButton.enabled = false
@@ -132,10 +125,7 @@ NewChoiceDelegate {
         let indexPath = NSIndexPath(forRow: numberOfChoicesBeforeAddition, inSection: 0)
         tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
         
-        // write modified list to phone storage
-        choiceList.save()
-        
-        // also update the recent list if necessary
+        // also update and save the recent list if necessary
         if !recentList.choices.contains(choice)  {
             recentList.choices.append(choice)
             recentList.save()
