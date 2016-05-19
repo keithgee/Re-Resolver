@@ -24,7 +24,7 @@ import UIKit
 // and shaking are disabled.
 class ChoiceResultsViewController: UIViewController {
     
-    @IBOutlet weak var choiceButton: UIButton!
+    @IBOutlet private weak var choiceButton: UIButton!
     var choiceList: ChoiceList!                 // list of options from which to pick
     var menuTitle: String?                 // title for navigation bar
     var displayResultImmediately = false   // used in Choice feature

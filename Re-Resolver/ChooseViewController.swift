@@ -23,10 +23,10 @@ NewChoiceDelegate {
     
     
     var choiceList =  ChoiceList(choices: [String]()) // current choices
-    var recentList = ChoiceList(choices: [String]())  // recent choices
+    private var recentList = ChoiceList(choices: [String]())  // recent choices
   
-    @IBOutlet weak var chooseButton: UIButton!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var chooseButton: UIButton!
+    @IBOutlet private weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Uncomment the following line to preserve selection between presentations

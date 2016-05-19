@@ -20,7 +20,7 @@ protocol NewChoiceDelegate: class  {
 class NewChoiceViewController: UIViewController, UITextFieldDelegate,
 RecentItemDelegate {
 
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet private weak var textField: UITextField!
     weak var delegate: NewChoiceDelegate?
     
     override func viewDidLoad() {
