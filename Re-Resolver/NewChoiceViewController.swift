@@ -26,8 +26,10 @@ RecentItemDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.delegate = self
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         textField.becomeFirstResponder()
-       
     }
     
 
@@ -55,6 +57,7 @@ RecentItemDelegate {
         if segue.identifier == "RecentSegue"  {
             let recentController = segue.destinationViewController as! RecentTableViewController
             recentController.delegate = self
+            textField.resignFirstResponder()
         }
     }
 }
