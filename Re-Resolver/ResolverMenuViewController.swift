@@ -21,6 +21,22 @@ import UIKit
 class ResolverMenuViewController: UIViewController {
 
     
+    @IBOutlet weak var decideButton: UIButton!
+    @IBOutlet weak var chooseButton: UIButton!
+    @IBOutlet weak var askButton: UIButton!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // set buttons so that only one at a time
+        // will respond to touches
+        
+        decideButton.exclusiveTouch = true
+        chooseButton.exclusiveTouch = true
+        askButton.exclusiveTouch = true
+    }
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         

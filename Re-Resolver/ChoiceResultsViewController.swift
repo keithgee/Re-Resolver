@@ -37,6 +37,8 @@ class ChoiceResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
   
+        choiceButton.exclusiveTouch = true
+        
         if let title = menuTitle  {
             navigationItem.title = title
         }

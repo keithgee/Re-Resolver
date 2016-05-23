@@ -10,7 +10,7 @@ import UIKit
 
 
 // This is the controller for the New Choice screen,
-// which allows the user to enter a new choice from the keybaord
+// which allows the user to enter a new choice from the keyboard
 
 
 protocol NewChoiceDelegate: class  {
@@ -26,6 +26,16 @@ RecentItemDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.delegate = self
+        
+        // prevent multiple items in navigation bar
+        // from being pressed simultaneously, which
+        // can corrupt the navigation stack
+     
+        if let navigationBarViews = navigationController?.navigationBar.subviews  {
+            for view in navigationBarViews  {
+                view.exclusiveTouch = true
+            }
+        }
     }
     
     override func viewWillAppear(animated: Bool) {

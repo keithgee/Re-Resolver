@@ -93,6 +93,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="1nq-mJ-tD6"/>
+                    <connections>
+                        <outlet property="askButton" destination="6IB-l3-GxU" id="0jW-TA-ua5"/>
+                        <outlet property="chooseButton" destination="MrX-Fm-NZa" id="WSv-6I-Wrv"/>
+                        <outlet property="decideButton" destination="qHR-2a-E8z" id="nQU-Wh-XCV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

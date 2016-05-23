@@ -32,8 +32,18 @@ NewChoiceDelegate {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        // prevent multiple items in navigation bar
+        // from being pressed simultaneously, which
+        // can corrupt the navigation stack
+           navigationController?.navigationBar.exclusiveTouch = true
+        if let navigationBarViews = navigationController?.navigationBar.subviews  {
+            for view in navigationBarViews  {
+                view.exclusiveTouch = true
+            }
+        }
+        
+        chooseButton.exclusiveTouch = true
         
         // set the data file name for load/save recents functionality
         recentList.dataFileName = ResolverConstants.recentChoicesFileName
