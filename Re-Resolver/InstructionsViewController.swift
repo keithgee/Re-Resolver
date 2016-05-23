@@ -19,6 +19,7 @@ class InstructionsViewController: UIViewController {
     // Make sure the beginning of the text
     // is visible in the scroll pane
     override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         textView.setContentOffset(CGPoint.zero, animated: false)
     }
    
