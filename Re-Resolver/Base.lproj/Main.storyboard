@@ -178,6 +178,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addChoiceButton" destination="u8Y-6R-w3E" id="lyP-yN-pQ4"/>
                         <outlet property="chooseButton" destination="RAG-wA-gZN" id="rka-Wb-jr2"/>
                         <outlet property="tableView" destination="pbU-eN-Vzo" id="GRm-Zv-Ail"/>
                     </connections>

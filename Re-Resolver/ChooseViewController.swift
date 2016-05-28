@@ -27,6 +27,9 @@ NewChoiceDelegate {
   
     @IBOutlet private weak var chooseButton: UIButton!
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet weak var addChoiceButton: UIBarButtonItem!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Uncomment the following line to preserve selection between presentations
@@ -59,6 +62,8 @@ NewChoiceDelegate {
             chooseButton.enabled = false
             chooseButton.alpha = 0.2
         }
+        
+        addChoiceButton.enabled = true
     }
     
     // MARK: - Table view data source
@@ -115,8 +120,13 @@ NewChoiceDelegate {
             resultsController.displayResultImmediately = true
             
         } else if segue.identifier == "AddChoice"  {  // Enter another choice
-            let addChoiceController = segue.destinationViewController as! NewChoiceViewController
             
+            // disable add button so that it can't be
+            // pressed in quick succession
+            addChoiceButton.enabled = false
+            
+            let addChoiceController = segue.destinationViewController as! NewChoiceViewController
+         
             addChoiceController.delegate = self
         }
         
