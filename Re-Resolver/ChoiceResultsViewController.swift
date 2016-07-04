@@ -31,7 +31,9 @@ class ChoiceResultsViewController: UIViewController {
     
     @IBAction func choiceButtonPressed(button: UIButton) {
         
-        button.setTitle(choiceList.choose(), forState: .Normal)
+        let choice = choiceList.choose()
+        button.setTitle(choice, forState: .Normal)
+        choiceButton.accessibilityLabel = choice
     }
     
     override func viewDidLoad() {
@@ -47,7 +49,9 @@ class ChoiceResultsViewController: UIViewController {
     
             // Check that there are choices before displaying one!
             if choiceList.choices.count > 0  {
-                choiceButton.setTitle(choiceList.choose(), forState: .Normal)
+                let choice =  choiceList.choose()
+                choiceButton.setTitle(choice, forState: .Normal)
+                choiceButton.accessibilityLabel = choice
             }
             
             choiceButton.enabled = false
@@ -70,9 +74,14 @@ class ChoiceResultsViewController: UIViewController {
                 choiceButton.titleLabel?.textColor = UIColor.redColor()
                 
                 // Added an animation to give feedback that the shake was recognized.
-                UIView.transitionWithView(choiceButton.titleLabel!, duration: 1.0, options: .TransitionFlipFromLeft,
+                UIView.transitionWithView(choiceButton.titleLabel!, duration: 0.5, options: .TransitionFlipFromLeft,
                                           animations: {
-                                            self.choiceButton.setTitle(self.choiceList.choose(), forState: .Normal)
+                                            let choice = self.choiceList.choose()
+                                            self.choiceButton.setTitle(choice, forState: .Normal)
+                                            self.choiceButton.accessibilityLabel = choice
+                                            
+                                            // If VoiceOver is enabled, speak the new result
+                                            UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, choice)
                     }, completion: nil )
             }
         }
