@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import AudioToolbox
 
 // This ViewController selects and displays the answer
 // from the "Decide", "Ask", and "Choose" features.
@@ -63,17 +63,23 @@ class ChoiceResultsViewController: UIViewController {
         return displayResultImmediately ? false : true
     }
     
+    
+    // When a shake is detected, pick a new answer (or potentially the same),
+    // animate the label change, and then make the phone vibrate when the
+    // animation is finished
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         
         if !displayResultImmediately  {
             if motion == .MotionShake  && choiceList.choices.count > 0  {
-                choiceButton.titleLabel?.textColor = UIColor.redColor()
                 
                 // Added an animation to give feedback that the shake was recognized.
                 UIView.transitionWithView(choiceButton.titleLabel!, duration: 1.0, options: .TransitionFlipFromLeft,
                                           animations: {
                                             self.choiceButton.setTitle(self.choiceList.choose(), forState: .Normal)
-                    }, completion: nil )
+                    }, completion: { wasSuccessful in
+                        if wasSuccessful {
+                            AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+                        }})
             }
         }
     }
