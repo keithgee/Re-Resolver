@@ -20,8 +20,8 @@ import AudioToolbox
 //
 // If displayResultImmediately is set to
 // true, the button title displays a result as
-// soon as the view loads, and button presses
-// and shaking are disabled.
+// soon as the view loads. This is used in the
+// "Choice" feature.
 class ChoiceResultsViewController: UIViewController {
     
     @IBOutlet private weak var choiceButton: UIButton!
@@ -49,38 +49,34 @@ class ChoiceResultsViewController: UIViewController {
             if choiceList.choices.count > 0  {
                 choiceButton.setTitle(choiceList.choose(), forState: .Normal)
             }
-            
-            choiceButton.enabled = false
-        } else  {
-            becomeFirstResponder()
         }
+        
+        becomeFirstResponder()
         
     }
     
-    // we don't enable shake events for "Choose" functionality,
-    // but we do for other types
+    // Let this controller respond to shake events
     override func canBecomeFirstResponder() -> Bool {
-        return displayResultImmediately ? false : true
+        return true
     }
     
     
-    // When a shake is detected, pick a new answer (or potentially the same),
+    // When a shake is detected, pick an answer again,
     // animate the label change, and then make the phone vibrate when the
     // animation is finished
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         
-        if !displayResultImmediately  {
-            if motion == .MotionShake  && choiceList.choices.count > 0  {
+        if motion == .MotionShake  && choiceList.choices.count > 0  {
                 
-                // Added an animation to give feedback that the shake was recognized.
-                UIView.transitionWithView(choiceButton.titleLabel!, duration: 1.0, options: .TransitionFlipFromLeft,
-                                          animations: {
+            // Added an animation to give feedback that the shake was recognized.
+            UIView.transitionWithView(choiceButton.titleLabel!, duration: 1.0, options: .TransitionFlipFromLeft,
+                                        animations: {
                                             self.choiceButton.setTitle(self.choiceList.choose(), forState: .Normal)
                     }, completion: { wasSuccessful in
                         if wasSuccessful {
                             AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
                         }})
             }
-        }
+        
     }
 }
