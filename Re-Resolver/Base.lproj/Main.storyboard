@@ -201,6 +201,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="upK-TA-daT">
                                 <rect key="frame" x="150" y="240" width="300" height="200"/>
+                                <accessibility key="accessibilityConfiguration" hint="Displays a new decision when pressed." label="Results"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="KJt-1f-g0w"/>
                                     <constraint firstAttribute="width" constant="300" id="WZV-eR-GTg"/>
@@ -280,6 +281,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oaw-Oo-BK3">
                                 <rect key="frame" x="20" y="164" width="560" height="30"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" hint="Allows entry of a new choice." label="Choice"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
