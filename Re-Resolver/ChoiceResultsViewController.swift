@@ -81,7 +81,10 @@ class ChoiceResultsViewController: UIViewController {
                                             
                                             // If VoiceOver is enabled, speak the new result
                                             UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, choice)
-                    }, completion: nil )
+                    }, completion: { animationWasSuccessful in
+                        if animationWasSuccessful {
+                            AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+                        }} )
             }
         
     }
