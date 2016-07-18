@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import AudioToolbox
 
 // This ViewController selects and displays the answer
 // from the "Decide", "Ask", and "Choose" features.
@@ -20,8 +20,8 @@ import UIKit
 //
 // If displayResultImmediately is set to
 // true, the button title displays a result as
-// soon as the view loads, and button presses
-// and shaking are disabled.
+// soon as the view loads. This is used in the
+// "Choice" feature.
 class ChoiceResultsViewController: UIViewController {
     
     @IBOutlet private weak var choiceButton: UIButton!
@@ -53,25 +53,24 @@ class ChoiceResultsViewController: UIViewController {
                 choiceButton.setTitle(choice, forState: .Normal)
                 choiceButton.accessibilityLabel = choice
             }
-            
-            choiceButton.enabled = false
-        } else  {
-            becomeFirstResponder()
         }
         
+        becomeFirstResponder()
+        
     }
     
-    // we don't enable shake events for "Choose" functionality,
-    // but we do for other types
+    // Let this controller respond to shake events
     override func canBecomeFirstResponder() -> Bool {
-        return displayResultImmediately ? false : true
+        return true
     }
     
+    
+    // When a shake is detected, pick an answer again,
+    // animate the label change, and then make the phone vibrate when the
+    // animation is finished
     override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
         
-        if !displayResultImmediately  {
-            if motion == .MotionShake  && choiceList.choices.count > 0  {
-                choiceButton.titleLabel?.textColor = UIColor.redColor()
+        if motion == .MotionShake  && choiceList.choices.count > 0  {
                 
                 // Added an animation to give feedback that the shake was recognized.
                 UIView.transitionWithView(choiceButton.titleLabel!, duration: 0.5, options: .TransitionFlipFromLeft,
@@ -84,6 +83,6 @@ class ChoiceResultsViewController: UIViewController {
                                             UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, choice)
                     }, completion: nil )
             }
-        }
+        
     }
 }
