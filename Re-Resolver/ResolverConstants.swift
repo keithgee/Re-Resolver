@@ -21,39 +21,31 @@ struct ResolverConstants  {
     static let decideChoices = ChoiceList(choices: ["Yes", "No"])
     
     // For the "Ask" feature
-    // Most of these answers were all stolen from Magic 8 ball
-    // https://en.wikipedia.org/wiki/Magic_8-Ball
-    //
-    // Just a few were taken from Amanda's demonstration video
-    // of Resolver
-    //
-    // TODO: Replace all with genuine Resolver answers
     static let askChoices = ChoiceList(choices:
-           ["It is certain",
-            "It is decidedly so",
-            "Without a doubt",
-            "Yes, definitely",
-            "You may rely on it",
-            "As I see it, yes",
-            "Most likely",
-            "Outlook good",
-            "Yes",
-            "Signs point to yes",
-            "Reply hazy try again",
-            "Ask again later",
-            "Better not tell you now",
-            "Cannot predict now",
-            "Concentrate and ask again",
-            "Don't count on it",
-            "My reply is no",
-            "My sources say no",
-            "Outlook not so good",
-            "Very doubtful",
+           [
             
             // Below are genuine Resolver answers
-            "Oh Yeah!",
+            "According to my manual, Yes.",
             "According to NASA the answer is no.",
-            "Nope, Sorry!"
+            "As far as I can tell, yes.",
+            "Can you ask later. My circuits are having a bad day.",
+            "Chance of positive outcome: 93.487%",
+            "I need to think about this a bit longer.",
+            "I wouldn't bet on it.",
+            "I'm not sure. Check again later.",
+            "It's looking good.",
+            "No Way Jose, your name is Jose, right?!?",
+            "Nope, Sorry!",
+            "Oh Yeah!",
+            "Only time will tell, so why should I bother?",
+            "Sure, when pigs fly.",
+            "Surely you can't be serious?",
+            "System Error. Please try again!",
+            "That's a negative.",
+            "What kind of a question is that?",
+            "Yes.",
+            "You can't expect me to answer that now.",
+            
         ]
     )
     
