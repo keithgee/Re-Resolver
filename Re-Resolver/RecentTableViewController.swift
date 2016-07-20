@@ -8,6 +8,7 @@
 
 import UIKit
 
+// TODO: Consider replacing with unwind segue
 protocol RecentItemDelegate: class  {
     func recentItemSelected(item: String)
 }
@@ -54,10 +55,9 @@ class RecentTableViewController: UITableViewController {
     
 
     // Handle taps on the rows by notifying the delegate of the text of the row
-    // and then popping back to the previous screen
+    // The delegate will also handle navigation
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         delegate?.recentItemSelected(choiceList.choices[indexPath.row])
-        navigationController?.popViewControllerAnimated(true)
     }
     
     // Enable slide to delete on the table view.
