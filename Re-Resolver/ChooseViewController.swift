@@ -14,12 +14,17 @@ import UIKit
 // This controller acts as a delegate for the NewChoiceViewController,
 // and updates the table when a new choice is entered on that screen.
 //
+// The controller also acts as a delegate for the "Recent" controller
+// and similarly updates the table with the choice selected from the
+// Recent table.
+//
 // When the "Choose" button is pressed, another screen is displayed
 // that shows a random selection from the table of choices.
 class ChooseViewController: UIViewController,
 UITableViewDataSource,
 UITableViewDelegate,
-NewChoiceDelegate {
+NewChoiceDelegate,
+RecentItemDelegate {
     
     
     var choiceList =  ChoiceList(choices: [String]()) // current choices
@@ -32,9 +37,6 @@ NewChoiceDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
         
         // prevent multiple items in navigation bar
         // from being pressed simultaneously, which
@@ -132,11 +134,9 @@ NewChoiceDelegate {
         
     }
     
-
-    
-    // MARK: - NewChoiceDelegate
-    // Used when choice added on the "New choice" screen
-    func choiceAdded(choice: String) {
+    // Add a new choice to the data model, the table,
+    // and the recent list
+    func addChoiceToList(choice: String)  {
         
         let numberOfChoicesBeforeAddition = choiceList.choices.count
         choiceList.choices.append(choice)
@@ -150,11 +150,28 @@ NewChoiceDelegate {
             recentList.choices.append(choice)
             recentList.save()
         }
-      
+        
         // make sure the choose button is enabled, as we now have at least 1 item
         chooseButton.enabled = true
         chooseButton.alpha = 1
+    }
+
+    
+    // MARK: - NewChoiceDelegate
+    // Used when choice added on the "New choice" screen
+    func choiceAdded(choice: String) {
+        
+        navigationController?.popViewControllerAnimated(true)
+        addChoiceToList(choice)
         
     }
+    
+    // MARK: RecentItemDelegate
+    // Used when a choice is added from the "Recent" screen
+    func recentItemSelected(item: String)  {
+        navigationController?.popToViewController(self, animated: true)
+        addChoiceToList(item)
+    }
+    
     
 }
