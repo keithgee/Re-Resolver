@@ -22,60 +22,17 @@
                                 <rect key="frame" x="20" y="558" width="22" height="22"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="resolver_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Tqk-0B-3Vf">
-                                <rect key="frame" x="150" y="28" width="300" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="nxL-fH-WZF"/>
-                                    <constraint firstAttribute="height" constant="64" id="ulu-oe-VAY"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="resolver_logo" translatesAutoresizingMaskIntoConstraints="NO" id="ayL-bq-2vh">
+                                <rect key="frame" x="140" y="28" width="320" height="81"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDc-DR-oVV">
-                                <rect key="frame" x="150" y="132" width="300" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="3wB-Rt-vSL"/>
-                                    <constraint firstAttribute="width" constant="300" id="N9k-E5-D9E"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Decide" backgroundImage="reresolvr_button_300pt">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Zy-CZ-c8R">
-                                <rect key="frame" x="150" y="216" width="300" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="Hlc-fq-p9F"/>
-                                    <constraint firstAttribute="width" constant="300" id="zXi-7i-oJz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Choose" backgroundImage="reresolvr_button_300pt">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BH7-eE-cwg">
-                                <rect key="frame" x="150" y="300" width="300" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="5gb-yt-59a"/>
-                                    <constraint firstAttribute="width" constant="300" id="qOf-bP-WJt"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Ask" backgroundImage="reresolvr_button_300pt">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.30039364230540699" green="0.30039364230540699" blue="0.30039364230540699" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="KDc-DR-oVV" firstAttribute="top" secondItem="Tqk-0B-3Vf" secondAttribute="bottom" constant="40" id="04r-Bi-1We"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="PPN-No-uFZ" secondAttribute="bottom" constant="20" id="0D6-e8-Spt"/>
-                            <constraint firstItem="Tqk-0B-3Vf" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="8" id="6xl-9v-40J"/>
-                            <constraint firstItem="KDc-DR-oVV" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ic4-EI-tUV"/>
-                            <constraint firstItem="7Zy-CZ-c8R" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="SUf-hD-c42"/>
-                            <constraint firstItem="BH7-eE-cwg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="SrR-fu-zTv"/>
-                            <constraint firstItem="7Zy-CZ-c8R" firstAttribute="top" secondItem="KDc-DR-oVV" secondAttribute="bottom" constant="20" id="mMt-hX-0uD"/>
+                            <constraint firstItem="ayL-bq-2vh" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="8" id="bEe-xA-KVf"/>
+                            <constraint firstItem="ayL-bq-2vh" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rjl-Xo-YNZ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="PPN-No-uFZ" secondAttribute="leading" id="wKR-3H-49a"/>
-                            <constraint firstItem="BH7-eE-cwg" firstAttribute="top" secondItem="7Zy-CZ-c8R" secondAttribute="bottom" constant="20" id="x7u-y4-dXS"/>
-                            <constraint firstItem="Tqk-0B-3Vf" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="xOq-8M-NPd"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -85,7 +42,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="reresolvr_button_300pt" width="600" height="128"/>
         <image name="resolver_logo" width="320" height="81"/>
     </resources>
 </document>
