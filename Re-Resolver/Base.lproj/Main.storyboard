@@ -100,7 +100,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAG-wA-gZN">
-                                <rect key="frame" x="150" y="516" width="320" height="83"/>
+                                <rect key="frame" x="140" y="516" width="320" height="83"/>
                                 <accessibility key="accessibilityConfiguration" label="Choose"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="wHr-NO-sp1"/>
@@ -147,10 +147,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="RAG-wA-gZN" firstAttribute="centerX" secondItem="kMX-sr-pZg" secondAttribute="centerX" constant="10" id="2A5-wh-Yth"/>
                             <constraint firstItem="RAG-wA-gZN" firstAttribute="top" secondItem="pbU-eN-Vzo" secondAttribute="bottom" constant="13" id="9dV-Ko-QE8"/>
                             <constraint firstItem="rAl-oT-ir8" firstAttribute="top" secondItem="RAG-wA-gZN" secondAttribute="bottom" constant="1" id="EZ4-Ao-EfF"/>
                             <constraint firstItem="pbU-eN-Vzo" firstAttribute="leading" secondItem="kMX-sr-pZg" secondAttribute="leading" constant="20" id="VeX-B2-rlU"/>
+                            <constraint firstItem="RAG-wA-gZN" firstAttribute="centerX" secondItem="kMX-sr-pZg" secondAttribute="centerX" id="ZIS-XH-mFC"/>
                             <constraint firstItem="pbU-eN-Vzo" firstAttribute="top" secondItem="MzG-T1-hW7" secondAttribute="bottom" constant="21" id="mc4-H7-mXH"/>
                             <constraint firstAttribute="trailing" secondItem="pbU-eN-Vzo" secondAttribute="trailing" constant="20" id="n1V-Yh-JBY"/>
                         </constraints>
@@ -376,7 +376,7 @@ As with nearly all software, Re-Resolver contains bugs. Do not ever rely on tech
         <image name="resolver_logo" width="320" height="81"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hNu-Qj-7nf"/>
+        <segue reference="WTS-Xr-Ql2"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
