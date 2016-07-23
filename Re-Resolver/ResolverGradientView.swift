@@ -21,7 +21,7 @@ class ResolverGradientView: UIView {
     override func drawRect(rect: CGRect) {
  
         let colorComponents: [CGFloat] = [0.02, 0.02, 0.02, 1,   // almost black
-                                     0.7, 0.7, 0.7, 1]   // slightly light gray
+                                     0.3, 0.3, 0.3, 1]   //  gray
         
         let locations: [CGFloat] = [0, 1]
         

@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // use custom bar button image
+        let barButtonAppearance = UIBarButtonItem.appearance()
+        let backImage = UIImage(named: "navbar_button")
+        barButtonAppearance.setBackButtonBackgroundImage(backImage, forState: .Normal, barMetrics: .Default  )
         return true
     }
 

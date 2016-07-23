@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nsd-RZ-qAF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nsd-RZ-qAF">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -18,57 +18,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="resolver_logo" translatesAutoresizingMaskIntoConstraints="NO" id="pAx-R3-NYc">
-                                <rect key="frame" x="150" y="28" width="300" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="TnT-7B-UjL"/>
-                                    <constraint firstAttribute="height" constant="64" id="fRT-MX-Nws"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="resolver_logo" translatesAutoresizingMaskIntoConstraints="NO" id="pAx-R3-NYc">
+                                <rect key="frame" x="140" y="72" width="320" height="81"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHR-2a-E8z">
-                                <rect key="frame" x="150" y="132" width="300" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="TEq-Rd-Wva"/>
-                                    <constraint firstAttribute="height" constant="64" id="V9b-UH-smk"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Decide" backgroundImage="reresolvr_button_300pt">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="x4Y-t4-eoT" kind="show" identifier="DecideSegue" id="Ifc-yP-Dfa"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrX-Fm-NZa">
-                                <rect key="frame" x="150" y="216" width="300" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="2lg-O8-Nse"/>
-                                    <constraint firstAttribute="width" constant="300" id="H1Z-ik-I04"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Choose" backgroundImage="reresolvr_button_300pt">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="8P0-yB-YBp" kind="show" id="jrN-1c-waG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IB-l3-GxU">
-                                <rect key="frame" x="150" y="300" width="300" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="wSe-ok-fdz"/>
-                                    <constraint firstAttribute="width" constant="300" id="yMS-ZS-9Wg"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Ask" backgroundImage="reresolvr_button_300pt">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="x4Y-t4-eoT" kind="show" identifier="AskSegue" id="hNu-Qj-7nf"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0ob-D8-BeR">
+                                <rect key="frame" x="140" y="160.5" width="320" height="279"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHR-2a-E8z">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+                                        <accessibility key="accessibilityConfiguration" label="Decide"/>
+                                        <state key="normal" backgroundImage="resolver_decide_button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="resolver_decide_button_highlight"/>
+                                        <connections>
+                                            <segue destination="x4Y-t4-eoT" kind="show" identifier="DecideSegue" id="Ifc-yP-Dfa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrX-Fm-NZa">
+                                        <rect key="frame" x="0.0" y="98" width="320" height="83"/>
+                                        <accessibility key="accessibilityConfiguration" label="Choose"/>
+                                        <state key="normal" backgroundImage="resolver_choose_button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="resolver_choose_button_highlight"/>
+                                        <connections>
+                                            <segue destination="8P0-yB-YBp" kind="show" id="jrN-1c-waG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IB-l3-GxU">
+                                        <rect key="frame" x="0.0" y="196" width="320" height="83"/>
+                                        <accessibility key="accessibilityConfiguration" label="Ask"/>
+                                        <state key="normal" backgroundImage="resolver_ask_button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="resolver_ask_button_highlight"/>
+                                        <connections>
+                                            <segue destination="x4Y-t4-eoT" kind="show" identifier="AskSegue" id="hNu-Qj-7nf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6te-AY-xK4">
-                                <rect key="frame" x="32" y="566" width="22" height="22"/>
+                                <rect key="frame" x="20" y="558" width="22" height="22"/>
                                 <connections>
                                     <segue destination="cXY-o0-P0T" kind="show" id="EBi-q2-WCm"/>
                                 </connections>
@@ -76,20 +68,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MrX-Fm-NZa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5sp-3K-fdw"/>
-                            <constraint firstItem="6IB-l3-GxU" firstAttribute="top" secondItem="MrX-Fm-NZa" secondAttribute="bottom" constant="20" id="Dng-VW-eST"/>
-                            <constraint firstItem="qHR-2a-E8z" firstAttribute="leading" secondItem="pAx-R3-NYc" secondAttribute="leading" id="Fxh-aG-Gkn"/>
-                            <constraint firstItem="6IB-l3-GxU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="P2W-rE-yMc"/>
-                            <constraint firstItem="MrX-Fm-NZa" firstAttribute="leading" secondItem="pAx-R3-NYc" secondAttribute="leading" id="Phv-jI-b8s"/>
-                            <constraint firstItem="pAx-R3-NYc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RYO-Bq-GAE"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6te-AY-xK4" secondAttribute="bottom" constant="12" id="U4J-Vc-nXi"/>
-                            <constraint firstItem="qHR-2a-E8z" firstAttribute="top" secondItem="pAx-R3-NYc" secondAttribute="bottom" constant="40" id="dSu-iv-oe3"/>
-                            <constraint firstItem="pAx-R3-NYc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="et9-Cq-XF4"/>
-                            <constraint firstItem="6te-AY-xK4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="jd4-du-nYx"/>
-                            <constraint firstItem="6IB-l3-GxU" firstAttribute="leading" secondItem="pAx-R3-NYc" secondAttribute="leading" id="srw-xQ-l83"/>
-                            <constraint firstItem="MrX-Fm-NZa" firstAttribute="top" secondItem="qHR-2a-E8z" secondAttribute="bottom" constant="20" id="t6m-iA-2E6"/>
-                            <constraint firstItem="pAx-R3-NYc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uWH-Kc-KIn"/>
-                            <constraint firstItem="qHR-2a-E8z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xxf-n1-U4P"/>
+                            <constraint firstItem="pAx-R3-NYc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="2gc-mN-xwa"/>
+                            <constraint firstItem="0ob-D8-BeR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4BD-G7-yUk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6te-AY-xK4" secondAttribute="bottom" constant="20" id="Tl9-eu-8uP"/>
+                            <constraint firstItem="pAx-R3-NYc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="add-SD-uKa"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="6te-AY-xK4" secondAttribute="leading" id="caN-Gg-4co"/>
+                            <constraint firstItem="0ob-D8-BeR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="waH-n8-SVW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="1nq-mJ-tD6"/>
@@ -115,43 +99,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAG-wA-gZN">
-                                <rect key="frame" x="150" y="516" width="300" height="64"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAG-wA-gZN">
+                                <rect key="frame" x="140" y="516" width="320" height="83"/>
+                                <accessibility key="accessibilityConfiguration" label="Choose"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="wHr-NO-sp1"/>
-                                    <constraint firstAttribute="height" constant="64" id="wee-a1-yT4"/>
+                                    <constraint firstAttribute="width" constant="320" id="wHr-NO-sp1"/>
+                                    <constraint firstAttribute="height" constant="83" id="wee-a1-yT4"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Choose" backgroundImage="reresolvr_button_300pt">
+                                <state key="normal" backgroundImage="resolver_choose_button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="highlighted" backgroundImage="resolver_choose_button_highlight"/>
                                 <connections>
                                     <segue destination="x4Y-t4-eoT" kind="show" identifier="ChoiceResults" id="WTS-Xr-Ql2"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pbU-eN-Vzo">
+                            <tableView clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pbU-eN-Vzo">
                                 <rect key="frame" x="20" y="85" width="560" height="418"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="choiceCell" textLabel="B28-1m-xvI" style="IBUITableViewCellStyleDefault" id="IEq-kZ-n1N">
                                         <rect key="frame" x="0.0" y="28" width="560" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IEq-kZ-n1N" id="E9r-lV-xaO">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Choice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="B28-1m-xvI">
-                                                    <rect key="frame" x="15" y="0.0" width="530" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="530" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.086274509799999996" green="0.090196078430000007" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -162,10 +147,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="RAG-wA-gZN" firstAttribute="centerX" secondItem="kMX-sr-pZg" secondAttribute="centerX" id="2A5-wh-Yth"/>
                             <constraint firstItem="RAG-wA-gZN" firstAttribute="top" secondItem="pbU-eN-Vzo" secondAttribute="bottom" constant="13" id="9dV-Ko-QE8"/>
-                            <constraint firstItem="rAl-oT-ir8" firstAttribute="top" secondItem="RAG-wA-gZN" secondAttribute="bottom" constant="20" id="EZ4-Ao-EfF"/>
+                            <constraint firstItem="rAl-oT-ir8" firstAttribute="top" secondItem="RAG-wA-gZN" secondAttribute="bottom" constant="1" id="EZ4-Ao-EfF"/>
                             <constraint firstItem="pbU-eN-Vzo" firstAttribute="leading" secondItem="kMX-sr-pZg" secondAttribute="leading" constant="20" id="VeX-B2-rlU"/>
+                            <constraint firstItem="RAG-wA-gZN" firstAttribute="centerX" secondItem="kMX-sr-pZg" secondAttribute="centerX" id="ZIS-XH-mFC"/>
                             <constraint firstItem="pbU-eN-Vzo" firstAttribute="top" secondItem="MzG-T1-hW7" secondAttribute="bottom" constant="21" id="mc4-H7-mXH"/>
                             <constraint firstAttribute="trailing" secondItem="pbU-eN-Vzo" secondAttribute="trailing" constant="20" id="n1V-Yh-JBY"/>
                         </constraints>
@@ -200,15 +185,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="upK-TA-daT">
-                                <rect key="frame" x="150" y="240" width="300" height="200"/>
+                                <rect key="frame" x="140" y="240" width="320" height="206"/>
                                 <accessibility key="accessibilityConfiguration" hint="Displays a new decision when pressed." label="Results"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="KJt-1f-g0w"/>
-                                    <constraint firstAttribute="width" constant="300" id="WZV-eR-GTg"/>
+                                    <constraint firstAttribute="height" constant="206" id="KJt-1f-g0w"/>
+                                    <constraint firstAttribute="width" constant="320" id="WZV-eR-GTg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" backgroundImage="reresolvr_button_300pt">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="titleEdgeInsets" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
+                                <state key="normal" backgroundImage="answer">
+                                    <color key="titleColor" red="0.56470588235294117" green="0.59215686274509804" blue="0.6705882352941176" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="choiceButtonPressed:" destination="x4Y-t4-eoT" eventType="touchUpInside" id="fPG-kc-wgy"/>
@@ -218,7 +204,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="upK-TA-daT" firstAttribute="centerX" secondItem="iGG-ex-Kiq" secondAttribute="centerX" id="0JY-Nu-Vrv"/>
-                            <constraint firstItem="upK-TA-daT" firstAttribute="centerY" secondItem="iGG-ex-Kiq" secondAttribute="centerY" constant="40" id="g52-0E-AV8"/>
+                            <constraint firstItem="upK-TA-daT" firstAttribute="centerY" secondItem="iGG-ex-Kiq" secondAttribute="centerY" constant="43" id="g52-0E-AV8"/>
                         </constraints>
                     </view>
                     <connections>
@@ -381,8 +367,14 @@ As with nearly all software, Re-Resolver contains bugs. Do not ever rely on tech
         </scene>
     </scenes>
     <resources>
-        <image name="reresolvr_button_300pt" width="600" height="128"/>
-        <image name="resolver_logo" width="596" height="125"/>
+        <image name="answer" width="320" height="206"/>
+        <image name="resolver_ask_button" width="320" height="83"/>
+        <image name="resolver_ask_button_highlight" width="320" height="83"/>
+        <image name="resolver_choose_button" width="320" height="83"/>
+        <image name="resolver_choose_button_highlight" width="320" height="83"/>
+        <image name="resolver_decide_button" width="320" height="83"/>
+        <image name="resolver_decide_button_highlight" width="320" height="83"/>
+        <image name="resolver_logo" width="320" height="81"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="WTS-Xr-Ql2"/>
