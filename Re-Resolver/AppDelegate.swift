@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // use custom bar button image
         let barButtonAppearance = UIBarButtonItem.appearance()
         let backImage = UIImage(named: "navbar_button")
-        barButtonAppearance.setBackButtonBackgroundImage(backImage, forState: .Normal, barMetrics: .Default)
+        barButtonAppearance.setBackButtonBackgroundImage(backImage, forState: .Normal, barMetrics: .Default )
         return true
     }
 

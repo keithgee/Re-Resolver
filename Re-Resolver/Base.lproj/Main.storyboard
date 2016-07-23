@@ -25,44 +25,47 @@
                                     <constraint firstAttribute="height" constant="64" id="fRT-MX-Nws"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHR-2a-E8z">
-                                <rect key="frame" x="150" y="132" width="300" height="64"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHR-2a-E8z">
+                                <rect key="frame" x="140" y="122" width="320" height="83"/>
+                                <accessibility key="accessibilityConfiguration" label="Decide"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="TEq-Rd-Wva"/>
                                     <constraint firstAttribute="height" constant="64" id="V9b-UH-smk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Decide" backgroundImage="button_blank">
+                                <state key="normal" backgroundImage="resolver_decide_button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="highlighted" backgroundImage="resolver_decide_button_highlight"/>
                                 <connections>
                                     <segue destination="x4Y-t4-eoT" kind="show" identifier="DecideSegue" id="Ifc-yP-Dfa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrX-Fm-NZa">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrX-Fm-NZa">
                                 <rect key="frame" x="150" y="216" width="300" height="64"/>
+                                <accessibility key="accessibilityConfiguration" label="Choose"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="2lg-O8-Nse"/>
                                     <constraint firstAttribute="width" constant="300" id="H1Z-ik-I04"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Choose" backgroundImage="button_blank">
+                                <state key="normal" backgroundImage="resolver_choose_button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="highlighted" backgroundImage="resolver_choose_button_highlight"/>
                                 <connections>
                                     <segue destination="8P0-yB-YBp" kind="show" id="jrN-1c-waG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IB-l3-GxU">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IB-l3-GxU">
                                 <rect key="frame" x="150" y="300" width="300" height="64"/>
+                                <accessibility key="accessibilityConfiguration" label="Ask"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="wSe-ok-fdz"/>
                                     <constraint firstAttribute="width" constant="300" id="yMS-ZS-9Wg"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Ask" backgroundImage="button_blank">
+                                <state key="normal" backgroundImage="resolver_ask_button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="highlighted" backgroundImage="resolver_ask_button_highlight"/>
                                 <connections>
                                     <segue destination="x4Y-t4-eoT" kind="show" identifier="AskSegue" id="hNu-Qj-7nf"/>
                                 </connections>
@@ -384,6 +387,12 @@ As with nearly all software, Re-Resolver contains bugs. Do not ever rely on tech
     <resources>
         <image name="button_blank" width="320" height="83"/>
         <image name="reresolvr_button_300pt" width="600" height="128"/>
+        <image name="resolver_ask_button" width="320" height="83"/>
+        <image name="resolver_ask_button_highlight" width="320" height="83"/>
+        <image name="resolver_choose_button" width="320" height="83"/>
+        <image name="resolver_choose_button_highlight" width="320" height="83"/>
+        <image name="resolver_decide_button" width="320" height="83"/>
+        <image name="resolver_decide_button_highlight" width="320" height="83"/>
         <image name="resolver_logo" width="320" height="81"/>
     </resources>
     <inferredMetricsTieBreakers>
