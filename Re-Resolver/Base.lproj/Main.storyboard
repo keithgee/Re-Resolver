@@ -184,16 +184,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="upK-TA-daT">
-                                <rect key="frame" x="140" y="240" width="320" height="200"/>
+                                <rect key="frame" x="140" y="240" width="320" height="206"/>
                                 <accessibility key="accessibilityConfiguration" hint="Displays a new decision when pressed." label="Results"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="KJt-1f-g0w"/>
+                                    <constraint firstAttribute="height" constant="206" id="KJt-1f-g0w"/>
                                     <constraint firstAttribute="width" constant="320" id="WZV-eR-GTg"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <inset key="contentEdgeInsets" minX="12" minY="-2" maxX="12" maxY="0.0"/>
-                                <state key="normal" backgroundImage="button_blank">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" backgroundImage="answer">
+                                    <color key="titleColor" red="0.56470588235294117" green="0.59215686274509804" blue="0.6705882352941176" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="choiceButtonPressed:" destination="x4Y-t4-eoT" eventType="touchUpInside" id="fPG-kc-wgy"/>
@@ -203,7 +202,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="upK-TA-daT" firstAttribute="centerX" secondItem="iGG-ex-Kiq" secondAttribute="centerX" id="0JY-Nu-Vrv"/>
-                            <constraint firstItem="upK-TA-daT" firstAttribute="centerY" secondItem="iGG-ex-Kiq" secondAttribute="centerY" constant="40" id="g52-0E-AV8"/>
+                            <constraint firstItem="upK-TA-daT" firstAttribute="centerY" secondItem="iGG-ex-Kiq" secondAttribute="centerY" constant="43" id="g52-0E-AV8"/>
                         </constraints>
                     </view>
                     <connections>
@@ -366,7 +365,7 @@ As with nearly all software, Re-Resolver contains bugs. Do not ever rely on tech
         </scene>
     </scenes>
     <resources>
-        <image name="button_blank" width="320" height="83"/>
+        <image name="answer" width="320" height="206"/>
         <image name="reresolvr_button_300pt" width="600" height="128"/>
         <image name="resolver_ask_button" width="320" height="83"/>
         <image name="resolver_ask_button_highlight" width="320" height="83"/>
@@ -377,7 +376,7 @@ As with nearly all software, Re-Resolver contains bugs. Do not ever rely on tech
         <image name="resolver_logo" width="320" height="81"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hNu-Qj-7nf"/>
+        <segue reference="WTS-Xr-Ql2"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

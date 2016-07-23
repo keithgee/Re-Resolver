@@ -41,6 +41,9 @@ class ChoiceResultsViewController: UIViewController {
   
         choiceButton.exclusiveTouch = true
         
+        // center each line in the label, as in the original Resolver
+        choiceButton.titleLabel?.textAlignment = .Center
+        
         if let title = menuTitle  {
             navigationItem.title = title
         }
