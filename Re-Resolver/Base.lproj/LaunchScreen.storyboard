@@ -25,12 +25,43 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="resolver_logo" translatesAutoresizingMaskIntoConstraints="NO" id="ayL-bq-2vh">
                                 <rect key="frame" x="140" y="28" width="320" height="81"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gvv-57-hem">
+                                <rect key="frame" x="140" y="160.5" width="320" height="279"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjq-cb-tBt">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+                                        <accessibility key="accessibilityConfiguration" label="Decide"/>
+                                        <state key="normal" backgroundImage="resolver_decide_button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="resolver_decide_button_highlight"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWi-Pp-rfM">
+                                        <rect key="frame" x="0.0" y="98" width="320" height="83"/>
+                                        <accessibility key="accessibilityConfiguration" label="Choose"/>
+                                        <state key="normal" backgroundImage="resolver_choose_button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="resolver_choose_button_highlight"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2a-Rt-u4z">
+                                        <rect key="frame" x="0.0" y="196" width="320" height="83"/>
+                                        <accessibility key="accessibilityConfiguration" label="Ask"/>
+                                        <state key="normal" backgroundImage="resolver_ask_button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" backgroundImage="resolver_ask_button_highlight"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.30039364230540699" green="0.30039364230540699" blue="0.30039364230540699" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="PPN-No-uFZ" secondAttribute="bottom" constant="20" id="0D6-e8-Spt"/>
+                            <constraint firstItem="gvv-57-hem" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="1Rh-Xx-4MA"/>
                             <constraint firstItem="ayL-bq-2vh" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="8" id="bEe-xA-KVf"/>
+                            <constraint firstItem="gvv-57-hem" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="n4J-in-OjH"/>
                             <constraint firstItem="ayL-bq-2vh" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rjl-Xo-YNZ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="PPN-No-uFZ" secondAttribute="leading" id="wKR-3H-49a"/>
                         </constraints>
@@ -42,6 +73,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="resolver_ask_button" width="320" height="83"/>
+        <image name="resolver_ask_button_highlight" width="320" height="83"/>
+        <image name="resolver_choose_button" width="320" height="83"/>
+        <image name="resolver_choose_button_highlight" width="320" height="83"/>
+        <image name="resolver_decide_button" width="320" height="83"/>
+        <image name="resolver_decide_button_highlight" width="320" height="83"/>
         <image name="resolver_logo" width="320" height="81"/>
     </resources>
 </document>
