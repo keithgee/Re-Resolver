@@ -258,7 +258,7 @@
         <!--New choice-->
         <scene sceneID="YUk-Ie-dVU">
             <objects>
-                <viewController id="3ox-f8-JdB" customClass="NewChoiceViewController" customModule="Re_Resolver" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3ox-f8-JdB" customClass="ChoiceDetailViewController" customModule="Re_Resolver" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2gc-Zh-HKm"/>
                         <viewControllerLayoutGuide type="bottom" id="K2a-Cq-0lB"/>

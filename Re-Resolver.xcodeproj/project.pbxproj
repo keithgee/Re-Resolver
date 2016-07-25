@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3713D2261CE6675F006C4261 /* NewChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3713D2251CE6675F006C4261 /* NewChoiceViewController.swift */; };
+		3713D2261CE6675F006C4261 /* ChoiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3713D2251CE6675F006C4261 /* ChoiceDetailViewController.swift */; };
 		3713D2281CE66A8F006C4261 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3713D2271CE66A8F006C4261 /* ChooseViewController.swift */; };
 		3713D22A1CE675E9006C4261 /* ChoiceResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3713D2291CE675E9006C4261 /* ChoiceResultsViewController.swift */; };
 		376A88351CE62D6A008C7659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376A88341CE62D6A008C7659 /* AppDelegate.swift */; };
@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3713D2251CE6675F006C4261 /* NewChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewChoiceViewController.swift; sourceTree = "<group>"; };
+		3713D2251CE6675F006C4261 /* ChoiceDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceDetailViewController.swift; sourceTree = "<group>"; };
 		3713D2271CE66A8F006C4261 /* ChooseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
 		3713D2291CE675E9006C4261 /* ChoiceResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceResultsViewController.swift; sourceTree = "<group>"; };
 		376A88311CE62D69008C7659 /* Re-Resolver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Re-Resolver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,7 +76,7 @@
 				37C8A09F1CE9293F00AE3B1F /* InstructionsViewController.swift */,
 				37C8A09D1CE8DC0000AE3B1F /* RecentTableViewController.swift */,
 				3713D2271CE66A8F006C4261 /* ChooseViewController.swift */,
-				3713D2251CE6675F006C4261 /* NewChoiceViewController.swift */,
+				3713D2251CE6675F006C4261 /* ChoiceDetailViewController.swift */,
 				3713D2291CE675E9006C4261 /* ChoiceResultsViewController.swift */,
 				37C8A0991CE8B7A100AE3B1F /* ChoiceList.swift */,
 				37C8A09B1CE8B8D400AE3B1F /* ResolverConstants.swift */,
@@ -166,7 +166,7 @@
 				37C8A0A01CE9293F00AE3B1F /* InstructionsViewController.swift in Sources */,
 				376A88371CE62D6A008C7659 /* ResolverMenuViewController.swift in Sources */,
 				3713D2281CE66A8F006C4261 /* ChooseViewController.swift in Sources */,
-				3713D2261CE6675F006C4261 /* NewChoiceViewController.swift in Sources */,
+				3713D2261CE6675F006C4261 /* ChoiceDetailViewController.swift in Sources */,
 				376A88351CE62D6A008C7659 /* AppDelegate.swift in Sources */,
 				37C8A09A1CE8B7A100AE3B1F /* ChoiceList.swift in Sources */,
 			);
