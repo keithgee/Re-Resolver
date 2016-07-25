@@ -21,6 +21,9 @@ import UIKit
 class ResolverMenuViewController: UIViewController {
 
     
+    let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
+
+    
     @IBOutlet weak var decideButton: UIButton!
     @IBOutlet weak var chooseButton: UIButton!
     @IBOutlet weak var askButton: UIButton!
@@ -55,6 +58,14 @@ class ResolverMenuViewController: UIViewController {
         super.viewWillAppear(animated)
         
         navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        // kind of ugly here. still not sure how to make
+        // color code nice
+    
+        if let gradientView = view as? ResolverGradientView  {
+            gradientView.colorComponents = appDelegate?.backgroundGradient
+            gradientView.setNeedsDisplay()
+        }
     }
    
     

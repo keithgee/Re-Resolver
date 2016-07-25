@@ -23,21 +23,24 @@ import UIKit
 @IBDesignable
 class ResolverGradientView: UIView {
 
+    let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
     
-    var colorComponents: [CGFloat] =
-       [0.02, 0.02, 0.02, 1,   // almost black
-        0.3, 0.3, 0.3, 1]   //  gray
+    var colorComponents: [CGFloat]?
+    
     
     override func drawRect(rect: CGRect) {
        
-        if let appDelegate = UIApplication.sharedApplication().delegate as?AppDelegate  {
-            colorComponents = appDelegate.backgroundGradient
+        if colorComponents == nil  {
+            if let appDelegate = appDelegate {
+                colorComponents = appDelegate.backgroundGradient
+            } else {
+                colorComponents = ResolverConstants.darkCalm
+            }
         }
-        
         let locations: [CGFloat] = [0, 1]
         
         let colorSpace = CGColorSpaceCreateDeviceRGB()
-        let gradient = CGGradientCreateWithColorComponents(colorSpace, colorComponents, locations, 2)
+        let gradient = CGGradientCreateWithColorComponents(colorSpace, colorComponents!, locations, 2)
         
         
         let context = UIGraphicsGetCurrentContext()
