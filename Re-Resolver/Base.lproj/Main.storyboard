@@ -255,7 +255,7 @@
             </objects>
             <point key="canvasLocation" x="2446" y="-3766"/>
         </scene>
-        <!--New choice-->
+        <!--New Choice-->
         <scene sceneID="YUk-Ie-dVU">
             <objects>
                 <viewController id="3ox-f8-JdB" customClass="ChoiceDetailViewController" customModule="Re_Resolver" customModuleProvider="target" sceneMemberID="viewController">
@@ -283,7 +283,7 @@
                             <constraint firstItem="Oaw-Oo-BK3" firstAttribute="top" secondItem="2gc-Zh-HKm" secondAttribute="bottom" constant="100" id="g67-U1-dCa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="New choice" id="BCP-to-1Yf">
+                    <navigationItem key="navigationItem" title="New Choice" id="BCP-to-1Yf">
                         <barButtonItem key="rightBarButtonItem" title="Recent" id="mXe-NT-Xzj">
                             <connections>
                                 <segue destination="m24-Wb-tmy" kind="show" identifier="RecentSegue" id="rst-lz-3vN"/>

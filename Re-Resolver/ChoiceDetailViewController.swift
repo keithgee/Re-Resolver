@@ -34,6 +34,7 @@ class ChoiceDetailViewController: UIViewController, UITextFieldDelegate {
         textField.delegate = self
         
         if let choice = choiceToEdit  {
+            title = "Edit Choice"
             textField.text = choice
         }
         
