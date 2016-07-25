@@ -11,8 +11,8 @@ import UIKit
 // This controller handles the main Choice functionality
 //
 // It displays a table with all of the choices in it.
-// This controller acts as a delegate for the NewChoiceViewController,
-// and updates the table when a new choice is entered on that screen.
+// This controller acts as a delegate for the ChoiceDetailViewController,
+// and updates the table when a new choice is entered or edited.
 //
 // The controller also acts as a delegate for the "Recent" controller
 // and similarly updates the table with the choice selected from the
@@ -23,12 +23,17 @@ import UIKit
 class ChooseViewController: UIViewController,
 UITableViewDataSource,
 UITableViewDelegate,
-NewChoiceDelegate,
+ChoiceDetailDelegate,
 RecentItemDelegate {
     
     
     var choiceList =  ChoiceList(choices: [String]()) // current choices
     private var recentList = ChoiceList(choices: [String]())  // recent choices
+    
+    // TODO: Refactor
+    // This is oddness because we are passing strings
+    // to controllers. Strings are pass by value
+    private var indexOfRowToEdit: Int?
   
     @IBOutlet private weak var chooseButton: UIButton!
     @IBOutlet private weak var tableView: UITableView!
@@ -127,9 +132,19 @@ RecentItemDelegate {
             // pressed in quick succession
             addChoiceButton.enabled = false
             
-            let addChoiceController = segue.destinationViewController as! NewChoiceViewController
+            let addChoiceController = segue.destinationViewController as! ChoiceDetailViewController
          
             addChoiceController.delegate = self
+        
+        } else if segue.identifier == "EditChoice"  {  // edit current row when tapped
+            
+            let editChoiceController = segue.destinationViewController as! ChoiceDetailViewController
+            if let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)  {
+                 editChoiceController.choiceToEdit = choiceList.choices[indexPath.row]
+                indexOfRowToEdit = indexPath.row
+            }
+          
+            editChoiceController.delegate = self
         }
         
     }
@@ -157,12 +172,33 @@ RecentItemDelegate {
     }
 
     
-    // MARK: - NewChoiceDelegate
+    // MARK: - ChoiceDetailDelegate
+    
     // Used when choice added on the "New choice" screen
-    func choiceAdded(choice: String) {
-        
+    func didFinishAddingChoice(choice: String) {
         navigationController?.popViewControllerAnimated(true)
         addChoiceToList(choice)
+    }
+    
+    // Used when choice edited on the "New choice" screen
+    // TODO: Refactor - fix duplicate code to save to recent
+    // list = plus other cleanup.
+    func didFinishEditingChoice(choice: String) {
+        navigationController?.popViewControllerAnimated(true)
+    
+        let indexPath = NSIndexPath(forRow: indexOfRowToEdit!, inSection: 0)
+        if tableView.cellForRowAtIndexPath(indexPath) != nil  {
+            choiceList.choices[indexOfRowToEdit!] = choice
+            tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }
+        
+        indexOfRowToEdit = nil
+        
+        // also update and save the recent list if necessary
+        if !recentList.choices.contains(choice)  {
+            recentList.choices.append(choice)
+            recentList.save()
+        }
         
     }
     
