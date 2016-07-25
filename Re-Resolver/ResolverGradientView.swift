@@ -13,15 +13,26 @@ import UIKit
 // Resolvr. 
 //
 // An alternative could be to use images
+//
+// TODO: Make an actually usable interface
+// to set the color gradients.
+//
+// TODO: Fix coupling of this class
+//       to Resolver app delegate. Class
+//       should be reusable.
 @IBDesignable
 class ResolverGradientView: UIView {
 
     
+    var colorComponents: [CGFloat] =
+       [0.02, 0.02, 0.02, 1,   // almost black
+        0.3, 0.3, 0.3, 1]   //  gray
     
     override func drawRect(rect: CGRect) {
- 
-        let colorComponents: [CGFloat] = [0.02, 0.02, 0.02, 1,   // almost black
-                                     0.3, 0.3, 0.3, 1]   //  gray
+       
+        if let appDelegate = UIApplication.sharedApplication().delegate as?AppDelegate  {
+            colorComponents = appDelegate.backgroundGradient
+        }
         
         let locations: [CGFloat] = [0, 1]
         

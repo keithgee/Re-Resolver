@@ -22,7 +22,7 @@
                                 <rect key="frame" x="140" y="72" width="320" height="81"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0ob-D8-BeR">
-                                <rect key="frame" x="140" y="160.5" width="320" height="279"/>
+                                <rect key="frame" x="140" y="161" width="320" height="279"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHR-2a-E8z">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
@@ -65,6 +65,14 @@
                                     <segue destination="cXY-o0-P0T" kind="show" id="EBi-q2-WCm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adu-UI-Tyy">
+                                <rect key="frame" x="542" y="530" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="K16-28-RBI"/>
+                                    <constraint firstAttribute="height" constant="50" id="ZeE-Iu-zBZ"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="palette-icon"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -73,7 +81,9 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="6te-AY-xK4" secondAttribute="bottom" constant="20" id="Tl9-eu-8uP"/>
                             <constraint firstItem="pAx-R3-NYc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="add-SD-uKa"/>
                             <constraint firstAttribute="leadingMargin" secondItem="6te-AY-xK4" secondAttribute="leading" id="caN-Gg-4co"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="adu-UI-Tyy" secondAttribute="bottom" constant="20" id="mm7-ee-den"/>
                             <constraint firstItem="0ob-D8-BeR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="waH-n8-SVW"/>
+                            <constraint firstAttribute="trailing" secondItem="adu-UI-Tyy" secondAttribute="trailing" constant="8" id="xXb-O6-1gx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="1nq-mJ-tD6"/>
@@ -216,7 +226,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akY-Xf-r7N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="543" y="-2793"/>
+            <point key="canvasLocation" x="2167" y="-2793"/>
         </scene>
         <!--Recent Table View Controller-->
         <scene sceneID="D8e-Ba-NhC">
@@ -371,6 +381,7 @@ As with nearly all software, Re-Resolver contains bugs. Do not ever rely on tech
     </scenes>
     <resources>
         <image name="answer" width="320" height="206"/>
+        <image name="palette-icon" width="256" height="256"/>
         <image name="resolver_ask_button" width="320" height="83"/>
         <image name="resolver_ask_button_highlight" width="320" height="83"/>
         <image name="resolver_choose_button" width="320" height="83"/>
