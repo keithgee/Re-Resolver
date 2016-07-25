@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var backgroundGradient = ResolverConstants.ocean
+    var backgroundGradient = ResolverConstants.darkCalm
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -22,6 +22,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let barButtonAppearance = UIBarButtonItem.appearance()
         let backImage = UIImage(named: "navbar_button")
         barButtonAppearance.setBackButtonBackgroundImage(backImage, forState: .Normal, barMetrics: .Default  )
+        
+        // register defaults for background gradient
+        let dictionary = ["ColorPreference": 0]
+        NSUserDefaults.standardUserDefaults().registerDefaults(dictionary)
+        
+        let colorPreference = NSUserDefaults.standardUserDefaults().integerForKey("ColorPreference")
+        switch colorPreference {
+        case 1:
+            backgroundGradient = ResolverConstants.crimson
+        case 2:
+            backgroundGradient = ResolverConstants.clover
+        case 3:
+            backgroundGradient = ResolverConstants.ocean
+        case 4:
+            backgroundGradient = ResolverConstants.passion
+        default:
+            backgroundGradient = ResolverConstants.darkCalm
+        }
+        
         return true
     }
 

@@ -75,6 +75,8 @@ class ColorTableViewController: UITableViewController {
             
             appDelegate?.backgroundGradient = previewArea.colorComponents!
             previewArea.setNeedsDisplay()
+            NSUserDefaults.standardUserDefaults().setInteger(indexPath.row, forKey: "ColorPreference")
+            NSUserDefaults.standardUserDefaults().synchronize()
             
         }
     }
