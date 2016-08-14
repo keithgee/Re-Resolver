@@ -1,14 +1,8 @@
 # Re-Resolver
 
-![Decide Screen. Yes. Passion Color](docs/images/passionate_yes.png)
+![Decide Screen. Yes. Passion Color](docs/images/ocean_menu.png)
 
 Re-Resolver is a preservation attempt to revive Resolver - a once highly-rated decision making app created in Iceland - from oblivion by system updates. The code is open source.
-
-Ask - Ask a question and then press the widget for a Yes/No answer.
-
-Decide - Ask a question and then press the widget to get a wordy answer that may be positive, negative, or ambiguous in tone.
-
-Choose - Use the + button to add options. Press the choose button and Re-Resolver will pick one of the options.
 
 Disclaimer
 
