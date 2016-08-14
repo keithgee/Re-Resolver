@@ -1,6 +1,6 @@
 # Re-Resolver
 
-Re-Resolver Information
+![Decide Screen. Yes. Passion Color](docs/images/passionate_yes.png)
 
 Re-Resolver is a preservation attempt to revive Resolver - a once highly-rated decision making app created in Iceland - from oblivion by system updates. The code is open source.
 
