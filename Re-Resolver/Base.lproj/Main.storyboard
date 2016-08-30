@@ -43,7 +43,7 @@
                                         </state>
                                         <state key="highlighted" backgroundImage="resolver_choose_button_highlight"/>
                                         <connections>
-                                            <segue destination="8P0-yB-YBp" kind="show" id="jrN-1c-waG"/>
+                                            <segue destination="8P0-yB-YBp" kind="show" identifier="ChooseSegue" id="jrN-1c-waG"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IB-l3-GxU">
@@ -381,7 +381,7 @@ As with nearly all software, Re-Resolver contains bugs. Do not ever rely on tech
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="IYw-VW-2lN"/>
-        <segue reference="WTS-Xr-Ql2"/>
+        <segue reference="hNu-Qj-7nf"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

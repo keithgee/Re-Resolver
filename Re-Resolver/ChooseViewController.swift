@@ -27,7 +27,9 @@ ChoiceDetailDelegate,
 RecentItemDelegate {
     
     
-    var choiceList =  ChoiceList(choices: [String]()) // current choices
+    var choiceList: ChoiceList! // Current choices, as stored
+                                // in the ResolverMenuViewController
+    
     private var recentList = ChoiceList(choices: [String]())  // recent choices
     
     // TODO: Refactor

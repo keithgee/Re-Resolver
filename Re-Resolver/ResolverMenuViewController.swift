@@ -26,6 +26,20 @@ class ResolverMenuViewController: UIViewController {
     @IBOutlet weak var askButton: UIButton!
     
     
+    // The choices for the ChooseViewController are, oddly,
+    // in this class so that they can be persisted when the
+    // "Choices" screen is dismissed and removed from memory.
+    // 
+    // Under the current application architecture, 
+    // This ResolverMenuViewController will stay in memory
+    // for the life of the application.
+    //
+    // TODO: Think of a better way to persist these choices
+    // in memory besides storing them in this controller.
+    // Maybe a separate data model class?
+    var choices = ChoiceList(choices: [String]() )
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -67,8 +81,13 @@ class ResolverMenuViewController: UIViewController {
             choiceResultsController.menuTitle = "Ask"
             choiceResultsController.choiceList = ResolverConstants.askChoices
         }
+        else if segue.identifier == "ChooseSegue"  {
+            
+            // inject any saved choices into the table on the "Choose" screen
+            let chooseController = segue.destinationViewController as! ChooseViewController
+            chooseController.choiceList = choices
+        }
         
-        // No preparation necessary for segue to "Choose" screens
         
     }
 }
