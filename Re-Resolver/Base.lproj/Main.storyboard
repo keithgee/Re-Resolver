@@ -67,6 +67,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adu-UI-Tyy">
                                 <rect key="frame" x="542" y="530" width="50" height="50"/>
+                                <accessibility key="accessibilityConfiguration" hint="Change the background colors" label="Set Colors"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="K16-28-RBI"/>
                                     <constraint firstAttribute="height" constant="50" id="ZeE-Iu-zBZ"/>
@@ -636,8 +637,8 @@ As with nearly all software, Re-Resolver contains bugs. Do not ever rely on tech
         <image name="resolver_logo" width="320" height="81"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="IYw-VW-2lN"/>
         <segue reference="hNu-Qj-7nf"/>
+        <segue reference="CaK-5P-DI7"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
