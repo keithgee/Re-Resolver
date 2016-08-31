@@ -18,6 +18,7 @@ class ColorTableViewController: UITableViewController {
     @IBOutlet weak var cloverView: ResolverGradientView!
     @IBOutlet weak var oceanView: ResolverGradientView!
     @IBOutlet weak var passionView: ResolverGradientView!
+    @IBOutlet weak var bornsteinView: ResolverGradientView!
     
     @IBOutlet weak var previewArea: ResolverGradientView!
     
@@ -34,6 +35,7 @@ class ColorTableViewController: UITableViewController {
         cloverView.colorComponents = ResolverConstants.clover
         oceanView.colorComponents = ResolverConstants.ocean
         passionView.colorComponents = ResolverConstants.passion
+        bornsteinView.colorComponents = ResolverConstants.bornstein
      
     }
     
@@ -49,7 +51,7 @@ class ColorTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if section == 0  {
-            return 5
+            return 6
         } else {
             return 1
         }
@@ -69,6 +71,8 @@ class ColorTableViewController: UITableViewController {
                 previewArea.colorComponents = ResolverConstants.ocean
             case 4:
                 previewArea.colorComponents = ResolverConstants.passion
+            case 5:
+                previewArea.colorComponents = ResolverConstants.bornstein
             default:
                 previewArea.colorComponents = ResolverConstants.darkCalm
             }

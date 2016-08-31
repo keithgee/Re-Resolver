@@ -76,4 +76,10 @@ struct ResolverConstants  {
         0.8, 0.0, 0.0, 1,
         0.0, 0.0, 0.8, 1]
     
+    // Through Kate's Eyes
+    static let bornstein: [CGFloat] = [
+        0.95, 0.10, 0.10, 1,
+        0.96, 0.90, 0.46, 1]
+    
+    
 }

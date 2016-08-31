@@ -272,12 +272,46 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fWG-0W-fwW">
+                                        <rect key="frame" x="0.0" y="312" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fWG-0W-fwW" id="ZCt-Ez-1xA">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1v-YY-21z" customClass="ResolverGradientView" customModule="Re_Resolver" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Through Kate's Eyes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbf-Lo-tvM">
+                                                            <rect key="frame" x="222" y="11" width="157" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="qbf-Lo-tvM" firstAttribute="centerX" secondItem="h1v-YY-21z" secondAttribute="centerX" id="0dD-Ii-ssB"/>
+                                                        <constraint firstItem="qbf-Lo-tvM" firstAttribute="centerY" secondItem="h1v-YY-21z" secondAttribute="centerY" id="EcI-or-VAD"/>
+                                                        <constraint firstItem="qbf-Lo-tvM" firstAttribute="centerY" secondItem="h1v-YY-21z" secondAttribute="centerY" id="iNR-e4-HSh"/>
+                                                        <constraint firstItem="qbf-Lo-tvM" firstAttribute="centerX" secondItem="h1v-YY-21z" secondAttribute="centerX" id="jvp-YH-jg3"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="h1v-YY-21z" secondAttribute="trailing" id="G0G-7I-acU"/>
+                                                <constraint firstItem="h1v-YY-21z" firstAttribute="leading" secondItem="ZCt-Ez-1xA" secondAttribute="leading" id="MeJ-Zm-ZMf"/>
+                                                <constraint firstItem="h1v-YY-21z" firstAttribute="top" secondItem="ZCt-Ez-1xA" secondAttribute="top" id="Tom-Cv-J8W"/>
+                                                <constraint firstAttribute="bottom" secondItem="h1v-YY-21z" secondAttribute="bottom" id="s92-Cy-Khv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Preview" id="Cxr-ES-cWt">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nDc-7w-03Y">
-                                        <rect key="frame" x="0.0" y="340" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="384" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nDc-7w-03Y" id="G6a-yn-CQB">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -313,6 +347,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="bornsteinView" destination="h1v-YY-21z" id="oof-ga-aU6"/>
                         <outlet property="cloverView" destination="V2b-nt-dEW" id="Eol-SD-AVh"/>
                         <outlet property="crimsonView" destination="33o-gh-UTQ" id="Nec-BK-mMS"/>
                         <outlet property="darkCalmView" destination="ep0-b2-Qsf" id="uW0-nM-vnz"/>

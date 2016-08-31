@@ -37,6 +37,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             backgroundGradient = ResolverConstants.ocean
         case 4:
             backgroundGradient = ResolverConstants.passion
+        case 5:
+            backgroundGradient = ResolverConstants.bornstein
         default:
             backgroundGradient = ResolverConstants.darkCalm
         }
