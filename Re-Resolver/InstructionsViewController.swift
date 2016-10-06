@@ -14,7 +14,7 @@ import UIKit
 class InstructionsViewController: UIViewController {
 
    
-    @IBOutlet private weak var textView: UITextView!
+    @IBOutlet fileprivate weak var textView: UITextView!
    
     // Make sure the beginning of the text
     // is visible in the scroll pane

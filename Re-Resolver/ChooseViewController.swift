@@ -30,15 +30,15 @@ RecentItemDelegate {
     var choiceList: ChoiceList! // Current choices, as stored
                                 // in the ResolverMenuViewController
     
-    private var recentList = ChoiceList(choices: [String]())  // recent choices
+    fileprivate var recentList = ChoiceList(choices: [String]())  // recent choices
     
     // TODO: Refactor
     // This is oddness because we are passing strings
     // to controllers. Strings are pass by value
-    private var indexOfRowToEdit: Int?
+    fileprivate var indexOfRowToEdit: Int?
   
-    @IBOutlet private weak var chooseButton: UIButton!
-    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet fileprivate weak var chooseButton: UIButton!
+    @IBOutlet fileprivate weak var tableView: UITableView!
     @IBOutlet weak var addChoiceButton: UIBarButtonItem!
     
     
@@ -48,14 +48,14 @@ RecentItemDelegate {
         // prevent multiple items in navigation bar
         // from being pressed simultaneously, which
         // can corrupt the navigation stack
-           navigationController?.navigationBar.exclusiveTouch = true
+           navigationController?.navigationBar.isExclusiveTouch = true
         if let navigationBarViews = navigationController?.navigationBar.subviews  {
             for view in navigationBarViews  {
-                view.exclusiveTouch = true
+                view.isExclusiveTouch = true
             }
         }
         
-        chooseButton.exclusiveTouch = true
+        chooseButton.isExclusiveTouch = true
         
         // set the data file name for load/save recents functionality
         recentList.dataFileName = ResolverConstants.recentChoicesFileName
@@ -63,33 +63,33 @@ RecentItemDelegate {
     }
 
    
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         
         // it doesn't make sense to "Choose" when
         // we have entered any choices
         if choiceList.choices.count == 0 {
-            chooseButton.enabled = false
+            chooseButton.isEnabled = false
             chooseButton.alpha = 0.2
         }
         
-        addChoiceButton.enabled = true
+        addChoiceButton.isEnabled = true
     }
     
     // MARK: - Table view data source
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return choiceList.choices.count
     }
     
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("choiceCell", forIndexPath: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "choiceCell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = choiceList.choices[indexPath.row]
+        cell.textLabel?.text = choiceList.choices[(indexPath as NSIndexPath).row]
         return cell
     }
     
@@ -98,17 +98,17 @@ RecentItemDelegate {
     // Swipe to delete rows
     // This deletes a row from the current choices table,
     // but leaves the row in the recent table
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
             // Delete the row from the data source
-            let choicesIndex = indexPath.row
-            choiceList.choices.removeAtIndex(choicesIndex)
+            let choicesIndex = (indexPath as NSIndexPath).row
+            choiceList.choices.remove(at: choicesIndex)
             
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            tableView.deleteRows(at: [indexPath], with: .fade)
             
             // disable the button if all choices were deleted
             if choiceList.choices.count == 0  {
-                chooseButton.enabled = false
+                chooseButton.isEnabled = false
                 chooseButton.alpha = 0.2
             }
         }
@@ -118,13 +118,13 @@ RecentItemDelegate {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
         
         if segue.identifier == "ChoiceResults"  {  // Show results after clicking "Choose" button
-            let resultsController = segue.destinationViewController as! ChoiceResultsViewController
+            let resultsController = segue.destination as! ChoiceResultsViewController
             resultsController.choiceList = choiceList
             resultsController.displayResultImmediately = true
             
@@ -132,18 +132,18 @@ RecentItemDelegate {
             
             // disable add button so that it can't be
             // pressed in quick succession
-            addChoiceButton.enabled = false
+            addChoiceButton.isEnabled = false
             
-            let addChoiceController = segue.destinationViewController as! ChoiceDetailViewController
+            let addChoiceController = segue.destination as! ChoiceDetailViewController
          
             addChoiceController.delegate = self
         
         } else if segue.identifier == "EditChoice"  {  // edit current row when tapped
             
-            let editChoiceController = segue.destinationViewController as! ChoiceDetailViewController
-            if let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)  {
-                 editChoiceController.choiceToEdit = choiceList.choices[indexPath.row]
-                indexOfRowToEdit = indexPath.row
+            let editChoiceController = segue.destination as! ChoiceDetailViewController
+            if let indexPath = tableView.indexPath(for: sender as! UITableViewCell)  {
+                 editChoiceController.choiceToEdit = choiceList.choices[(indexPath as NSIndexPath).row]
+                indexOfRowToEdit = (indexPath as NSIndexPath).row
             }
           
             editChoiceController.delegate = self
@@ -153,14 +153,14 @@ RecentItemDelegate {
     
     // Add a new choice to the data model, the table,
     // and the recent list
-    func addChoiceToList(choice: String)  {
+    func addChoiceToList(_ choice: String)  {
         
         let numberOfChoicesBeforeAddition = choiceList.choices.count
         choiceList.choices.append(choice)
         
         // update current choices table
-        let indexPath = NSIndexPath(forRow: numberOfChoicesBeforeAddition, inSection: 0)
-        tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        let indexPath = IndexPath(row: numberOfChoicesBeforeAddition, section: 0)
+        tableView.insertRows(at: [indexPath], with: .automatic)
         
         // also update and save the recent list if necessary
         if !recentList.choices.contains(choice)  {
@@ -169,7 +169,7 @@ RecentItemDelegate {
         }
         
         // make sure the choose button is enabled, as we now have at least 1 item
-        chooseButton.enabled = true
+        chooseButton.isEnabled = true
         chooseButton.alpha = 1
     }
 
@@ -177,21 +177,21 @@ RecentItemDelegate {
     // MARK: - ChoiceDetailDelegate
     
     // Used when choice added on the "New choice" screen
-    func didFinishAddingChoice(choice: String) {
-        navigationController?.popViewControllerAnimated(true)
+    func didFinishAddingChoice(_ choice: String) {
+        navigationController?.popViewController(animated: true)
         addChoiceToList(choice)
     }
     
     // Used when choice edited on the "New choice" screen
     // TODO: Refactor - fix duplicate code to save to recent
     // list = plus other cleanup.
-    func didFinishEditingChoice(choice: String) {
-        navigationController?.popViewControllerAnimated(true)
+    func didFinishEditingChoice(_ choice: String) {
+        navigationController?.popViewController(animated: true)
     
-        let indexPath = NSIndexPath(forRow: indexOfRowToEdit!, inSection: 0)
-        if tableView.cellForRowAtIndexPath(indexPath) != nil  {
+        let indexPath = IndexPath(row: indexOfRowToEdit!, section: 0)
+        if tableView.cellForRow(at: indexPath) != nil  {
             choiceList.choices[indexOfRowToEdit!] = choice
-            tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            tableView.reloadRows(at: [indexPath], with: .automatic)
         }
         
         indexOfRowToEdit = nil
@@ -206,7 +206,7 @@ RecentItemDelegate {
     
     // MARK: RecentItemDelegate
     // Used when a choice is added from the "Recent" screen
-    func recentItemSelected(item: String)  {
+    func recentItemSelected(_ item: String)  {
         navigationController?.popToViewController(self, animated: true)
         addChoiceToList(item)
     }

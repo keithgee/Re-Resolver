@@ -62,14 +62,14 @@ class ChoiceList  {
     // code here adapted from:
     // iOS Apprentice, 4th edition - Matthjis Hollemans
     // The book is available from http://raywenderlich.com
-    private func documentsDirectory() -> String  {
-        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+    fileprivate func documentsDirectory() -> String  {
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         return paths[0]
     }
     
     
-    private func dataFilePath() -> String  {
-        return (documentsDirectory() as NSString).stringByAppendingPathComponent(dataFileName!)
+    fileprivate func dataFilePath() -> String  {
+        return (documentsDirectory() as NSString).appendingPathComponent(dataFileName!)
     }
     
     // Save choices to the dataFile, if set
@@ -80,10 +80,10 @@ class ChoiceList  {
         }
         
         let data = NSMutableData()
-        let archiver = NSKeyedArchiver(forWritingWithMutableData: data)
-        archiver.encodeObject(choices, forKey: "Choices")
+        let archiver = NSKeyedArchiver(forWritingWith: data)
+        archiver.encode(choices, forKey: "Choices")
         archiver.finishEncoding()
-        data.writeToFile(dataFilePath(), atomically: true)
+        data.write(toFile: dataFilePath(), atomically: true)
     }
     
     // Replace data in the choices array with data
@@ -98,10 +98,10 @@ class ChoiceList  {
         
         let path = dataFilePath()
         
-        if NSFileManager.defaultManager().fileExistsAtPath(path)  {
-            if let data = NSData(contentsOfFile: path)  {
-                let unarchiver = NSKeyedUnarchiver(forReadingWithData: data)
-                choices = unarchiver.decodeObjectForKey("Choices") as! [String]
+        if FileManager.default.fileExists(atPath: path)  {
+            if let data = try? Data(contentsOf: URL(fileURLWithPath: path))  {
+                let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
+                choices = unarchiver.decodeObject(forKey: "Choices") as! [String]
             }
         }
     }

@@ -21,7 +21,7 @@ import UIKit
 class ResolverMenuViewController: UIViewController {
 
     
-    let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
 
     
     @IBOutlet weak var decideButton: UIButton!
@@ -49,12 +49,12 @@ class ResolverMenuViewController: UIViewController {
         // set buttons so that only one at a time
         // will respond to touches
         
-        decideButton.exclusiveTouch = true
-        chooseButton.exclusiveTouch = true
-        askButton.exclusiveTouch = true
+        decideButton.isExclusiveTouch = true
+        chooseButton.isExclusiveTouch = true
+        askButton.isExclusiveTouch = true
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         navigationController?.setNavigationBarHidden(true, animated: false)
@@ -70,32 +70,32 @@ class ResolverMenuViewController: UIViewController {
    
     
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillAppear(true)
         
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
 
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "DecideSegue"  {
-            let choiceResultsController = segue.destinationViewController as! ChoiceResultsViewController
+            let choiceResultsController = segue.destination as! ChoiceResultsViewController
             choiceResultsController.menuTitle = "Decide"
             choiceResultsController.choiceList = ResolverConstants.decideChoices
             
         }  else if segue.identifier == "AskSegue"  {
-            let choiceResultsController = segue.destinationViewController as! ChoiceResultsViewController
+            let choiceResultsController = segue.destination as! ChoiceResultsViewController
             choiceResultsController.menuTitle = "Ask"
             choiceResultsController.choiceList = ResolverConstants.askChoices
         }
         else if segue.identifier == "ChooseSegue"  {
             
             // inject any saved choices into the table on the "Choose" screen
-            let chooseController = segue.destinationViewController as! ChooseViewController
+            let chooseController = segue.destination as! ChooseViewController
             chooseController.choiceList = choices
         }
         

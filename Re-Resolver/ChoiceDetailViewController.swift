@@ -15,13 +15,13 @@ import UIKit
 
 
 protocol ChoiceDetailDelegate: class  {
-    func didFinishAddingChoice(choice: String)
-    func didFinishEditingChoice(choice: String)
+    func didFinishAddingChoice(_ choice: String)
+    func didFinishEditingChoice(_ choice: String)
 }
 
 class ChoiceDetailViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet private weak var textField: UITextField!
+    @IBOutlet fileprivate weak var textField: UITextField!
     weak var delegate: ChoiceDetailDelegate?
     
     // This variable will have a value
@@ -44,17 +44,17 @@ class ChoiceDetailViewController: UIViewController, UITextFieldDelegate {
      
         if let navigationBarViews = navigationController?.navigationBar.subviews  {
             for view in navigationBarViews  {
-                view.exclusiveTouch = true
+                view.isExclusiveTouch = true
             }
         }
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         textField.becomeFirstResponder()
     }
     
 
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         if textField.text?.characters.count == 0  {
             return false
@@ -71,9 +71,9 @@ class ChoiceDetailViewController: UIViewController, UITextFieldDelegate {
    
       
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "RecentSegue"  {
-            let recentController = segue.destinationViewController as! RecentTableViewController
+            let recentController = segue.destination as! RecentTableViewController
             // our ChoiceDetailDelegate will also be the RecentItem delegate
             // for the RecentTableViewController
             //

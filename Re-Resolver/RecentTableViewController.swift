@@ -10,7 +10,7 @@ import UIKit
 
 // TODO: Consider replacing with unwind segue
 protocol RecentItemDelegate: class  {
-    func recentItemSelected(item: String)
+    func recentItemSelected(_ item: String)
 }
 
 class RecentTableViewController: UITableViewController {
@@ -35,40 +35,40 @@ class RecentTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
        
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return choiceList.choices.count
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("RecentCell", forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RecentCell", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = choiceList.choices[indexPath.row]
+        cell.textLabel?.text = choiceList.choices[(indexPath as NSIndexPath).row]
         return cell
     }
     
 
     // Handle taps on the rows by notifying the delegate of the text of the row
     // The delegate will also handle navigation
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        delegate?.recentItemSelected(choiceList.choices[indexPath.row])
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.recentItemSelected(choiceList.choices[(indexPath as NSIndexPath).row])
     }
     
     // Enable slide to delete on the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
             
             // Delete the row from the data source
-            choiceList.choices.removeAtIndex(indexPath.row)
+            choiceList.choices.remove(at: (indexPath as NSIndexPath).row)
             choiceList.save()
             
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     

@@ -24,25 +24,25 @@ import AudioToolbox
 // "Choice" feature.
 class ChoiceResultsViewController: UIViewController {
     
-    @IBOutlet private weak var choiceButton: UIButton!
+    @IBOutlet fileprivate weak var choiceButton: UIButton!
     var choiceList: ChoiceList!                 // list of options from which to pick
     var menuTitle: String?                 // title for navigation bar
     var displayResultImmediately = false   // used in Choice feature
     
-    @IBAction func choiceButtonPressed(button: UIButton) {
+    @IBAction func choiceButtonPressed(_ button: UIButton) {
         
         let choice = choiceList.choose()
-        button.setTitle(choice, forState: .Normal)
+        button.setTitle(choice, for: UIControlState())
         choiceButton.accessibilityLabel = choice
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
   
-        choiceButton.exclusiveTouch = true
+        choiceButton.isExclusiveTouch = true
         
         // center each line in the label, as in the original Resolver
-        choiceButton.titleLabel?.textAlignment = .Center
+        choiceButton.titleLabel?.textAlignment = .center
         
         if let title = menuTitle  {
             navigationItem.title = title
@@ -53,7 +53,7 @@ class ChoiceResultsViewController: UIViewController {
             // Check that there are choices before displaying one!
             if choiceList.choices.count > 0  {
                 let choice =  choiceList.choose()
-                choiceButton.setTitle(choice, forState: .Normal)
+                choiceButton.setTitle(choice, for: UIControlState())
                 choiceButton.accessibilityLabel = choice
             }
         }
@@ -63,7 +63,7 @@ class ChoiceResultsViewController: UIViewController {
     }
     
     // Let this controller respond to shake events
-    override func canBecomeFirstResponder() -> Bool {
+    override var canBecomeFirstResponder : Bool {
         return true
     }
     
@@ -71,15 +71,15 @@ class ChoiceResultsViewController: UIViewController {
     // When a shake is detected, pick an answer again,
     // animate the label change, and then make the phone vibrate when the
     // animation is finished
-    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         
-        if motion == .MotionShake  && choiceList.choices.count > 0  {
+        if motion == .motionShake  && choiceList.choices.count > 0  {
                 
                 // Added an animation to give feedback that the shake was recognized.
-                UIView.transitionWithView(choiceButton.titleLabel!, duration: 0.5, options: .TransitionFlipFromLeft,
+                UIView.transition(with: choiceButton.titleLabel!, duration: 0.5, options: .transitionFlipFromLeft,
                                           animations: {
                                             let choice = self.choiceList.choose()
-                                            self.choiceButton.setTitle(choice, forState: .Normal)
+                                            self.choiceButton.setTitle(choice, for: UIControlState())
                                             self.choiceButton.accessibilityLabel = choice
                                             
                                             // If VoiceOver is enabled, speak the new result
