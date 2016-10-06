@@ -178,7 +178,7 @@ RecentItemDelegate {
     
     // Used when choice added on the "New choice" screen
     func didFinishAddingChoice(_ choice: String) {
-        navigationController?.popViewController(animated: true)
+        _ = navigationController?.popViewController(animated: true)
         addChoiceToList(choice)
     }
     
@@ -186,7 +186,7 @@ RecentItemDelegate {
     // TODO: Refactor - fix duplicate code to save to recent
     // list = plus other cleanup.
     func didFinishEditingChoice(_ choice: String) {
-        navigationController?.popViewController(animated: true)
+        _ = navigationController?.popViewController(animated: true)
     
         let indexPath = IndexPath(row: indexOfRowToEdit!, section: 0)
         if tableView.cellForRow(at: indexPath) != nil  {
@@ -207,7 +207,7 @@ RecentItemDelegate {
     // MARK: RecentItemDelegate
     // Used when a choice is added from the "Recent" screen
     func recentItemSelected(_ item: String)  {
-        navigationController?.popToViewController(self, animated: true)
+        _ = navigationController?.popToViewController(self, animated: true)
         addChoiceToList(item)
     }
     
