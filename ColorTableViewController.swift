@@ -11,7 +11,7 @@ import UIKit
 class ColorTableViewController: UITableViewController {
 
     
-    let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
     
     @IBOutlet weak var darkCalmView: ResolverGradientView!
     @IBOutlet weak var crimsonView: ResolverGradientView!
@@ -23,8 +23,8 @@ class ColorTableViewController: UITableViewController {
     @IBOutlet weak var previewArea: ResolverGradientView!
     
     
-    @IBAction func donePressed(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func donePressed(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -43,12 +43,12 @@ class ColorTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 2
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if section == 0  {
             return 6
@@ -57,10 +57,10 @@ class ColorTableViewController: UITableViewController {
         }
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if indexPath.section == 0  {
-            switch indexPath.row {
+        if (indexPath as NSIndexPath).section == 0  {
+            switch (indexPath as NSIndexPath).row {
             case 0:
             previewArea.colorComponents = ResolverConstants.darkCalm
             case 1:
@@ -79,8 +79,8 @@ class ColorTableViewController: UITableViewController {
             
             appDelegate?.backgroundGradient = previewArea.colorComponents!
             previewArea.setNeedsDisplay()
-            NSUserDefaults.standardUserDefaults().setInteger(indexPath.row, forKey: "ColorPreference")
-            NSUserDefaults.standardUserDefaults().synchronize()
+            UserDefaults.standard.set((indexPath as NSIndexPath).row, forKey: "ColorPreference")
+            UserDefaults.standard.synchronize()
             
         }
     }
@@ -95,11 +95,11 @@ class ColorTableViewController: UITableViewController {
     }
     */
 
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        if indexPath.section == 1  {
+        if (indexPath as NSIndexPath).section == 1  {
             return 200
         }
-        return super.tableView(tableView, heightForRowAtIndexPath: indexPath)
+        return super.tableView(tableView, heightForRowAt: indexPath)
     }
    }

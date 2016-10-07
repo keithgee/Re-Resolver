@@ -23,12 +23,12 @@ import UIKit
 @IBDesignable
 class ResolverGradientView: UIView {
 
-    let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
     
     var colorComponents: [CGFloat]?
     
     
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
        
         if colorComponents == nil  {
             if let appDelegate = appDelegate {
@@ -40,21 +40,20 @@ class ResolverGradientView: UIView {
         let locations: [CGFloat] = [0, 1]
         
         let colorSpace = CGColorSpaceCreateDeviceRGB()
-        let gradient = CGGradientCreateWithColorComponents(colorSpace, colorComponents!, locations, 2)
+        let gradient = CGGradient(colorSpace: colorSpace, colorComponents: colorComponents!, locations: locations, count: 2)
         
         
         let context = UIGraphicsGetCurrentContext()
 
         // The gradient is diagonal, from dark in the top left corner
         // to lighter in the bottom right
-        let startPoint = CGPoint(x: CGRectGetMinX(bounds), y: CGRectGetMinY(bounds))
-        let endPoint = CGPoint(x: CGRectGetMaxX(bounds), y: CGRectGetMaxY(bounds))
+        let startPoint = CGPoint(x: bounds.minX, y: bounds.minY)
+        let endPoint = CGPoint(x: bounds.maxX, y: bounds.maxY)
         
-        CGContextDrawLinearGradient(context,
-                                    gradient,
-                                    startPoint,
-                                    endPoint,
-                                    .DrawsAfterEndLocation)
+        context?.drawLinearGradient(gradient!,
+                                    start: startPoint,
+                                    end: endPoint,
+                                    options: .drawsAfterEndLocation)
       
 
     }
