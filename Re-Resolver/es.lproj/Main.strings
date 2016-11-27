@@ -1,0 +1,128 @@
+
+/* Class = "UINavigationItem"; title = "Menu"; ObjectID = "1nq-mJ-tD6"; */
+"1nq-mJ-tD6.title" = "Menu";
+
+/* Class = "UIButton"; accessibilityLabel = "Ask"; ObjectID = "6IB-l3-GxU"; */
+"6IB-l3-GxU.accessibilityLabel" = "Ask";
+
+/* Class = "UIButton"; normalTitle = "Ask"; ObjectID = "6IB-l3-GxU"; */
+"6IB-l3-GxU.normalTitle" = "Ask";
+
+/* Class = "UILabel"; text = "Dark Calm"; ObjectID = "83Z-gs-Beu"; */
+"83Z-gs-Beu.text" = "Dark Calm"; /* gray black color scheme */
+
+/* Class = "UILabel"; text = "Choice"; ObjectID = "B28-1m-xvI"; */
+"B28-1m-xvI.text" = "Choice";
+
+/* Class = "UINavigationItem"; title = "New Choice"; ObjectID = "BCP-to-1Yf"; */
+"BCP-to-1Yf.title" = "New Choice";
+
+/* Class = "UITableViewSection"; headerTitle = "Preview"; ObjectID = "Cxr-ES-cWt"; */
+"Cxr-ES-cWt.headerTitle" = "Preview";
+
+/* Class = "UITableViewSection"; headerTitle = "Colors"; ObjectID = "EFK-qo-XxV"; */
+"EFK-qo-XxV.headerTitle" = "Colors";
+
+/* Class = "UIButton"; accessibilityLabel = "Choose"; ObjectID = "MrX-Fm-NZa"; */
+"MrX-Fm-NZa.accessibilityLabel" = "Choose";
+
+/* Class = "UIButton"; normalTitle = "Choose"; ObjectID = "MrX-Fm-NZa"; */
+"MrX-Fm-NZa.normalTitle" = "Choose";
+
+/* Class = "UITextField"; accessibilityHint = "Allows entry of a new choice."; ObjectID = "Oaw-Oo-BK3"; */
+"Oaw-Oo-BK3.accessibilityHint" = "Allows entry of a new choice.";
+
+/* Class = "UITextField"; accessibilityLabel = "Choice"; ObjectID = "Oaw-Oo-BK3"; */
+"Oaw-Oo-BK3.accessibilityLabel" = "Choice";
+
+/* Class = "UIButton"; accessibilityLabel = "Choose"; ObjectID = "RAG-wA-gZN"; */
+"RAG-wA-gZN.accessibilityLabel" = "Choose";
+
+/* Class = "UILabel"; text = "Crimson"; ObjectID = "Ras-JB-Zvm"; */
+"Ras-JB-Zvm.text" = "Crimson"; /* red color scheme */
+
+/* Class = "UILabel"; text = "Recent Choice"; ObjectID = "S4J-tx-nwW"; */
+"S4J-tx-nwW.text" = "Recent Choice";
+
+/* Class = "UINavigationItem"; title = "Instructions"; ObjectID = "VOi-TB-aOH"; */
+"VOi-TB-aOH.title" = "Instructions";
+
+/* Class = "UILabel"; text = "Passion"; ObjectID = "XzV-di-irM"; */
+"XzV-di-irM.text" = "Passion"; /* pink and purple red blue color scheme */
+
+/* Class = "UINavigationItem"; title = "Choose"; ObjectID = "ZSK-VR-PMP"; */
+"ZSK-VR-PMP.title" = "Choose";
+
+/* Class = "UIButton"; accessibilityHint = "Change the background colors"; ObjectID = "adu-UI-Tyy"; */
+"adu-UI-Tyy.accessibilityHint" = "Change the background colors";
+
+/* Class = "UIButton"; accessibilityLabel = "Set Colors"; ObjectID = "adu-UI-Tyy"; */
+"adu-UI-Tyy.accessibilityLabel" = "Set Colors";
+
+/* Class = "UINavigationItem"; title = "Select Color"; ObjectID = "g3b-WS-F03"; */
+"g3b-WS-F03.title" = "Select Color";
+
+/* Class = "UILabel"; text = "Clover"; ObjectID = "kdJ-qA-gT0"; */
+"kdJ-qA-gT0.text" = "Clover"; /* Green color scheme */
+
+/* Class = "UILabel"; text = "Ocean"; ObjectID = "lE7-Uf-UTG"; */
+"lE7-Uf-UTG.text" = "Ocean"; /* Blue green color scheme */
+
+/* Class = "UITextView"; text = "Re-Resolver Information\n\nRe-Resolver is a preservation attempt to revive Resolver - a once highly-rated decision making app created in Iceland - from oblivion by system updates. The code is open source and available at https://github.com/keithgee/Re-Resolver.\n\nAsk - Ask a question and then press the widget or shake the phone for a Yes/No answer.\n\nDecide - Ask a question and then press the widget or shake the phone to get a wordy answer that may be positive, negative, or ambiguous in tone.\n\nChoose - Use the + button to add options. Type a new option or use the \"Recent\" button to add a previous option. Press the \"Choose\" button and Re-Resolver will pick one of the options.\n\nDisclaimer\n\nRe-Resolver does not contain any decision-making intelligence; it relies on a process that is statistically similar to randomness. Do not use Re-Resolver for important decisions.\n\nAs with nearly all software, Re-Resolver contains bugs. Do not ever rely on technology for anything critical.
+
+Credits:
+
+The palette icon was found at http://megaicons.net/iconspack-691/24003/ and is used under a Creative Commons 3.0 Attribution license.
+
+Software Development:
+Keith Gilbertson 
+http://keithgilbertson.org
+
+Device Support and Testing:
+Amanda French
+http://amandafrench.net/
+
+Spanish Translation:
+Hilary Smith
+
+Thank you to the University Libraries at Virginia Tech for support of this project.
+
+Special thanks to the team at Fancy Pants Global!"; ObjectID = "lQA-dr-PZZ"; */
+"lQA-dr-PZZ.text" = "Re-Resolver Information\n\nRe-Resolver is a preservation attempt to revive Resolver - a once highly-rated decision making app created in Iceland - from oblivion by system updates. The code is open source and available at https://github.com/keithgee/Re-Resolver.\n\nAsk - Ask a question and then press the widget or shake the phone for a Yes/No answer.\n\nDecide - Ask a question and then press the widget or shake the phone to get a wordy answer that may be positive, negative, or ambiguous in tone.\n\nChoose - Use the + button to add options. Type a new option or use the \"Recent\" button to add a previous option. Press the \"Choose\" button and Re-Resolver will pick one of the options.\n\nDisclaimer\n\nRe-Resolver does not contain any decision-making intelligence; it relies on a process that is statistically similar to randomness. Do not use Re-Resolver for important decisions.\n\nAs with nearly all software, Re-Resolver contains bugs. Do not ever rely on technology for anything critical.
+
+Credits:
+
+The palette icon was found at http://megaicons.net/iconspack-691/24003/ and is used under a Creative Commons 3.0 Attribution license.
+
+Software Development:
+Keith Gilbertson 
+http://keithgilbertson.org
+
+Device Support and Testing:
+Amanda French
+http://amandafrench.net/
+
+Spanish Translation:
+Hilary Smith
+
+Thank you to the University Libraries at Virginia Tech for support of this project.
+
+Special thanks to the team at Fancy Pants Global!";
+
+/* Class = "UIBarButtonItem"; title = "Recent"; ObjectID = "mXe-NT-Xzj"; */
+"mXe-NT-Xzj.title" = "Recent";
+
+/* Class = "UIButton"; accessibilityLabel = "Decide"; ObjectID = "qHR-2a-E8z"; */
+"qHR-2a-E8z.accessibilityLabel" = "Decide";
+
+/* Class = "UIButton"; normalTitle = "Decide"; ObjectID = "qHR-2a-E8z"; */
+"qHR-2a-E8z.normalTitle" = "Decide";
+
+/* Class = "UILabel"; text = "Through Kate's Eyes"; ObjectID = "qbf-Lo-tvM"; */
+"qbf-Lo-tvM.text" = "Through Kate's Eyes"; /* This is an orange-red color scheme */
+
+/* Class = "UIButton"; accessibilityHint = "Displays a new decision when pressed."; ObjectID = "upK-TA-daT"; */
+"upK-TA-daT.accessibilityHint" = "Displays a new decision when pressed.";
+
+/* Class = "UIButton"; accessibilityLabel = "Results"; ObjectID = "upK-TA-daT"; */
+"upK-TA-daT.accessibilityLabel" = "Results";
