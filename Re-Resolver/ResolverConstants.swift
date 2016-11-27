@@ -19,33 +19,36 @@ struct ResolverConstants  {
     
     // MARK: lists of choices
     // For the "Decide" feature
-    static let decideChoices = ChoiceList(choices: ["Yes", "No"])
+    static let decideChoices = ChoiceList(choices:
+        [
+            NSLocalizedString("Yes", comment: "Affirmative on Decide Screen"),
+            NSLocalizedString("No", comment: "Negative on Decide Screen")])
     
     // For the "Ask" feature
     static let askChoices = ChoiceList(choices:
            [
             
             // Below are genuine Resolver answers
-            "According to my manual, Yes.",
-            "According to NASA the answer is no.",
-            "As far as I can tell, yes.",
-            "Can you ask later. My circuits are having a bad day.",
-            "Chance of positive outcome: 93.487%",
-            "I need to think about this a bit longer.",
-            "I wouldn't bet on it.",
-            "I'm not sure. Check again later.",
-            "It's looking good.",
-            "No Way Jose, your name is Jose, right?!?",
-            "Nope, Sorry!",
-            "Oh Yeah!",
-            "Only time will tell, so why should I bother?",
-            "Sure, when pigs fly.",
-            "Surely you can't be serious?",
-            "System Error. Please try again!",
-            "That's a negative.",
-            "What kind of a question is that?",
-            "Yes.",
-            "You can't expect me to answer that now.",
+            NSLocalizedString("According to my manual, Yes.", comment: "Answer on ask screen"),
+            NSLocalizedString("According to NASA the answer is no.", comment: "Answer on ask screen"),
+            NSLocalizedString("As far as I can tell, yes.", comment: "Answer on ask screen"),
+            NSLocalizedString("Can you ask later. My circuits are having a bad day.", comment: "Answer on ask screen"),
+            NSLocalizedString("Chance of positive outcome: 93.487%", comment: "Answer on ask screen"),
+            NSLocalizedString("I need to think about this a bit longer.", comment: "Answer on ask screen"),
+            NSLocalizedString("I wouldn't bet on it.", comment: "Answer on ask screen"),
+            NSLocalizedString("I'm not sure. Check again later.", comment: "Answer on ask screen"),
+            NSLocalizedString("It's looking good.", comment: "Answer on ask screen"),
+            NSLocalizedString("No Way Jose, your name is Jose, right?!?", comment: "Answer on ask screen"),
+            NSLocalizedString("Nope, Sorry!", comment: "Answer on ask screen"),
+            NSLocalizedString("Oh Yeah!", comment: "Answer on ask screen"),
+            NSLocalizedString("Only time will tell, so why should I bother?", comment: "Answer on ask screen"),
+            NSLocalizedString("Sure, when pigs fly.", comment: "Answer on ask screen"),
+            NSLocalizedString("Surely you can't be serious?", comment: "Answer on ask screen"),
+            NSLocalizedString("System Error. Please try again!", comment: "Answer on ask screen"),
+            NSLocalizedString("That's a negative.", comment: "Answer on ask screen"),
+            NSLocalizedString("What kind of a question is that?", comment: "Answer on ask screen"),
+            NSLocalizedString("Yes.", comment: "Answer on ask screen"),
+            NSLocalizedString("You can't expect me to answer that now.", comment: "Answer on ask screen"),
             
         ]
     )
