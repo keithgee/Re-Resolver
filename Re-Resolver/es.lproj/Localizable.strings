@@ -1,66 +1,67 @@
 /* Answer on ask screen */
-"According to my manual, Yes." = "According to my manual, Yes.";
+"According to my manual, Yes." = "Según mi manual, si.";
 
 /* Answer on ask screen */
-"According to NASA the answer is no." = "According to NASA the answer is no.";
+"According to NASA the answer is no." = "Según NASA la respuesta es no.";
 
 /* Answer on ask screen */
-"As far as I can tell, yes." = "As far as I can tell, yes.";
+"As far as I can tell, yes." = "Por lo que yo sé, si.";
 
 /* Answer on ask screen */
-"Can you ask later. My circuits are having a bad day." = "Can you ask later. My circuits are having a bad day.";
+"Can you ask later. My circuits are having a bad day." = "Se puede pedir más tarde? Mis circuito están teniendo un día mal.";
 
 /* Answer on ask screen */
-"Chance of positive outcome: 93.487%" = "Chance of positive outcome: 93.487%";
+"Chance of positive outcome: 93.487%" = "Probabilidad de un resultado positivo: 93.487%";
 
 /* Answer on ask screen */
-"I need to think about this a bit longer." = "I need to think about this a bit longer.";
+"I need to think about this a bit longer." = "Necesito pensar en esto un poco más tiempo.";
 
 /* Answer on ask screen */
-"I wouldn't bet on it." = "I wouldn't bet on it.";
+"I wouldn't bet on it." = "Yo no contaría con eso.";
 
 /* Answer on ask screen */
-"I'm not sure. Check again later." = "I'm not sure. Check again later.";
+"I'm not sure. Check again later." = "No estoy seguro. Compruebe de nuevo más tarde.";
 
 /* Answer on ask screen */
-"It's looking good." = "It's looking good.";
+"It's looking good." = "Se parece bien.";
 
 /* Negative on Decide Screen */
 "No" = "No";
 
 /* Answer on ask screen */
-"No Way Jose, your name is Jose, right?!?" = "No Way Jose, your name is Jose, right?!?";
+/* Check with Hilary again - she left a note that this does not make sense in Spanish */
+"No Way Jose, your name is Jose, right?!?" = "De ninguna manera, José, tu nombre es José verdad?";
 
 /* Answer on ask screen */
-"Nope, Sorry!" = "Nope, Sorry!";
+"Nope, Sorry!" = "No, lo siento.";
 
 /* Answer on ask screen */
-"Oh Yeah!" = "Oh Yeah!";
+"Oh Yeah!" = "Si!";
 
 /* Answer on ask screen */
-"Only time will tell, so why should I bother?" = "Only time will tell, so why should I bother?";
+"Only time will tell, so why should I bother?" = "Sólo el tiempo dirá,  así que ¿por qué debería molestarme?";
 
 /* Answer on ask screen */
-"Sure, when pigs fly." = "Sure, when pigs fly.";
+"Sure, when pigs fly." = "Claro, cuando cerdos pueden volar.";
 
 /* Answer on ask screen */
-"Surely you can't be serious?" = "Surely you can't be serious?";
+"Surely you can't be serious?" = "Verdaderamente no puedes ser serio.";
 
 /* Answer on ask screen */
-"System Error. Please try again!" = "System Error. Please try again!";
+"System Error. Please try again!" = "Error de sistema. Por favor, inténtelo de nuevo.";
 
 /* Answer on ask screen */
-"That's a negative." = "That's a negative.";
+"That's a negative." = "Eso es un negativo.";
 
 /* Answer on ask screen */
-"What kind of a question is that?" = "What kind of a question is that?";
+"What kind of a question is that?" = "¿Que tipo de pregunta es esa?";
 
 /* Affirmative on Decide Screen */
 "Yes" = "Sí";
 
 /* Answer on ask screen */
-"Yes." = "Yes.";
+"Yes." = "Sí.";
 
 /* Answer on ask screen */
-"You can't expect me to answer that now." = "You can't expect me to answer that now.";
+"You can't expect me to answer that now." = "No puedes esperar que voy a responder ahora.";
 
