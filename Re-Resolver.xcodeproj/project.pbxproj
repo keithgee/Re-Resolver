@@ -43,7 +43,7 @@
 		37C8A09F1CE9293F00AE3B1F /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		37C923921DEBA6DC00D09F64 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		37C923931DEBA6DC00D09F64 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		37C9239F1DEBA94B00D09F64 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = "Re-Resolver/es.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		37C9239F1DEBA94B00D09F64 /* es */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = es; path = "Re-Resolver/es.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
