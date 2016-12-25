@@ -84,12 +84,12 @@ class ResolverMenuViewController: UIViewController {
         
         if segue.identifier == "DecideSegue"  {
             let choiceResultsController = segue.destination as! ChoiceResultsViewController
-            choiceResultsController.menuTitle = "Decide"
+            choiceResultsController.menuTitle = NSLocalizedString("Decide", comment: "Name of Decide Menu Title")
             choiceResultsController.choiceList = ResolverConstants.decideChoices
             
         }  else if segue.identifier == "AskSegue"  {
             let choiceResultsController = segue.destination as! ChoiceResultsViewController
-            choiceResultsController.menuTitle = "Ask"
+            choiceResultsController.menuTitle = NSLocalizedString("Ask", comment: "Name of Ask Menu Title")
             choiceResultsController.choiceList = ResolverConstants.askChoices
         }
         else if segue.identifier == "ChooseSegue"  {
