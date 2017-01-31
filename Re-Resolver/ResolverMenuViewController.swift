@@ -52,6 +52,18 @@ class ResolverMenuViewController: UIViewController {
         decideButton.isExclusiveTouch = true
         chooseButton.isExclusiveTouch = true
         askButton.isExclusiveTouch = true
+        
+        // Adjust insets so that text on the custom 
+        // buttons appears centered. This step was
+        // required after i18n and applies only
+        // to languages other than English.
+        //
+        // The original image assets provided by Fancy Pants
+        // Global have English text saved as part of the image
+        
+        decideButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 20.0, 0)
+        chooseButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 20.0, 0)
+        askButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 20.0, 0)
     }
     
     override func viewWillAppear(_ animated: Bool) {
