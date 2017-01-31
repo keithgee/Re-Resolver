@@ -71,7 +71,7 @@ class ResolverMenuViewController: UIViewController {
     
     
     override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillDisappear(animated)
         
         navigationController?.setNavigationBarHidden(false, animated: false)
     }
