@@ -35,6 +35,9 @@
 /* Class = "UITextField"; accessibilityLabel = "Choice"; ObjectID = "Oaw-Oo-BK3"; */
 "Oaw-Oo-BK3.accessibilityLabel" = "Opción";
 
+/* Class = "UIButton"; normalTitle = "Choose"; ObjectID = "RAG-wA-gZN"; */
+"RAG-wA-gZN.normalTitle" = "Elige";
+
 /* Class = "UIButton"; accessibilityLabel = "Choose"; ObjectID = "RAG-wA-gZN"; */
 "RAG-wA-gZN.accessibilityLabel" = "Elige";
 
