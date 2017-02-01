@@ -81,7 +81,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="palette-icon"/>
                                 <connections>
-                                    <segue destination="cCD-GM-Rqg" kind="presentation" id="0qc-Jl-H2B"/>
+                                    <segue destination="cCD-GM-Rqg" kind="presentation" identifier="ColorSegue" id="0qc-Jl-H2B"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -127,6 +127,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ep0-b2-Qsf" customClass="ResolverGradientView" customModule="Re_Resolver" customModuleProvider="target">
+
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Calm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83Z-gs-Beu">
@@ -159,6 +160,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="33o-gh-UTQ" customClass="ResolverGradientView" customModule="Re_Resolver" customModuleProvider="target">
+
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crimson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ras-JB-Zvm">
@@ -255,6 +257,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0M-cf-ub2" customClass="ResolverGradientView" customModule="Re_Resolver" customModuleProvider="target">
+
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzV-di-irM">

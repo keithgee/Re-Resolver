@@ -23,6 +23,10 @@ class ResolverMenuViewController: UIViewController {
     
     let appDelegate = UIApplication.shared.delegate as? AppDelegate
 
+    // This is used to fix a bug that
+    // caused the Resolver logo to drop
+    // when showing the Select Color screen
+    var showingColorSelector = false
     
     @IBOutlet weak var decideButton: UIButton!
     @IBOutlet weak var chooseButton: UIButton!
@@ -102,9 +106,22 @@ class ResolverMenuViewController: UIViewController {
     
     
     override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillDisappear(animated)
         
-        navigationController?.setNavigationBarHidden(false, animated: false)
+        // when transitioning to another screen, 
+        // show the navigation bar, unless
+        // displaying the modal color selector.
+        // 
+        // Displaying navigation bar during the modal
+        // pop-up makes the Resolver logo drop down
+        // noticably.
+        if showingColorSelector == false  {
+            navigationController?.setNavigationBarHidden(false, animated: false)
+        }
+        
+        // reset this so that it can be used on the
+        // next screen transition
+        showingColorSelector = false
     }
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
@@ -128,6 +145,9 @@ class ResolverMenuViewController: UIViewController {
             // inject any saved choices into the table on the "Choose" screen
             let chooseController = segue.destination as! ChooseViewController
             chooseController.choiceList = choices
+        }
+        else if segue.identifier == "ColorSegue"  {
+            showingColorSelector = true
         }
         
         
