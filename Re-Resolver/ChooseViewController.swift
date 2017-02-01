@@ -34,7 +34,7 @@ RecentItemDelegate {
     
     // TODO: Refactor
     // This is oddness because we are passing strings
-    // to controllers. Strings are pass by value
+    // to controllers. Strings are pass-by-value
     fileprivate var indexOfRowToEdit: Int?
   
     @IBOutlet fileprivate weak var chooseButton: UIButton!
@@ -53,6 +53,19 @@ RecentItemDelegate {
             for view in navigationBarViews  {
                 view.isExclusiveTouch = true
             }
+        }
+        
+        // Adjust insets so that text on the custom
+        // button appears centered.
+        chooseButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 20.0, 0)
+        
+        // Use the original choose button image provided by
+        // Fancy Pants Global if the app is using English.
+        let preferredLocalization = Bundle.main.preferredLocalizations[0]
+        if preferredLocalization.hasPrefix("en")  {
+            chooseButton.setBackgroundImage(UIImage(named: "resolver_choose_button"), for: .normal)
+            chooseButton.setBackgroundImage(UIImage(named: "resolver_choose_button_highlight"), for: .highlighted)
+            chooseButton.setTitle("", for: .normal)
         }
         
         chooseButton.isExclusiveTouch = true

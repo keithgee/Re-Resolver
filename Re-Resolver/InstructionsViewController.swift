@@ -22,5 +22,15 @@ class InstructionsViewController: UIViewController {
         super.viewDidLayoutSubviews()
         textView.setContentOffset(CGPoint.zero, animated: false)
     }
+    
+    
+    // Manually load internationalized text for the
+    // textview. It is not automatically loaded from the
+    // storyboard strings file.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        textView.text =
+            NSLocalizedString("instructions_text", comment: "Text shown on the instructions page")
+    }
    
 }

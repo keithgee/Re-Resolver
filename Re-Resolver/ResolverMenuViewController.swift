@@ -56,6 +56,37 @@ class ResolverMenuViewController: UIViewController {
         decideButton.isExclusiveTouch = true
         chooseButton.isExclusiveTouch = true
         askButton.isExclusiveTouch = true
+        
+        // The original image assets provided by Fancy Pants
+        // Global have English text saved as part of the image.
+        // If the device is using English, use the original assets
+        // and blank the text labels.
+        let preferredLocalization = Bundle.main.preferredLocalizations[0]
+        if preferredLocalization.hasPrefix("en")  {
+            decideButton.setBackgroundImage(UIImage(named: "resolver_decide_button"), for: .normal)
+          decideButton.setBackgroundImage(UIImage(named:"resolver_decide_button_highlight"), for: .highlighted)
+            decideButton.setTitle("", for: .normal)
+            
+            chooseButton.setBackgroundImage(UIImage(named: "resolver_choose_button"), for: .normal)
+            chooseButton.setBackgroundImage(UIImage(named: "resolver_choose_button_highlight"), for: .highlighted)
+            chooseButton.setTitle("", for: .normal)
+            
+            askButton.setBackgroundImage(UIImage(named: "resolver_ask_button"), for: .normal)
+            askButton.setBackgroundImage(UIImage(named: "resolver_ask_button_highlight"), for: .highlighted)
+            askButton.setTitle("", for: .normal)
+
+        } else  { // a supported language other than English (currently, Spanish)
+            
+            // Adjust insets so that text on the custom
+            // buttons appears centered. This step was
+            // required after i18n and applies only
+            // to languages other than English.
+            //
+            decideButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 20.0, 0)
+            chooseButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 20.0, 0)
+            askButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 20.0, 0)
+        }
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -101,12 +132,12 @@ class ResolverMenuViewController: UIViewController {
         
         if segue.identifier == "DecideSegue"  {
             let choiceResultsController = segue.destination as! ChoiceResultsViewController
-            choiceResultsController.menuTitle = "Decide"
+            choiceResultsController.menuTitle = NSLocalizedString("Decide", comment: "Name of Decide Menu Title")
             choiceResultsController.choiceList = ResolverConstants.decideChoices
             
         }  else if segue.identifier == "AskSegue"  {
             let choiceResultsController = segue.destination as! ChoiceResultsViewController
-            choiceResultsController.menuTitle = "Ask"
+            choiceResultsController.menuTitle = NSLocalizedString("Ask", comment: "Name of Ask Menu Title")
             choiceResultsController.choiceList = ResolverConstants.askChoices
         }
         else if segue.identifier == "ChooseSegue"  {

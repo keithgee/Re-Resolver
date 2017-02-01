@@ -34,7 +34,7 @@ class ChoiceDetailViewController: UIViewController, UITextFieldDelegate {
         textField.delegate = self
         
         if let choice = choiceToEdit  {
-            title = "Edit Choice"
+            title = NSLocalizedString("Edit Choice", comment: "Title when user edits a choice already on the list")
             textField.text = choice
         }
         

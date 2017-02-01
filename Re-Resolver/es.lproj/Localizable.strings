@@ -1,0 +1,75 @@
+/* Answer on ask screen */
+"According to my manual, Yes." = "Según mi manual, si.";
+
+/* Answer on ask screen */
+"According to NASA the answer is no." = "Según NASA la respuesta es no.";
+
+/* Answer on ask screen */
+"As far as I can tell, yes." = "Por lo que yo sé, si.";
+
+/* Answer on ask screen */
+"Can you ask later. My circuits are having a bad day." = "Se puede pedir más tarde? Mis circuito están teniendo un día mal.";
+
+/* Answer on ask screen */
+"Chance of positive outcome: 93.487%" = "Probabilidad de un resultado positivo: 93.487%";
+
+/* Answer on ask screen */
+"I need to think about this a bit longer." = "Necesito pensar en esto un poco más tiempo.";
+
+/* Answer on ask screen */
+"I wouldn't bet on it." = "Yo no contaría con eso.";
+
+/* Answer on ask screen */
+"I'm not sure. Check again later." = "No estoy seguro. Compruebe de nuevo más tarde.";
+
+/* Answer on ask screen */
+"It's looking good." = "Se parece bien.";
+
+/* Negative on Decide Screen */
+"No" = "No";
+
+/* Answer on ask screen */
+/* Check with Hilary again - she left a note that this does not make sense in Spanish */
+"No Way Jose, your name is Jose, right?!?" = "De ninguna manera, José, tu nombre es José verdad?";
+
+/* Answer on ask screen */
+"Nope, Sorry!" = "No, lo siento.";
+
+/* Answer on ask screen */
+"Oh Yeah!" = "Si!";
+
+/* Answer on ask screen */
+"Only time will tell, so why should I bother?" = "Sólo el tiempo dirá,  así que ¿por qué debería molestarme?";
+
+/* Answer on ask screen */
+"Sure, when pigs fly." = "Claro, cuando cerdos pueden volar.";
+
+/* Answer on ask screen */
+"Surely you can't be serious?" = "Verdaderamente no puedes ser serio.";
+
+/* Answer on ask screen */
+"System Error. Please try again!" = "Error de sistema. Por favor, inténtelo de nuevo.";
+
+/* Answer on ask screen */
+"That's a negative." = "Eso es un negativo.";
+
+/* Answer on ask screen */
+"What kind of a question is that?" = "¿Que tipo de pregunta es esa?";
+
+/* Affirmative on Decide Screen */
+"Yes" = "Sí";
+
+/* Answer on ask screen */
+"Yes." = "Sí.";
+
+/* Answer on ask screen */
+"You can't expect me to answer that now." = "No puedes esperar que voy a responder ahora.";
+
+/* Instructions screen */
+"instructions_text" = "Re-Resolver Información\n\nRe-Resolver es un intento de preservación para recuperar Resolver – una aplicación de toma de decisiones creado en Islandia que fue una vez altamente calificado – de olvido total causado por actualizaciones de sistemas. El codigo es código abierto y disponible en https://github.com/keithgee/Re-Resolver.\n\nAsk - Haz una pregunta y después empujar el widget o agitar el celular por conseguir una respuesta de si/no.\n\nDecide - Haz una pregunta y después empujar el widget o agitar el celular por conseguir una respuesta mas verboso que puede ser positiva, negativa o ambigua.\n\nElige - Usa el botón + para añadir opciones. Escriba una nueva opción o usa el botón  \"Recent\" para añadir una opción antigua. Presiona el botón \"Elige\" Y Re-Resolver eligirá una de las opciones.\n\nAviso: Re-Resolver no tiene ninguna inteligencia de toma de decisiones, se basa en un proceso que es estadísticamente similar a la aleatoriedad. No usas Re-Resolver para tomar decisiones importantes. Como todos los softwares Re-Resolver contiene errores. Nunca usa tecnología para resolver cosas críticas.\n\nReconocimientos:\nEl icono de la palette se encontró en http://megaicons.net/iconspack-691/24003/ y es usado dentro de una licencia Creative Commons 3.0 Attribution.\n\nDesarrollo de software:\nKeith Gilbertson\nhttp://keithgilbertson.org\n\nApoyo y pruebas del aparato:\nAmanda French\nhttp://amandafrench.net/\n\nTraducción de Español\nHilary Smith\n\nGracias a las bibliotecas de la Universidad Virginia Tech por su apoyo de este proyecto.\n\nAgradecimiento especial al equipo de Fancy Pants Global!";
+
+/*  navigation item on ask screen */
+"Ask" = "Pregunta";
+
+/* text in navigation bar when editing a choice */
+"Edit Choice" = "Edita Opción";
