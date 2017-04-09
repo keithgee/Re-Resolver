@@ -62,13 +62,13 @@ class ChoiceList  {
     // code here adapted from:
     // iOS Apprentice, 4th edition - Matthjis Hollemans
     // The book is available from http://raywenderlich.com
-    fileprivate func documentsDirectory() -> String  {
+    private func documentsDirectory() -> String  {
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         return paths[0]
     }
     
     
-    fileprivate func dataFilePath() -> String  {
+    private func dataFilePath() -> String  {
         return (documentsDirectory() as NSString).appendingPathComponent(dataFileName!)
     }
     

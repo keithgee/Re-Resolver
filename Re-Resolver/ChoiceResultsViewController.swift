@@ -24,7 +24,7 @@ import AudioToolbox
 // "Choice" feature.
 class ChoiceResultsViewController: UIViewController {
     
-    @IBOutlet fileprivate weak var choiceButton: UIButton!
+    @IBOutlet private weak var choiceButton: UIButton!
     var choiceList: ChoiceList!                 // list of options from which to pick
     var menuTitle: String?                 // title for navigation bar
     var displayResultImmediately = false   // used in Choice feature

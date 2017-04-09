@@ -21,7 +21,7 @@ protocol ChoiceDetailDelegate: class  {
 
 class ChoiceDetailViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet fileprivate weak var textField: UITextField!
+    @IBOutlet private weak var textField: UITextField!
     weak var delegate: ChoiceDetailDelegate?
     
     // This variable will have a value

@@ -30,16 +30,16 @@ RecentItemDelegate {
     var choiceList: ChoiceList! // Current choices, as stored
                                 // in the ResolverMenuViewController
     
-    fileprivate var recentList = ChoiceList(choices: [String]())  // recent choices
+    private var recentList = ChoiceList(choices: [String]())  // recent choices
     
     // TODO: Refactor
     // This is oddness because we are passing strings
     // to controllers. Strings are pass-by-value
-    fileprivate var indexOfRowToEdit: Int?
+    private var indexOfRowToEdit: Int?
   
-    @IBOutlet fileprivate weak var chooseButton: UIButton!
-    @IBOutlet fileprivate weak var tableView: UITableView!
-    @IBOutlet weak var addChoiceButton: UIBarButtonItem!
+    @IBOutlet private weak var chooseButton: UIButton!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var addChoiceButton: UIBarButtonItem!
     
     
     override func viewDidLoad() {
