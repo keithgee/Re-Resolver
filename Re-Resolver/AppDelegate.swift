@@ -28,18 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UserDefaults.standard.register(defaults: dictionary)
         
         let colorPreference = UserDefaults.standard.integer(forKey: "ColorPreference")
-        switch colorPreference {
-        case 1:
-            backgroundGradient = ResolverConstants.crimson
-        case 2:
-            backgroundGradient = ResolverConstants.clover
-        case 3:
-            backgroundGradient = ResolverConstants.ocean
-        case 4:
-            backgroundGradient = ResolverConstants.passion
-        case 5:
-            backgroundGradient = ResolverConstants.bornstein
-        default:
+        if colorPreference < ResolverConstants.colorList.count  {
+            backgroundGradient = ResolverConstants.colorList[colorPreference]
+        } else {
             backgroundGradient = ResolverConstants.darkCalm
         }
         

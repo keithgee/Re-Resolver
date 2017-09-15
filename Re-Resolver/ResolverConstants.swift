@@ -59,30 +59,38 @@ struct ResolverConstants  {
     
     
     // MARK: Color schemes
+    
+    // 0
     static let darkCalm: [CGFloat] = [
         0.02, 0.02, 0.02, 1,   // almost black
         0.3, 0.3, 0.3, 1]   //  gray
 
+    // 1
     static let crimson: [CGFloat] =  [
          0.02, 0.0, 0.0, 1,
          0.3, 0.0, 0.0, 1]
     
+    // 2
     static let clover: [CGFloat] = [
         0.0, 0.02, 0.0, 1,
         0.0, 0.3, 0.0, 1]
     
+    // 3
     static let ocean: [CGFloat] = [
         0.0, 0.0, 0.3, 1,
         0.0, 0.4, 0.3, 1]
     
+    // 4
     static let passion: [CGFloat] = [
         0.8, 0.0, 0.0, 1,
         0.0, 0.0, 0.8, 1]
     
+    // 5
     // Through Kate's Eyes
     static let bornstein: [CGFloat] = [
         0.95, 0.10, 0.10, 1,
         0.96, 0.90, 0.46, 1]
     
     
+    static let colorList = [darkCalm, crimson, clover, ocean, passion, bornstein]
 }

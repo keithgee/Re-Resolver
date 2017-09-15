@@ -60,20 +60,11 @@ class ColorTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if (indexPath as NSIndexPath).section == 0  {
-            switch (indexPath as NSIndexPath).row {
-            case 0:
-            previewArea.colorComponents = ResolverConstants.darkCalm
-            case 1:
-                previewArea.colorComponents = ResolverConstants.crimson
-            case 2:
-                previewArea.colorComponents = ResolverConstants.clover
-            case 3:
-                previewArea.colorComponents = ResolverConstants.ocean
-            case 4:
-                previewArea.colorComponents = ResolverConstants.passion
-            case 5:
-                previewArea.colorComponents = ResolverConstants.bornstein
-            default:
+            let colorNumber = (indexPath as NSIndexPath).row
+            if colorNumber < ResolverConstants.colorList.count  {
+             previewArea.colorComponents = ResolverConstants.colorList[colorNumber]
+            }
+            else  {
                 previewArea.colorComponents = ResolverConstants.darkCalm
             }
             
