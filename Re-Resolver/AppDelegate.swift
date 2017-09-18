@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var backgroundGradient = ResolverConstants.darkCalm
+    var backgroundGradient = ResolverConstants.colorList[0].colorComponents
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -29,9 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let colorPreference = UserDefaults.standard.integer(forKey: "ColorPreference")
         if colorPreference < ResolverConstants.colorList.count  {
-            backgroundGradient = ResolverConstants.colorList[colorPreference]
+            backgroundGradient = ResolverConstants.colorList[colorPreference].colorComponents
         } else {
-            backgroundGradient = ResolverConstants.darkCalm
+            backgroundGradient = ResolverConstants.colorList[0].colorComponents
         }
         
         return true

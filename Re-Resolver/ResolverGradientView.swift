@@ -34,7 +34,7 @@ class ResolverGradientView: UIView {
             if let appDelegate = appDelegate {
                 colorComponents = appDelegate.backgroundGradient
             } else {
-                colorComponents = ResolverConstants.darkCalm
+                colorComponents = ResolverConstants.colorList[0].colorComponents
             }
         }
         let locations: [CGFloat] = [0, 1]
