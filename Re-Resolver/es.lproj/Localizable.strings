@@ -73,3 +73,16 @@
 
 /* text in navigation bar when editing a choice */
 "Edit Choice" = "Edita Opción";
+
+/* Colors */
+"Dark Calm" = "Calma Oscura"; /* gray black color scheme */
+
+"Crimson" = "Carmesí"; /* red color scheme */
+
+"Clover" = "Trébol"; /* Green color scheme */
+
+"Ocean" = "Mar"; /* Blue green color scheme */
+
+"Passion" = "Pasión"; /* pink and purple red blue color scheme */
+
+"Through Kate's Eyes" = "A través de los ojos de Kate"; /* orange-red color scheme */

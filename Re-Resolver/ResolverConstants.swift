@@ -53,36 +53,56 @@ struct ResolverConstants  {
         ]
     )
     
-    
+   
     // MARK: data file names
     static let recentChoicesFileName = "Recent.plist"
     
     
     // MARK: Color schemes
-    static let darkCalm: [CGFloat] = [
-        0.02, 0.02, 0.02, 1,   // almost black
-        0.3, 0.3, 0.3, 1]   //  gray
-
-    static let crimson: [CGFloat] =  [
-         0.02, 0.0, 0.0, 1,
-         0.3, 0.0, 0.0, 1]
     
-    static let clover: [CGFloat] = [
-        0.0, 0.02, 0.0, 1,
-        0.0, 0.3, 0.0, 1]
+    // each color has a name and a gradient
+    // To add a new color scheme, add the data to the colorList array
+    // and optionally, put a translation in Localizable.strings
+    struct ColorScheme  {
+        let colorName: String
+        let colorComponents: [CGFloat]
+    }
     
-    static let ocean: [CGFloat] = [
-        0.0, 0.0, 0.3, 1,
-        0.0, 0.4, 0.3, 1]
+    // TODO: Assign names to color scheme constants before adding to array.
+    // Would an enumeration be appropriate?
     
-    static let passion: [CGFloat] = [
-        0.8, 0.0, 0.0, 1,
-        0.0, 0.0, 0.8, 1]
-    
-    // Through Kate's Eyes
-    static let bornstein: [CGFloat] = [
-        0.95, 0.10, 0.10, 1,
-        0.96, 0.90, 0.46, 1]
-    
-    
+    // TODO: consider moving color schemes out of this file and into ResolverGradientView
+    static let colorList = [
+        ColorScheme(colorName: NSLocalizedString("Dark Calm", comment: "dark gray black scheme"),
+                    colorComponents:
+            [0.02, 0.02, 0.02, 1,   // almost black
+             0.3, 0.3, 0.3, 1]   //  gray)
+            ),
+        ColorScheme(colorName: NSLocalizedString("Crimson",comment: "red color scheme"),
+                    colorComponents:
+            [0.02, 0.0, 0.0, 1,
+              0.3, 0.0, 0.0, 1]
+        ),
+        ColorScheme(colorName: NSLocalizedString("Clover", comment: "green color scheme"),
+                    colorComponents:
+            [0.0, 0.02, 0.0, 1,
+             0.0, 0.3, 0.0, 1]
+        ),
+        ColorScheme(colorName: NSLocalizedString("Ocean", comment: "blue green color scheme"),
+                    colorComponents:
+            [0.0, 0.0, 0.3, 1,
+             0.0, 0.4, 0.3, 1]
+        ),
+        ColorScheme(colorName: NSLocalizedString("Passion", comment: "pink and purple red blue color scheme"),
+                    colorComponents:
+            [0.8, 0.0, 0.0, 1,
+             0.0, 0.0, 0.8, 1]
+        ),
+        ColorScheme(colorName: NSLocalizedString("Through Kate's Eyes", comment: "orange-red color scheme"),
+                    colorComponents:
+            [0.95, 0.10, 0.10, 1,
+             0.96, 0.90, 0.46, 1] // Bornstein's glasses
+        ),
+        
+    ]
 }
