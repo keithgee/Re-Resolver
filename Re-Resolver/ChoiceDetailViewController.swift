@@ -56,7 +56,7 @@ class ChoiceDetailViewController: UIViewController, UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        if textField.text?.characters.count == 0  {
+        guard textField.text?.isEmpty == false else {
             return false
         }
         
