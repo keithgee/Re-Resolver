@@ -23,6 +23,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let backImage = UIImage(named: "navbar_button")
         barButtonAppearance.setBackButtonBackgroundImage(backImage, for: UIControlState(), barMetrics: .default  )
         
+        // If this app is running on iOS 11 or higher,
+        // fix an apparent iOS bug where the "<" indicator
+        // is shown on custom back buttons in navigation bars
+        // This code may need to be updated if this is determined
+        // to be an iOS bug and it is fixed in later updates.
+        if #available (iOS 11.0, *)  {
+            self.hideNavBarDefaultBackIndicator()
+        }
+        
         // register defaults for background gradient
         let dictionary = ["ColorPreference": 0]
         UserDefaults.standard.register(defaults: dictionary)
@@ -37,6 +46,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+    // This is used only in iOS 11 and higher to work around
+    // a bug that displays the default "<" back indicator
+    // in navigation bars even when a custom button image is
+    // used.
+    func hideNavBarDefaultBackIndicator()  {
+        // hide default "<" image
+        let navBarAppearance = UINavigationBar.appearance()
+        navBarAppearance.backIndicatorImage = UIImage()
+        navBarAppearance.backIndicatorTransitionMaskImage = UIImage()
+        
+        // adjust text label on the custom back button so that it
+        // isn't smashed up to the left side of the display.
+        let buttonTitleAdjustment = UIOffsetMake(-20,0)
+        let barButtonAppearance = UIBarButtonItem.appearance()
+        barButtonAppearance.setBackButtonTitlePositionAdjustment(buttonTitleAdjustment, for: .default)
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
