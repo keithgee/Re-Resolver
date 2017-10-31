@@ -44,7 +44,6 @@
 		37C8A09D1CE8DC0000AE3B1F /* RecentTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentTableViewController.swift; sourceTree = "<group>"; };
 		37C8A09F1CE9293F00AE3B1F /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		37C923921DEBA6DC00D09F64 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
-		37C923931DEBA6DC00D09F64 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		37C9239F1DEBA94B00D09F64 /* es */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = es; path = "Re-Resolver/es.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		5FA547DD1E4131D300C71354 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "Re-Resolver/en.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -205,7 +204,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				376A883E1CE62D6A008C7659 /* Base */,
-				37C923931DEBA6DC00D09F64 /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
