@@ -103,8 +103,10 @@ struct ResolverConstants  {
             [0.95, 0.10, 0.10, 1,
              0.96, 0.90, 0.46, 1] // Bornstein's glasses
         ),
-        ColorScheme(colorName: NSLocalizedString("Midnight", comment: "Pure black for OLED displays"), colorComponents: [0.0, 0.0, 0.0, 1,
-            0.0, 0.0, 0.0, 1]    // This is a hack, as the theming system was designed for gradients
+        ColorScheme(colorName: NSLocalizedString("Midnight", comment: "Pure black for OLED displays"),
+                    colorComponents: 
+            [0.0, 0.0, 0.0, 1,
+             0.0, 0.0, 0.0, 1]    // This is a hack, as the theming system was designed for gradients
         ),
     ]
 }
