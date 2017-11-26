@@ -131,7 +131,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Name" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J4u-KG-ubj">
-                                            <rect key="frame" x="0.0" y="189" width="200" height="21"/>
+                                            <rect key="frame" x="8" y="189" width="184" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -316,7 +316,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Recent Choice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S4J-tx-nwW">
-                                            <rect key="frame" x="16" y="0.0" width="344" height="43.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -391,46 +391,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lQA-dr-PZZ">
-                                <rect key="frame" x="16" y="80" width="343" height="579"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <string key="text">Re-Resolver Information
-
-Re-Resolver is a preservation attempt to revive Resolver - a once highly-rated decision making app created in Iceland - from oblivion by system updates. The code is open source and available at https://github.com/keithgee/Re-Resolver.
-
-Ask - Ask a question and then press the widget or shake the phone for a Yes/No answer.
-
-Decide - Ask a question and then press the widget or shake the phone to get a wordy answer that may be positive, negative, or ambiguous in tone.
-
-Choose - Use the + button to add options. Type a new option or use the "Recent" button to add a previous option. Press the "Choose" button and Re-Resolver will pick one of the options.
-
-Disclaimer
-
-Re-Resolver does not contain any decision-making intelligence; it relies on a process that is statistically similar to randomness. Do not use Re-Resolver for important decisions.
-
-As with nearly all software, Re-Resolver contains bugs. Do not ever rely on technology for anything critical.  Credits:  The palette icon was found at http://megaicons.net/iconspack-691/24003/ and is used under a Creative Commons 3.0 Attribution license.  Software Development: Keith Gilbertson  http://keithgilbertson.org  Device Support and Testing: Amanda French http://amandafrench.net/  Spanish Translation: Hilary Smith  Thank you to the University Libraries at Virginia Tech for support of this project.  Special thanks to the team at Fancy Pants Global!</string>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                            </textView>
+                            <webView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwm-69-w3E">
+                                <rect key="frame" x="16" y="72" width="343" height="580"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="lQA-dr-PZZ" firstAttribute="trailing" secondItem="sC1-LV-2Q5" secondAttribute="trailingMargin" id="6BP-ID-ai8"/>
-                            <constraint firstItem="e3z-Lp-RxF" firstAttribute="top" secondItem="lQA-dr-PZZ" secondAttribute="bottom" constant="8" id="OHq-cR-CmI"/>
-                            <constraint firstItem="lQA-dr-PZZ" firstAttribute="top" secondItem="T9P-Ns-EH1" secondAttribute="bottom" constant="16" id="epf-41-ajn"/>
-                            <constraint firstItem="lQA-dr-PZZ" firstAttribute="leading" secondItem="sC1-LV-2Q5" secondAttribute="leadingMargin" id="qB9-IX-q9k"/>
+                            <constraint firstItem="gwm-69-w3E" firstAttribute="leading" secondItem="sC1-LV-2Q5" secondAttribute="leadingMargin" id="2r6-Md-jTY"/>
+                            <constraint firstItem="gwm-69-w3E" firstAttribute="top" secondItem="T9P-Ns-EH1" secondAttribute="bottom" constant="8" id="FNO-KA-VeA"/>
+                            <constraint firstItem="e3z-Lp-RxF" firstAttribute="top" secondItem="gwm-69-w3E" secondAttribute="bottom" constant="15" id="W0a-SJ-ciS"/>
+                            <constraint firstItem="gwm-69-w3E" firstAttribute="trailing" secondItem="sC1-LV-2Q5" secondAttribute="trailingMargin" id="ynS-R4-GcR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Instructions" id="VOi-TB-aOH"/>
                     <connections>
-                        <outlet property="textView" destination="lQA-dr-PZZ" id="A36-CL-vt1"/>
+                        <outlet property="webView" destination="gwm-69-w3E" id="SIx-UQ-0aI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cSb-2M-kvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-618" y="-2941"/>
+            <point key="canvasLocation" x="-618.39999999999998" y="-2941.0794602698652"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7NV-6R-Yd7">

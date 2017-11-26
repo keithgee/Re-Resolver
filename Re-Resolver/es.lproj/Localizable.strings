@@ -65,9 +65,6 @@
 /* Answer on ask screen */
 "You can't expect me to answer that now." = "No puedes esperar que voy a responder ahora.";
 
-/* Instructions screen */
-"instructions_text" = "Re-Resolver Información\n\nRe-Resolver es un intento de preservación para recuperar Resolver – una aplicación de toma de decisiones creado en Islandia que fue una vez altamente calificado – de olvido total causado por actualizaciones de sistemas. El codigo es código abierto y disponible en https://github.com/keithgee/Re-Resolver.\n\nAsk - Haz una pregunta y después empujar el widget o agitar el celular por conseguir una respuesta de si/no.\n\nDecide - Haz una pregunta y después empujar el widget o agitar el celular por conseguir una respuesta mas verboso que puede ser positiva, negativa o ambigua.\n\nElige - Usa el botón + para añadir opciones. Escriba una nueva opción o usa el botón  \"Recent\" para añadir una opción antigua. Presiona el botón \"Elige\" Y Re-Resolver eligirá una de las opciones.\n\nAviso: Re-Resolver no tiene ninguna inteligencia de toma de decisiones, se basa en un proceso que es estadísticamente similar a la aleatoriedad. No usas Re-Resolver para tomar decisiones importantes. Como todos los softwares Re-Resolver contiene errores. Nunca usa tecnología para resolver cosas críticas.\n\nReconocimientos:\nEl icono de la palette se encontró en http://megaicons.net/iconspack-691/24003/ y es usado dentro de una licencia Creative Commons 3.0 Attribution.\n\nDesarrollo de software:\nKeith Gilbertson\nhttp://keithgilbertson.org\n\nApoyo y pruebas del aparato:\nAmanda French\nhttp://amandafrench.net/\n\nTraducción de Español\nHilary Smith\n\nGracias a las bibliotecas de la Universidad Virginia Tech por su apoyo de este proyecto.\n\nAgradecimiento especial al equipo de Fancy Pants Global!";
-
 /*  navigation item on ask screen */
 "Ask" = "Pregunta";
 
