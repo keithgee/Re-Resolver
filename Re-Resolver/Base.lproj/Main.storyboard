@@ -391,23 +391,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwm-69-w3E">
-                                <rect key="frame" x="16" y="72" width="343" height="580"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <dataDetectorType key="dataDetectorTypes"/>
-                            </webView>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eN4-bF-vBV">
+                                <rect key="frame" x="16" y="72" width="343" height="587"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gwm-69-w3E" firstAttribute="leading" secondItem="sC1-LV-2Q5" secondAttribute="leadingMargin" id="2r6-Md-jTY"/>
-                            <constraint firstItem="gwm-69-w3E" firstAttribute="top" secondItem="T9P-Ns-EH1" secondAttribute="bottom" constant="8" id="FNO-KA-VeA"/>
-                            <constraint firstItem="e3z-Lp-RxF" firstAttribute="top" secondItem="gwm-69-w3E" secondAttribute="bottom" constant="15" id="W0a-SJ-ciS"/>
-                            <constraint firstItem="gwm-69-w3E" firstAttribute="trailing" secondItem="sC1-LV-2Q5" secondAttribute="trailingMargin" id="ynS-R4-GcR"/>
+                            <constraint firstItem="eN4-bF-vBV" firstAttribute="top" secondItem="T9P-Ns-EH1" secondAttribute="bottom" constant="8" id="NSL-oU-3X3"/>
+                            <constraint firstItem="eN4-bF-vBV" firstAttribute="leading" secondItem="sC1-LV-2Q5" secondAttribute="leadingMargin" id="NrX-Cs-XRA"/>
+                            <constraint firstItem="eN4-bF-vBV" firstAttribute="trailing" secondItem="sC1-LV-2Q5" secondAttribute="trailingMargin" id="bpx-je-87H"/>
+                            <constraint firstItem="e3z-Lp-RxF" firstAttribute="top" secondItem="eN4-bF-vBV" secondAttribute="bottom" constant="8" id="fIT-E8-YOx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Instructions" id="VOi-TB-aOH"/>
                     <connections>
-                        <outlet property="webView" destination="gwm-69-w3E" id="SIx-UQ-0aI"/>
+                        <outlet property="enclosingView" destination="eN4-bF-vBV" id="z9a-bX-oMX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cSb-2M-kvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
