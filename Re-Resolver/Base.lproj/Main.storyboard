@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="resolver_logo" translatesAutoresizingMaskIntoConstraints="NO" id="pAx-R3-NYc">
-                                <rect key="frame" x="27.5" y="72" width="320" height="81"/>
+                                <rect key="frame" x="27.5" y="124" width="320" height="81"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0ob-D8-BeR">
                                 <rect key="frame" x="27.5" y="194" width="320" height="279"/>
@@ -124,7 +124,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ColorCell" id="fab-3o-dWB" customClass="ColorCollectionViewCell" customModule="Re_Resolver" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="101.5" width="200" height="400"/>
+                                <rect key="frame" x="0.0" y="75.5" width="200" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="400"/>
@@ -156,7 +156,7 @@
                     </collectionView>
                     <navigationItem key="navigationItem" title="Select Color" id="s0F-bc-8BG">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="uGv-Sw-ZPf">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="donePressed:" destination="ByA-4I-H7s" id="i9U-he-2Bo"/>
                             </connections>
@@ -196,7 +196,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pbU-eN-Vzo">
-                                <rect key="frame" x="20" y="85" width="335" height="485"/>
+                                <rect key="frame" x="20" y="137" width="335" height="433"/>
                                 <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="choiceCell" textLabel="B28-1m-xvI" style="IBUITableViewCellStyleDefault" id="IEq-kZ-n1N">
@@ -349,7 +349,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oaw-Oo-BK3">
-                                <rect key="frame" x="20" y="164" width="335" height="30"/>
+                                <rect key="frame" x="20" y="216" width="335" height="30"/>
                                 <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" hint="Allows entry of a new choice." label="Choice"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -379,7 +379,7 @@
             </objects>
             <point key="canvasLocation" x="1662" y="-3766"/>
         </scene>
-        <!--Instructions-->
+        <!--Information-->
         <scene sceneID="gzb-d5-cwh">
             <objects>
                 <viewController id="cXY-o0-P0T" customClass="InstructionsViewController" customModule="Re_Resolver" customModuleProvider="target" sceneMemberID="viewController">
@@ -392,7 +392,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eN4-bF-vBV">
-                                <rect key="frame" x="16" y="72" width="343" height="587"/>
+                                <rect key="frame" x="16" y="124" width="343" height="535"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -404,7 +404,7 @@
                             <constraint firstItem="e3z-Lp-RxF" firstAttribute="top" secondItem="eN4-bF-vBV" secondAttribute="bottom" constant="8" id="fIT-E8-YOx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Instructions" id="VOi-TB-aOH"/>
+                    <navigationItem key="navigationItem" title="Information" id="VOi-TB-aOH"/>
                     <connections>
                         <outlet property="enclosingView" destination="eN4-bF-vBV" id="z9a-bX-oMX"/>
                     </connections>
@@ -418,8 +418,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nsd-RZ-qAF" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="x4s-t6-7Pm">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" largeTitles="YES" id="x4s-t6-7Pm">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -436,8 +436,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="klW-sn-yne" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5QJ-oa-UwI">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="5QJ-oa-UwI">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
