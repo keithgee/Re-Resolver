@@ -41,8 +41,8 @@
 /* Class = "UILabel"; text = "Recent Choice"; ObjectID = "S4J-tx-nwW"; */
 "S4J-tx-nwW.text" = "Elección Reciente";
 
-/* Class = "UINavigationItem"; title = "Instructions"; ObjectID = "VOi-TB-aOH"; */
-"VOi-TB-aOH.title" = "Instrucciones";
+/* Class = "UINavigationItem"; title = "Information"; ObjectID = "VOi-TB-aOH"; */
+"VOi-TB-aOH.title" = "Información";
 
 /* Class = "UINavigationItem"; title = "Choose"; ObjectID = "ZSK-VR-PMP"; */
 "ZSK-VR-PMP.title" = "Elige";
