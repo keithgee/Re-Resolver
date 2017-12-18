@@ -34,7 +34,7 @@
 		3713D2271CE66A8F006C4261 /* ChooseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
 		3713D2291CE675E9006C4261 /* ChoiceResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoiceResultsViewController.swift; sourceTree = "<group>"; };
 		3717DD571FCB5EAD001E4359 /* information_es.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = information_es.html; sourceTree = "<group>"; };
-		376A88311CE62D69008C7659 /* Re-Resolver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Re-Resolver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		376A88311CE62D69008C7659 /* ReResolver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReResolver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		376A88341CE62D6A008C7659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		376A88361CE62D6A008C7659 /* ResolverMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverMenuViewController.swift; sourceTree = "<group>"; };
 		376A88391CE62D6A008C7659 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		376A88321CE62D69008C7659 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				376A88311CE62D69008C7659 /* Re-Resolver.app */,
+				376A88311CE62D69008C7659 /* ReResolver.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,9 +115,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		376A88301CE62D69008C7659 /* Re-Resolver */ = {
+		376A88301CE62D69008C7659 /* ReResolver */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 376A88431CE62D6A008C7659 /* Build configuration list for PBXNativeTarget "Re-Resolver" */;
+			buildConfigurationList = 376A88431CE62D6A008C7659 /* Build configuration list for PBXNativeTarget "ReResolver" */;
 			buildPhases = (
 				376A882D1CE62D69008C7659 /* Sources */,
 				376A882E1CE62D69008C7659 /* Frameworks */,
@@ -127,9 +127,9 @@
 			);
 			dependencies = (
 			);
-			name = "Re-Resolver";
+			name = ReResolver;
 			productName = "Re-Resolver";
-			productReference = 376A88311CE62D69008C7659 /* Re-Resolver.app */;
+			productReference = 376A88311CE62D69008C7659 /* ReResolver.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -148,7 +148,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 376A882C1CE62D69008C7659 /* Build configuration list for PBXProject "Re-Resolver" */;
+			buildConfigurationList = 376A882C1CE62D69008C7659 /* Build configuration list for PBXProject "ReResolver" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -162,7 +162,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				376A88301CE62D69008C7659 /* Re-Resolver */,
+				376A88301CE62D69008C7659 /* ReResolver */,
 			);
 		};
 /* End PBXProject section */
@@ -342,7 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Re-Resolver/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.superclassconsulting.Re-Resolver";
+				PRODUCT_BUNDLE_IDENTIFIER = com.superclassconsulting.ReResolver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -355,7 +355,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Re-Resolver/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.superclassconsulting.Re-Resolver";
+				PRODUCT_BUNDLE_IDENTIFIER = com.superclassconsulting.ReResolver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -365,7 +365,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		376A882C1CE62D69008C7659 /* Build configuration list for PBXProject "Re-Resolver" */ = {
+		376A882C1CE62D69008C7659 /* Build configuration list for PBXProject "ReResolver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				376A88411CE62D6A008C7659 /* Debug */,
@@ -374,7 +374,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		376A88431CE62D6A008C7659 /* Build configuration list for PBXNativeTarget "Re-Resolver" */ = {
+		376A88431CE62D6A008C7659 /* Build configuration list for PBXNativeTarget "ReResolver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				376A88441CE62D6A008C7659 /* Debug */,
