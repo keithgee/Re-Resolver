@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import ReResolver
 
 // TODO: Some of these tests will fail if the test
 //       scheme is set to a language other than English.
@@ -23,8 +22,8 @@ class ReResolverUITests: XCTestCase {
         
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        
+        // UI tests must launch the application that they test. Doing this in setup will make sure it happens
+        // for each test method.
         // This seems to install the app fresh after each test. Not sure if that's what I want.
         // App will be in a known state, but this is slow.  --Keith
         app = XCUIApplication()
@@ -39,6 +38,7 @@ class ReResolverUITests: XCTestCase {
         super.tearDown()
     }
     
+    // Test the "Decide" functionality
     func testDecideScreen()  {
         
         app.buttons["Decide"].tap()
@@ -55,6 +55,7 @@ class ReResolverUITests: XCTestCase {
         
     }
     
+    // Test the "Ask" functionality
     func testAskScreen()  {
         
         app.buttons["Ask"].tap()
@@ -133,11 +134,13 @@ class ReResolverUITests: XCTestCase {
     }
     
     
-    
+    // MARK: Stubs.
+    // Test below this line tap a few things
+    // on their respective screens, but they don't verify functionality.
     func testInformationScreen()  {
         
         app.buttons["More Info"].tap()
-        // TODO: need to check that the instructions load!
+        // TODO: Check that the instructions load!
         app.navigationBars["Information"].buttons["Menu"].tap()
         
     }
