@@ -23,6 +23,13 @@ class RecentTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // support dynamic type
+        // label is also configured with 0 rows,
+        // body text style, word wrap, and automatically
+        // resize in interface builder
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 40.0
+        
         choiceList.dataFileName = ResolverConstants.recentChoicesFileName
         choiceList.load()
         
