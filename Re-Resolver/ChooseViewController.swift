@@ -55,6 +55,10 @@ RecentItemDelegate {
             }
         }
         
+        // allow rows to resize to accomodate multiple lines
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 40.0
+        
         // Adjust insets so that text on the custom
         // button appears centered.
         chooseButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 20.0, 0)
@@ -103,6 +107,7 @@ RecentItemDelegate {
 
         // Configure the cell...
         cell.textLabel?.text = choiceList.choices[(indexPath as NSIndexPath).row]
+        cell.textLabel?.textColor = .white
         return cell
     }
     
