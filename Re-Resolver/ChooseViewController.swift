@@ -108,6 +108,12 @@ RecentItemDelegate {
         // Configure the cell...
         cell.textLabel?.text = choiceList.choices[(indexPath as NSIndexPath).row]
         cell.textLabel?.textColor = .white
+        
+        // When the text size is changed with Dynamic Type
+        // while this screen is displayed, the text labels
+        // don't quite extend all the way to the end of the
+        // table view. This fixes/hides that issue.
+        cell.textLabel?.backgroundColor = .black
         return cell
     }
     
