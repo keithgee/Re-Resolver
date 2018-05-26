@@ -71,6 +71,20 @@ struct ResolverConstants  {
     // TODO: Assign names to color scheme constants before adding to array.
     // Would an enumeration be appropriate?
     
+    
+    // This particular color scheme is defined here because the colorList Array, below was
+    // becoming too complex for the compiler to evaluate quickly. Other color schemes are defined
+    // directly in the colorList array
+    static let prideColors = ColorScheme(colorName: NSLocalizedString("Proud Prism", comment: "Pride Flag Inspired"),
+                                         colorComponents:
+        [CGFloat(231.0 / 255.0), 0.0, 0.0, 1.0,
+         1.0, CGFloat(140.0 / 255.0), 0.0, 1.0,
+         1.0, CGFloat(239.0 / 255.0), 0.0, 1.0,
+         0.0, CGFloat(129.0 / 255.0), CGFloat(31.0 / 255.0), 1.0,
+         0.0, CGFloat(68.0 / 255.0), 1.0, 1.0,
+         CGFloat(118.0 / 255.0), 0.0, CGFloat(137.0 / 255.0), 1.0]
+    )
+    
     // TODO: consider moving color schemes out of this file and into ResolverGradientView
     static let colorList = [
         ColorScheme(colorName: NSLocalizedString("Dark Calm", comment: "dark gray black scheme"),
@@ -108,5 +122,6 @@ struct ResolverConstants  {
             [0.0, 0.0, 0.0, 1,
              0.0, 0.0, 0.0, 1]    // This is a hack, as the theming system was designed for gradients
         ),
+        prideColors
     ]
 }
