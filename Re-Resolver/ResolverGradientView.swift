@@ -37,10 +37,11 @@ class ResolverGradientView: UIView {
                 colorComponents = ResolverConstants.colorList[0].colorComponents
             }
         }
-        let locations: [CGFloat] = [0, 1]
         
         let colorSpace = CGColorSpaceCreateDeviceRGB()
-        let gradient = CGGradient(colorSpace: colorSpace, colorComponents: colorComponents!, locations: locations, count: 2)
+        // Each color is composed of four component values - red, green, blue, alpha - therefore the color count for the gradient is
+        // the number of components, divided by four
+        let gradient = CGGradient(colorSpace: colorSpace, colorComponents: colorComponents!, locations: nil, count: colorComponents!.count / 4)
         
         
         let context = UIGraphicsGetCurrentContext()
