@@ -53,6 +53,10 @@ class InstructionsViewController: UIViewController, WKNavigationDelegate {
         if let url = Bundle.main.url(forResource: "information_" + languageCode, withExtension: "html")  {
             webView.loadFileURL(url, allowingReadAccessTo: url)
         }
+        
+        // listen for dynamic type text size changes
+        NotificationCenter.default.addObserver(forName: NSNotification.Name.UIContentSizeCategoryDidChange,
+             object: nil, queue: nil, using: {_ in self.webView.reload()})
     }
 
     // Overridden to set the webView to fill
@@ -80,5 +84,10 @@ class InstructionsViewController: UIViewController, WKNavigationDelegate {
         } else  {
             decisionHandler(.allow)
         }
+    }
+    
+    deinit {
+        // tell the notification center that we won't pay attention to text size changes anymore
+        NotificationCenter.default.removeObserver(self, name: .UIContentSizeCategoryDidChange, object: nil)
     }
 }

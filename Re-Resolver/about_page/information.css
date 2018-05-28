@@ -1,0 +1,24 @@
+body  {
+    color: white;
+    font: -apple-system-body;
+}
+
+a  {
+    color: white;
+    font-weight: bold;
+}
+
+table, th, td {
+    border: 1px solid white
+}
+
+th  {
+    padding: 5px;
+    text-align: left;
+}
+
+td  {
+    padding: 5px;
+    font-variant: small-caps;
+}
+
