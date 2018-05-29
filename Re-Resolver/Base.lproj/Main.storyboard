@@ -348,8 +348,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oaw-Oo-BK3">
-                                <rect key="frame" x="20" y="164" width="335" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oaw-Oo-BK3">
+                                <rect key="frame" x="20" y="144" width="335" height="26"/>
                                 <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" hint="Allows entry of a new choice." label="Choice"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -361,7 +361,7 @@
                         <constraints>
                             <constraint firstItem="Oaw-Oo-BK3" firstAttribute="leading" secondItem="SHF-iJ-MrO" secondAttribute="leading" constant="20" id="3gC-IA-EnO"/>
                             <constraint firstAttribute="trailing" secondItem="Oaw-Oo-BK3" secondAttribute="trailing" constant="20" id="50D-ka-yjz"/>
-                            <constraint firstItem="Oaw-Oo-BK3" firstAttribute="top" secondItem="2gc-Zh-HKm" secondAttribute="bottom" constant="100" id="g67-U1-dCa"/>
+                            <constraint firstItem="Oaw-Oo-BK3" firstAttribute="top" secondItem="2gc-Zh-HKm" secondAttribute="bottom" constant="80" id="g67-U1-dCa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Choice" largeTitleDisplayMode="never" id="BCP-to-1Yf">
