@@ -55,7 +55,7 @@ class InstructionsViewController: UIViewController, WKNavigationDelegate {
         }
         
         // listen for dynamic type text size changes
-        NotificationCenter.default.addObserver(forName: NSNotification.Name.UIContentSizeCategoryDidChange,
+        NotificationCenter.default.addObserver(forName: UIContentSizeCategory.didChangeNotification,
              object: nil, queue: nil, using: {_ in self.webView.reload()})
     }
 
@@ -78,8 +78,10 @@ class InstructionsViewController: UIViewController, WKNavigationDelegate {
     //   link in the initial test that used UIWebView instead of WKWebView.
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         
+        // TODO: KRG 2018-09-14 check use of helper dictionary
+        // conversion function
         if navigationAction.navigationType == .linkActivated  {
-            UIApplication.shared.open(navigationAction.request.url!, options: [:], completionHandler: nil)
+            UIApplication.shared.open(navigationAction.request.url!, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
             decisionHandler(.cancel)
         } else  {
             decisionHandler(.allow)
@@ -88,6 +90,13 @@ class InstructionsViewController: UIViewController, WKNavigationDelegate {
     
     deinit {
         // tell the notification center that we won't pay attention to text size changes anymore
-        NotificationCenter.default.removeObserver(self, name: .UIContentSizeCategoryDidChange, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIContentSizeCategory.didChangeNotification, object: nil)
     }
+}
+
+// TODO: KRG 2018-09-14 check need for this function,
+// and its use above
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }

@@ -56,12 +56,12 @@ RecentItemDelegate {
         }
         
         // allow rows to resize to accomodate multiple lines
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 40.0
         
         // Adjust insets so that text on the custom
         // button appears centered.
-        chooseButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 20.0, 0)
+        chooseButton.titleEdgeInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: 20.0, right: 0)
         
         // Use the original choose button image provided by
         // Fancy Pants Global if the app is using English.
@@ -116,7 +116,7 @@ RecentItemDelegate {
     // Swipe to delete rows
     // This deletes a row from the current choices table,
     // but leaves the row in the recent table
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
             let choicesIndex = (indexPath as NSIndexPath).row

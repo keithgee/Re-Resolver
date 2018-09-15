@@ -27,7 +27,7 @@ class RecentTableViewController: UITableViewController {
         // label is also configured with 0 rows,
         // body text style, word wrap, and automatically
         // resize in interface builder
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 40.0
         
         choiceList.dataFileName = ResolverConstants.recentChoicesFileName
@@ -68,7 +68,7 @@ class RecentTableViewController: UITableViewController {
     }
     
     // Enable slide to delete on the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             
             // Delete the row from the data source

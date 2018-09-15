@@ -82,9 +82,9 @@ class ResolverMenuViewController: UIViewController {
             // required after i18n and applies only
             // to languages other than English.
             //
-            decideButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 20.0, 0)
-            chooseButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 20.0, 0)
-            askButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 20.0, 0)
+            decideButton.titleEdgeInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: 20.0, right: 0)
+            chooseButton.titleEdgeInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: 20.0, right: 0)
+            askButton.titleEdgeInsets = UIEdgeInsets.init(top: 0, left: 0, bottom: 20.0, right: 0)
         }
        
     }
