@@ -32,7 +32,7 @@ class ChoiceResultsViewController: UIViewController {
     @IBAction func choiceButtonPressed(_ button: UIButton) {
         
         let choice = choiceList.choose()
-        button.setTitle(choice, for: UIControlState())
+        button.setTitle(choice, for: UIControl.State())
         choiceButton.accessibilityLabel = choice
     }
     
@@ -53,7 +53,7 @@ class ChoiceResultsViewController: UIViewController {
             // Check that there are choices before displaying one!
             if choiceList.choices.count > 0  {
                 let choice =  choiceList.choose()
-                choiceButton.setTitle(choice, for: UIControlState())
+                choiceButton.setTitle(choice, for: UIControl.State())
                 choiceButton.accessibilityLabel = choice
             }
         }
@@ -71,7 +71,7 @@ class ChoiceResultsViewController: UIViewController {
     // When a shake is detected, pick an answer again,
     // animate the label change, and then make the phone vibrate when the
     // animation is finished
-    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         
         if motion == .motionShake  && choiceList.choices.count > 0  {
                 
@@ -79,11 +79,11 @@ class ChoiceResultsViewController: UIViewController {
                 UIView.transition(with: choiceButton.titleLabel!, duration: 0.5, options: .transitionFlipFromLeft,
                                           animations: {
                                             let choice = self.choiceList.choose()
-                                            self.choiceButton.setTitle(choice, for: UIControlState())
+                                            self.choiceButton.setTitle(choice, for: UIControl.State())
                                             self.choiceButton.accessibilityLabel = choice
                                             
                                             // If VoiceOver is enabled, speak the new result
-                                            UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, choice)
+                                            UIAccessibility.post(notification: UIAccessibility.Notification.announcement, argument: choice)
                     }, completion: { animationWasSuccessful in
                         if animationWasSuccessful {
                             AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)

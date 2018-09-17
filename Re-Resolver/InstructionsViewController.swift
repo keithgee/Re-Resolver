@@ -55,7 +55,7 @@ class InstructionsViewController: UIViewController, WKNavigationDelegate {
         }
         
         // listen for dynamic type text size changes
-        NotificationCenter.default.addObserver(forName: NSNotification.Name.UIContentSizeCategoryDidChange,
+        NotificationCenter.default.addObserver(forName: UIContentSizeCategory.didChangeNotification,
              object: nil, queue: nil, using: {_ in self.webView.reload()})
     }
 
@@ -79,7 +79,7 @@ class InstructionsViewController: UIViewController, WKNavigationDelegate {
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         
         if navigationAction.navigationType == .linkActivated  {
-            UIApplication.shared.open(navigationAction.request.url!, options: [:], completionHandler: nil)
+            UIApplication.shared.open(navigationAction.request.url!)
             decisionHandler(.cancel)
         } else  {
             decisionHandler(.allow)
@@ -88,6 +88,6 @@ class InstructionsViewController: UIViewController, WKNavigationDelegate {
     
     deinit {
         // tell the notification center that we won't pay attention to text size changes anymore
-        NotificationCenter.default.removeObserver(self, name: .UIContentSizeCategoryDidChange, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIContentSizeCategory.didChangeNotification, object: nil)
     }
 }
