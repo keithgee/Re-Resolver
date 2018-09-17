@@ -78,10 +78,8 @@ class InstructionsViewController: UIViewController, WKNavigationDelegate {
     //   link in the initial test that used UIWebView instead of WKWebView.
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         
-        // TODO: KRG 2018-09-14 check use of helper dictionary
-        // conversion function
         if navigationAction.navigationType == .linkActivated  {
-            UIApplication.shared.open(navigationAction.request.url!, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
+            UIApplication.shared.open(navigationAction.request.url!)
             decisionHandler(.cancel)
         } else  {
             decisionHandler(.allow)
@@ -92,11 +90,4 @@ class InstructionsViewController: UIViewController, WKNavigationDelegate {
         // tell the notification center that we won't pay attention to text size changes anymore
         NotificationCenter.default.removeObserver(self, name: UIContentSizeCategory.didChangeNotification, object: nil)
     }
-}
-
-// TODO: KRG 2018-09-14 check need for this function,
-// and its use above
-// Helper function inserted by Swift 4.2 migrator.
-fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
-	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }
