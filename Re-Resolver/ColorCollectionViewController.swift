@@ -16,9 +16,6 @@ private let reuseIdentifier = "ColorCell"
 // It displays the color schemes in a collection view, using the
 // ColorCollectionViewCell class.
 //
-//
-// TODO: Make currently configured color selected when screen launches
-//
 // TODO: Understand cell lifecycle to understand precisely which code is needed
 //       to handle selection, deselection, and redrawing of cell views
 class ColorCollectionViewController: UICollectionViewController {
@@ -33,6 +30,8 @@ class ColorCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
         
         collectionView!.backgroundView = gradientBackground
+        adjustColorCellSize();
+
         
     }
 
@@ -125,6 +124,39 @@ class ColorCollectionViewController: UICollectionViewController {
         // I suspect I am handling selection state/ selected appearance incorrectly.
         //collectionView.reloadData()
         collectionView.reloadItems(at: [indexPath])
+    }
+    
+    // This sets an appropriate size for color preview cells based on the
+    // screen size of the device.
+    // The height of the cells is set to half of the screen height.
+    // The width is set so that the color preview cell appears proportionally
+    // similar to the shape of the screen on the device.
+    //
+    // This configuration allows for a collection view of one row, with
+    // portions of at least two color cells displaying on the screen at once.
+    // This will be a cue to users that this screen is to be swiped
+    // horizontally.
+    // Prior to this change, multiple rows were appearing on simulations
+    // of the 6.1 and 6.5 inch screens released in 2018, perhaps tempting
+    // innefective up/down swipes.
+    //
+    // Still problematic here:
+    // If the user has the Dynamic Type settings on a very large text size,
+    // the names of the colors spill over onto the next line, with breaks
+    // in the middle of words. It looks bad.
+    private func adjustColorCellSize()  {
+        // The Layout type for this collection view has already been set to flowLayout in the storyboard
+        if let flowLayout = collectionView!.collectionViewLayout as? UICollectionViewFlowLayout  {
+            // get device dimensions and proportion
+            let screenHeight = UIScreen.main.bounds.height
+            let screenWidth = UIScreen.main.bounds.width
+            let screenRatio = screenHeight / screenWidth
+            
+            // set cell dimensions accordingly
+            let cellHeight = screenHeight / 2
+            let cellWidth = cellHeight / screenRatio
+            flowLayout.itemSize = CGSize(width: cellWidth, height: cellHeight)
+        }
     }
 
 }
