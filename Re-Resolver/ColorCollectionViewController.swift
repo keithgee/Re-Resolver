@@ -128,9 +128,9 @@ class ColorCollectionViewController: UICollectionViewController {
     
     // This sets an appropriate size for color preview cells based on the
     // screen size of the device.
-    // The height of the cells is set to half of the screen height.
-    // The width is set so that the color preview cell appears proportionally
-    // similar to the shape of the screen on the device.
+    // The height and width of the cells are scaled proportionally
+    // so that the cells have an aspect ratio similar to the
+    // entire screen.
     //
     // This configuration allows for a collection view of one row, with
     // portions of at least two color cells displaying on the screen at once.
@@ -138,7 +138,7 @@ class ColorCollectionViewController: UICollectionViewController {
     // horizontally.
     // Prior to this change, multiple rows were appearing on simulations
     // of the 6.1 and 6.5 inch screens released in 2018, perhaps tempting
-    // innefective up/down swipes.
+    // ineffective up/down swipes.
     //
     // Still problematic here:
     // If the user has the Dynamic Type settings on a very large text size,
@@ -147,14 +147,14 @@ class ColorCollectionViewController: UICollectionViewController {
     private func adjustColorCellSize()  {
         // The Layout type for this collection view has already been set to flowLayout in the storyboard
         if let flowLayout = collectionView!.collectionViewLayout as? UICollectionViewFlowLayout  {
-            // get device dimensions and proportion
+            // get device dimensions
             let screenHeight = UIScreen.main.bounds.height
             let screenWidth = UIScreen.main.bounds.width
-            let screenRatio = screenHeight / screenWidth
             
             // set cell dimensions accordingly
-            let cellHeight = screenHeight / 2
-            let cellWidth = cellHeight / screenRatio
+            let scaleFactor = CGFloat(0.618) // approximation of golden ratio, inverted
+            let cellHeight = screenHeight * scaleFactor
+            let cellWidth = screenWidth * scaleFactor
             flowLayout.itemSize = CGSize(width: cellWidth, height: cellHeight)
         }
     }
