@@ -105,7 +105,6 @@ class ColorCollectionViewController: UICollectionViewController {
           
             // store color scheme as user preference
             UserDefaults.standard.set((indexPath as NSIndexPath).row, forKey: "ColorPreference")
-            UserDefaults.standard.synchronize()
         }
     }
     
@@ -116,13 +115,12 @@ class ColorCollectionViewController: UICollectionViewController {
         // This is a workaround for when a selected cell is scrolled just
         // slightly off screen and remains in memory while another cell is selected.
         //
-        // When the originally cell appears on screen again, it looks to be in the selected state
+        // When the original cell appears on screen again, it looks to be in the selected state
         // with the thick border even though it has been deselected.
         //
         // This hack forces the cell to reload so the appearance will be different
         // when it appears on-screen again.
         // I suspect I am handling selection state/ selected appearance incorrectly.
-        //collectionView.reloadData()
         collectionView.reloadItems(at: [indexPath])
     }
     
