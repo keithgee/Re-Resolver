@@ -276,10 +276,9 @@
 			};
 			buildConfigurationList = 376A882C1CE62D69008C7659 /* Build configuration list for PBXProject "ReResolver" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 				es,
