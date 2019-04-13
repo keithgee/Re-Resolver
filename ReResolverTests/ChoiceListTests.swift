@@ -11,14 +11,6 @@ import XCTest
 
 class ChoiceListTests: XCTestCase {
 
-    
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
 
     func testChooseFromEmptyList() {
         // Making a selection from an empty ChoiceList should return
@@ -63,18 +55,10 @@ class ChoiceListTests: XCTestCase {
         XCTAssertNotEqual(firstChoice, choice, "Selecting from two options 100 times picked the same option each time")
     }
     
-    
     // TODO: check that the distribution
     // from a large number of selections is approximately equal
 
     // TODO: Test file reads and writes
 
-    // TODO: get baseline performance for selection
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
 
 }
