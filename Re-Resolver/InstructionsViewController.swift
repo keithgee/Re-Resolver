@@ -24,7 +24,17 @@ class InstructionsViewController: UIViewController, WKNavigationDelegate {
     // while the main component of the scene, the WKWebView,
     // is added as a subview and sized to fit in viewDIdLayoutSubviews.
     @IBOutlet weak var enclosingView: UIView!
-    let webView = WKWebView()
+    let webView: WKWebView =  {
+        let wv = WKWebView()
+        wv.configuration.preferences.javaScriptEnabled = false
+        // webview is clear to show background gradient
+        wv.backgroundColor = UIColor.clear
+        wv.isOpaque = false
+        
+        // webview scroll indicator is white, which shows on all current themes
+        wv.scrollView.indicatorStyle = .white
+        return wv
+    }()
     
     // Create and configure the WKWebView and load localized help
     // text.
@@ -35,10 +45,6 @@ class InstructionsViewController: UIViewController, WKNavigationDelegate {
         // I wanted the enclosingView to be visible in Interface Builder.
         enclosingView.backgroundColor = UIColor.clear
     
-        // Configure the webView
-        webView.configuration.preferences.javaScriptEnabled = false
-        webView.backgroundColor = UIColor.clear
-        webView.isOpaque = false
         enclosingView.addSubview(webView)
         webView.navigationDelegate = self
         
