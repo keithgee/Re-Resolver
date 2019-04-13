@@ -16,6 +16,11 @@ This app may also build with Swift 4.2, but this configuration will not be maint
 You may also obtain a recent version of the app 
 [from the App Store](https://itunes.apple.com/us/app/reresolver/id1137642671?mt=8).
 
+#### Build Status
+[![CircleCI](https://circleci.com/gh/keithgee/Re-Resolver.svg?style=svg)](https://circleci.com/gh/keithgee/Re-Resolver)
+
+Continuous integration testing infrastructure and tools have been generously provided by [CircleCI](https://circleci.com/).
+
 ### Hardware requirements
 
 - iPhone 5 or newer with any version of iOS 10 through iOS 12 (iOS 9 is no longer supported)
@@ -30,3 +35,8 @@ Re-Resolver does not contain any decision-making intelligence; it relies on a pr
 
 As with nearly all software, Re-Resolver contains bugs. Do not ever rely on technology 
 for anything critical.
+
+## Acknowledgements
+
+- Fancy Pants Global for creating the initial app
+- Virginia Tech for partial sponsorship of the initial restoration effort
