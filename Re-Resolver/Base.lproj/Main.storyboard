@@ -99,6 +99,7 @@
                         <outlet property="askButton" destination="6IB-l3-GxU" id="0jW-TA-ua5"/>
                         <outlet property="chooseButton" destination="MrX-Fm-NZa" id="WSv-6I-Wrv"/>
                         <outlet property="decideButton" destination="qHR-2a-E8z" id="nQU-Wh-XCV"/>
+                        <outlet property="largeLogoImage" destination="pAx-R3-NYc" id="DaA-fe-4xw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -259,7 +260,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="upK-TA-daT">
-                                <rect key="frame" x="27.5" y="273.5" width="320" height="206"/>
+                                <rect key="frame" x="27.5" y="273.5" width="320" height="206.00000000000006"/>
                                 <accessibility key="accessibilityConfiguration" hint="Displays a new decision when pressed." label="Results"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="206" id="KJt-1f-g0w"/>
