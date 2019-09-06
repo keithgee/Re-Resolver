@@ -30,7 +30,7 @@ class ColorCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
         
         collectionView!.backgroundView = gradientBackground
-        adjustColorCellSize();
+        adjustColorCellSize(size: view.frame.size);
 
         
     }
@@ -125,14 +125,19 @@ class ColorCollectionViewController: UICollectionViewController {
     }
     
     // This sets an appropriate size for color preview cells based on the
-    // screen size of the device.
+    // size parameter, which should be the window size of the app.
+    // Size is parameterized here - instead of directly using the size
+    // of the view frame - so that the cell size can also be adjusted
+    // from viewWillTransition(to size:), where the change in the
+    // window frame size has not yet occurred.
+    //
     // The height and width of the cells are scaled proportionally
     // so that the cells have an aspect ratio similar to the
-    // entire screen.
+    // app window.
     //
     // This configuration allows for a collection view of one row, with
-    // portions of at least two color cells displaying on the screen at once.
-    // This will be a cue to users that this screen is to be swiped
+    // portions of at least two color cells displaying in the view at once.
+    // This will be a cue to users that this view is to be swiped
     // horizontally.
     // Prior to this change, multiple rows were appearing on simulations
     // of the 6.1 and 6.5 inch screens released in 2018, perhaps tempting
@@ -142,19 +147,46 @@ class ColorCollectionViewController: UICollectionViewController {
     // If the user has the Dynamic Type settings on a very large text size,
     // the names of the colors spill over onto the next line, with breaks
     // in the middle of words. It looks bad.
-    private func adjustColorCellSize()  {
+    private func adjustColorCellSize(size: CGSize)  {
         // The Layout type for this collection view has already been set to flowLayout in the storyboard
         if let flowLayout = collectionView!.collectionViewLayout as? UICollectionViewFlowLayout  {
             // get device dimensions
-            let screenHeight = UIScreen.main.bounds.height
-            let screenWidth = UIScreen.main.bounds.width
+            let windowHeight = size.height
+            let windowWidth = size.width
             
             // set cell dimensions accordingly
             let scaleFactor = CGFloat(0.618) // approximation of golden ratio, inverted
-            let cellHeight = screenHeight * scaleFactor
-            let cellWidth = screenWidth * scaleFactor
+            let cellHeight = windowHeight * scaleFactor
+            let cellWidth = windowWidth * scaleFactor
             flowLayout.itemSize = CGSize(width: cellWidth, height: cellHeight)
         }
     }
-
+    
+    // This will be called automatically when the device is rotated
+    // or when the size of a Slide Over or Split View multitasking window
+    // on iPad is changed.
+    //
+    // Here it's used to handle resizing the color theme preview cells
+    // so that they fit with the new window size or aspect ratio.
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        adjustColorCellSize(size: size)
+        collectionView.collectionViewLayout.invalidateLayout()
+        
+        // Scroll to the selected color cell during this transition.
+        // This usually makes sense, but another option would be to scroll
+        // to one of the cells that was visible on the screen before
+        // the transition.
+        // But which one?
+        coordinator.animate(alongsideTransition: { [unowned self] _ in
+            if let selectedColorIndex = self.collectionView?.indexPathsForSelectedItems?[0]  { // Is this unsafe in case of empty array?
+                if selectedColorIndex.row < ResolverConstants.colorList.count  {
+                    self.collectionView?.scrollToItem(at: selectedColorIndex, at: .centeredHorizontally, animated: true)
+                }
+            
+            }
+        })
+        
+    }
+    
 }

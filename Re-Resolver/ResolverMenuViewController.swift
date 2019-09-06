@@ -32,6 +32,7 @@ class ResolverMenuViewController: UIViewController {
     @IBOutlet weak var chooseButton: UIButton!
     @IBOutlet weak var askButton: UIButton!
     
+    @IBOutlet weak var largeLogoImage: UIImageView!
     
     // The choices for the ChooseViewController are, oddly,
     // in this class so that they can be persisted when the
@@ -152,5 +153,25 @@ class ResolverMenuViewController: UIViewController {
         
         
     }
+    
+    // This updates the logo to be hidden
+    // if the size of the window is too small.
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        if let windowSize = view.window?.frame.size  {
+            updateLogoDisplayStatus(for: windowSize)
+        }
+    }
+    
+    // If the view window has a small height,
+    // hide the Resolver logo so that it doesn't peek out behind
+    // the menu buttons.
+    //
+    // This is currently implemented in such a way that the logo will
+    // be hidden with current phones in landscape mode. Portrait mode,
+    // or any view on iPads will display the logo.
+    func updateLogoDisplayStatus(for size: CGSize)  {
+        let XSMaxScreenHeightInLandscape = CGFloat(414)
+        largeLogoImage.isHidden = (size.height < XSMaxScreenHeightInLandscape + 15)
+    }
 }
-
