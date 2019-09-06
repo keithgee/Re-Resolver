@@ -168,12 +168,24 @@ class ColorCollectionViewController: UICollectionViewController {
     //
     // Here it's used to handle resizing the color theme preview cells
     // so that they fit with the new window size or aspect ratio.
-    // TODO: Fix so that the selected cell remains in view after the
-    // rotation or resize
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         adjustColorCellSize(size: size)
         collectionView.collectionViewLayout.invalidateLayout()
+        
+        // Scroll to the selected color cell during this transition.
+        // This usually makes sense, but another option would be to scroll
+        // to one of the cells that was visible on the screen before
+        // the transition.
+        // But which one?
+        coordinator.animate(alongsideTransition: { [unowned self] _ in
+            if let selectedColorIndex = self.collectionView?.indexPathsForSelectedItems?[0]  { // Is this unsafe in case of empty array?
+                if selectedColorIndex.row < ResolverConstants.colorList.count  {
+                    self.collectionView?.scrollToItem(at: selectedColorIndex, at: .centeredHorizontally, animated: true)
+                }
+            
+            }
+        })
         
     }
     
