@@ -260,7 +260,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="upK-TA-daT">
-                                <rect key="frame" x="27.5" y="273.5" width="320" height="206.00000000000006"/>
+                                <rect key="frame" x="27.5" y="273.5" width="320" height="206"/>
                                 <accessibility key="accessibilityConfiguration" hint="Displays a new decision when pressed." label="Results"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="206" id="KJt-1f-g0w"/>
