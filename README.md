@@ -8,8 +8,8 @@ making app created in Iceland - from oblivion by system updates. The code is ope
 ## Requirements
 
 ### Build Requirements
-- Xcode 10.2
-- Swift 5.0 (included with Xcode 10.2)
+- Xcode 10.3
+- Swift 5.0 (included with Xcode 10.3)
 
 This app may also build with Swift 4.2, but this configuration will not be maintained.
 
