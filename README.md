@@ -23,10 +23,7 @@ Continuous integration testing infrastructure and tools have been generously pro
 
 ### Hardware requirements
 
-- iPhone 5 or newer with any version of iOS 10 through iOS 12 (iOS 9 is no longer supported)
-
-The app will also run on iPads with the required operating system via the built-in iPhone
-simulator, though the experience is not optimal.
+- Any iPhone, iPad, or iPod touch running a version of iOS from iOS 10 through iOS 12
 
 ## Disclaimer
 
