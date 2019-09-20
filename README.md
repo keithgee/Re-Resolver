@@ -8,10 +8,8 @@ making app created in Iceland - from oblivion by system updates. The code is ope
 ## Requirements
 
 ### Build Requirements
-- Xcode 10.3
-- Swift 5.0 (included with Xcode 10.3)
-
-This app may also build with Swift 4.2, but this configuration will not be maintained.
+- Xcode 11
+- Swift 5.x (included with Xcode 11)
 
 You may also obtain a recent version of the app 
 [from the App Store](https://itunes.apple.com/us/app/reresolver/id1137642671?mt=8).
@@ -23,7 +21,8 @@ Continuous integration testing infrastructure and tools have been generously pro
 
 ### Hardware requirements
 
-- Any iPhone, iPad, or iPod touch running a version of iOS from iOS 10 through iOS 12
+- Any iPhone, iPad, or iPod touch running a version of iOS from iOS 10 through iOS 13
+- You can also build the app to run on MacOS Catalina, but this is not a supported configuration due to UI/UX issues.
 
 ## Disclaimer
 
