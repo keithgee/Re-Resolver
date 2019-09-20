@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nsd-RZ-qAF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nsd-RZ-qAF">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14819.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="resolver_logo" translatesAutoresizingMaskIntoConstraints="NO" id="pAx-R3-NYc">
-                                <rect key="frame" x="-132.5" y="104" width="640" height="162"/>
+                                <rect key="frame" x="27.5" y="104" width="320" height="81"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0ob-D8-BeR">
-                                <rect key="frame" x="-132.5" y="69.5" width="640" height="528"/>
+                                <rect key="frame" x="27.5" y="194" width="320" height="279"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHR-2a-E8z">
-                                        <rect key="frame" x="0.0" y="0.0" width="640" height="166"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
                                         <accessibility key="accessibilityConfiguration" label="Decide"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <state key="normal" title="Decide" backgroundImage="button_blank">
@@ -35,7 +35,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrX-Fm-NZa">
-                                        <rect key="frame" x="0.0" y="181" width="640" height="166"/>
+                                        <rect key="frame" x="0.0" y="98" width="320" height="83"/>
                                         <accessibility key="accessibilityConfiguration" label="Choose"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <state key="normal" title="Choose" backgroundImage="button_blank">
@@ -47,7 +47,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IB-l3-GxU">
-                                        <rect key="frame" x="0.0" y="362" width="640" height="166"/>
+                                        <rect key="frame" x="0.0" y="196" width="320" height="83"/>
                                         <accessibility key="accessibilityConfiguration" label="Ask"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <state key="normal" title="Ask" backgroundImage="button_blank">
@@ -120,7 +120,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ColorCell" id="fab-3o-dWB" customClass="ColorCollectionViewCell" customModule="ReResolver" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="141.5" width="200" height="340"/>
+                                <rect key="frame" x="0.0" y="115.5" width="200" height="340"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="340"/>
