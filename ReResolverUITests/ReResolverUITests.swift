@@ -96,7 +96,7 @@ class ReResolverUITests: XCTestCase {
         let addButton = app.navigationBars["Choose"].buttons["Add"]
         let choiceTextField = app.textFields["Choice"]
         
-        let petChoices = ["Cat", "Dog", "Bird", "Fish", "Hamster"]
+        let petChoices = ["Cat", "Dog", "Bird"]
         for pet in petChoices  {
             addButton.tap()
             choiceTextField.typeText(pet + "\r")
@@ -122,11 +122,11 @@ class ReResolverUITests: XCTestCase {
         // Go into the recent screen and select "Fish"
         app.navigationBars["Choose"].buttons["Add"].tap()
         app.navigationBars["New Choice"].buttons["Recent"].tap()
-        let fishStaticText = app.tables/*@START_MENU_TOKEN@*/.staticTexts["Fish"]/*[[".cells.staticTexts[\"Fish\"]",".staticTexts[\"Fish\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-        fishStaticText.tap()
+        let dogStaticText = app.tables.staticTexts["Dog"]
+        dogStaticText.tap()
         
-        // verify that the sixth row on the Choice screen is "Fish"
-        XCTAssert(app.tables.children(matching: .cell).element(boundBy: 5).staticTexts["Fish"].exists)
+        // verify that the fourth row on the Choice screen is "Dog"
+        XCTAssert(app.tables.children(matching: .cell).element(boundBy: 3).staticTexts["Dog"].exists)
        
         app.navigationBars["Choose"].buttons["Menu"].tap()
         // verify that we're back on the main screen
@@ -148,7 +148,7 @@ class ReResolverUITests: XCTestCase {
     func testSelectColor()  {
         // TODO: Verify that colors changed properly
         
-        // Change the color to "Ocean"
+        // Change the color to "Crimson"
         app.buttons["Set Colors"].tap()
         var collectionViewsQuery = app.collectionViews
         collectionViewsQuery.cells.otherElements.containing(.staticText, identifier:"Crimson").element.tap()
