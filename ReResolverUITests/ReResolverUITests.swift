@@ -119,7 +119,7 @@ class ReResolverUITests: XCTestCase {
         // verify that we're back on the choose screen
         XCTAssert(addButton.exists)
         
-        // Go into the recent screen and select "Fish"
+        // Go into the recent screen and select "Dog"
         app.navigationBars["Choose"].buttons["Add"].tap()
         app.navigationBars["New Choice"].buttons["Recent"].tap()
         let dogStaticText = app.tables.staticTexts["Dog"]
