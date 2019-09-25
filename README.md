@@ -24,7 +24,7 @@ Continuous integration testing infrastructure and tools have been generously pro
 - Any iPhone, iPad, or iPod touch running a version of iOS or iPadOS from iOS 10 through iOS 13.
 - You can also build the app to run on MacOS Catalina, but this is not a supported configuration due to UI/UX issues.
  
- ** Important! There is a bug in iOS 13.0 that can cause the app to stop responding, especially on the "Ask" screen. For iOS 13 use, please upgrade to iOS 13.1 or higher, when available ** 
+ **Important! There is a bug in iOS 13.0 that can cause the app to stop responding, especially on the "Ask" screen. For iOS 13 use, please upgrade to iOS 13.1 or higher** 
  
 ## Disclaimer
 
