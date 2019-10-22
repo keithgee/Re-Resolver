@@ -45,16 +45,11 @@ class ChoiceList  {
     }
     
     // MARK: operations on ChoiceList
+    
+    // Choose an item from the list
+    // Returns an empty String if the list is empty.
     func choose() -> String  {
-        
-        let numChoices = UInt32(choices.count)
-        
-        if numChoices == 0  {  // handle empty list
-            return ""
-        }  else  {
-            let randomIndex = Int(arc4random_uniform(numChoices))
-            return choices[randomIndex]
-        }
+        choices.randomElement() ?? ""
     }
     
     
