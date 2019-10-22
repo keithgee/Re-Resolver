@@ -84,11 +84,17 @@ class ReResolverUITests: XCTestCase {
     // named "Choose", and a button on the Choose screen also called "Choose"
     //
     // This function:
-    //    1. adds a list of 5 pets to the choices
+    //    1. adds a list of 3 pets to the choices
     //    2. Taps the choice button
     //    3. verifies that the result is from the list of pets
-    //    4. Goes to the recent screen and adds "Fish" again
-    //    5. Checks that "Fish" is now the sixth row in the list of choices
+    //    4. Goes to the recent screen and adds "Dog" again
+    //    5. Checks that "Dog" is now the fourth row in the list of choices
+    //
+    // WARNING! As of 2019-10-22 This test is fragile when run in the simulator
+    // with the hardware keyboard attached. As workarounds until this is solved,
+    // make sure that any simulators used during test execution do not have the
+    // hardware keyboard attached.
+    // ("Hardware -> Keyboard -> Connect Hardware Keyboard" deactivated)
     func testChooseScreen()  {
         let mainMenuChooseButton = app.buttons["Choose"]
         mainMenuChooseButton.tap()
