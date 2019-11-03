@@ -8,7 +8,7 @@ making app created in Iceland - from oblivion by system updates. The code is ope
 ## Requirements
 
 ### Build Requirements
-- Xcode 11
+- Xcode 11 (Except for Xcode 11.2, which has a severe [bug](https://forums.developer.apple.com/thread/125287) when TextViews are used in storyboards)
 - Swift 5.x (included with Xcode 11)
 
 You may also obtain a recent version of the app 
