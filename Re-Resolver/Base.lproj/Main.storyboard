@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nsd-RZ-qAF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nsd-RZ-qAF">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -75,7 +74,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="palette-icon"/>
                                 <connections>
-                                    <segue destination="klW-sn-yne" kind="presentation" identifier="ColorSegue" id="FQK-sq-xUG"/>
+                                    <segue destination="klW-sn-yne" kind="presentation" identifier="ColorSegue" modalPresentationStyle="automatic" id="FQK-sq-xUG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -109,7 +108,7 @@
             <objects>
                 <collectionViewController id="ByA-4I-H7s" customClass="ColorCollectionViewController" customModule="ReResolver" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="i0C-QJ-EnU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Bh6-Vk-leL">
@@ -120,7 +119,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ColorCell" id="fab-3o-dWB" customClass="ColorCollectionViewCell" customModule="ReResolver" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="115.5" width="200" height="340"/>
+                                <rect key="frame" x="0.0" y="99.5" width="200" height="340"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="340"/>
@@ -336,7 +335,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oaw-Oo-BK3">
-                                <rect key="frame" x="20" y="94" width="335" height="31"/>
+                                <rect key="frame" x="20" y="94" width="335" height="32"/>
                                 <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" hint="Allows entry of a new choice." label="Choice"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -422,7 +421,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="klW-sn-yne" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="5QJ-oa-UwI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -435,6 +434,11 @@
             <point key="canvasLocation" x="73" y="-2884"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="CaK-5P-DI7"/>
+        <segue reference="hNu-Qj-7nf"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="answer" width="320" height="206"/>
         <image name="button_blank" width="320" height="83"/>
@@ -442,9 +446,4 @@
         <image name="palette-icon" width="256" height="256"/>
         <image name="resolver_logo" width="320" height="81"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="CaK-5P-DI7"/>
-        <segue reference="hNu-Qj-7nf"/>
-    </inferredMetricsTieBreakers>
-    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
