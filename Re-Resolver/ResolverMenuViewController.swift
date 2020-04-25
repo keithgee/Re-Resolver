@@ -87,16 +87,7 @@ class ResolverMenuViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         navigationController?.setNavigationBarHidden(true, animated: false)
-        
-        // kind of ugly here. still not sure how to make
-        // color code nice
-    
-        if let gradientView = view as? ResolverGradientView  {
-            gradientView.colorComponents = appDelegate?.backgroundGradient
-            gradientView.setNeedsDisplay()
-        }
     }
    
     
@@ -133,7 +124,9 @@ class ResolverMenuViewController: UIViewController {
             chooseController.choiceList = choices
         }
         else if segue.identifier == "ColorSegue"  {
-        
+            let navController = segue.destination as! UINavigationController
+            let colorController = navController.topViewController as! ColorCollectionViewController
+            colorController.delegate = self // respond instantly to color changes
         }
         
         
@@ -158,5 +151,23 @@ class ResolverMenuViewController: UIViewController {
     func updateLogoDisplayStatus(for size: CGSize)  {
         let XSMaxScreenHeightInLandscape = CGFloat(414)
         largeLogoImage.isHidden = (size.height < XSMaxScreenHeightInLandscape + 15)
+    }
+}
+
+// Allow the Main Menu to instantly change its color when a
+// selection is made in the Color selection modal. This is
+// used because with the sheet presentation style for modals in
+// iOS 13, a small piece of the main menu is visible under the
+// Color selection window.
+extension ResolverMenuViewController: ColorCollectionViewControllerDelegate  {
+    func colorDidChange() {
+        redrawGradient()
+    }
+    
+    private func redrawGradient()  {
+        if let gradientView = view as? ResolverGradientView  {
+            gradientView.colorComponents = appDelegate?.backgroundGradient
+            gradientView.setNeedsDisplay()
+        }
     }
 }
