@@ -22,11 +22,6 @@ class ResolverMenuViewController: UIViewController {
 
     
     let appDelegate = UIApplication.shared.delegate as? AppDelegate
-
-    // This is used to fix a bug that
-    // caused the Resolver logo to drop
-    // when showing the Select Color screen
-    var showingColorSelector = false
     
     @IBOutlet weak var decideButton: UIButton!
     @IBOutlet weak var chooseButton: UIButton!
@@ -92,16 +87,7 @@ class ResolverMenuViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         navigationController?.setNavigationBarHidden(true, animated: false)
-        
-        // kind of ugly here. still not sure how to make
-        // color code nice
-    
-        if let gradientView = view as? ResolverGradientView  {
-            gradientView.colorComponents = appDelegate?.backgroundGradient
-            gradientView.setNeedsDisplay()
-        }
     }
    
     
@@ -109,21 +95,11 @@ class ResolverMenuViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        // when transitioning to another screen, 
-        // show the navigation bar, unless
-        // displaying the modal color selector.
-        // 
-        // Displaying navigation bar during the modal
-        // pop-up makes the Resolver logo drop down
-        // noticably.
-        if showingColorSelector == false  {
-            navigationController?.setNavigationBarHidden(false, animated: false)
-        }
-        
-        // reset this so that it can be used on the
-        // next screen transition
-        showingColorSelector = false
+        // when transitioning to another screen,
+        // show the navigation bar
+        navigationController?.setNavigationBarHidden(false, animated: false)
     }
+    
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return .lightContent
     }
@@ -148,7 +124,9 @@ class ResolverMenuViewController: UIViewController {
             chooseController.choiceList = choices
         }
         else if segue.identifier == "ColorSegue"  {
-            showingColorSelector = true
+            let navController = segue.destination as! UINavigationController
+            let colorController = navController.topViewController as! ColorCollectionViewController
+            colorController.delegate = self // respond instantly to color changes
         }
         
         
@@ -173,5 +151,23 @@ class ResolverMenuViewController: UIViewController {
     func updateLogoDisplayStatus(for size: CGSize)  {
         let XSMaxScreenHeightInLandscape = CGFloat(414)
         largeLogoImage.isHidden = (size.height < XSMaxScreenHeightInLandscape + 15)
+    }
+}
+
+// Allow the Main Menu to instantly change its color when a
+// selection is made in the Color selection modal. This is
+// used because with the sheet presentation style for modals in
+// iOS 13, a small piece of the main menu is visible under the
+// Color selection window.
+extension ResolverMenuViewController: ColorCollectionViewControllerDelegate  {
+    func colorDidChange() {
+        redrawGradient()
+    }
+    
+    private func redrawGradient()  {
+        if let gradientView = view as? ResolverGradientView  {
+            gradientView.colorComponents = appDelegate?.backgroundGradient
+            gradientView.setNeedsDisplay()
+        }
     }
 }

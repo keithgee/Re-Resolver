@@ -73,7 +73,7 @@ class RecentTableViewController: UITableViewController {
             
             // Delete the row from the data source
             choiceList.choices.remove(at: (indexPath as NSIndexPath).row)
-            choiceList.save()
+            try? choiceList.save()
             
             tableView.deleteRows(at: [indexPath], with: .fade)
         }

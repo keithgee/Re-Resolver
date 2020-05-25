@@ -68,17 +68,16 @@ class ChoiceList  {
     }
     
     // Save choices to the dataFile, if set
-    func save()  {
+    func save() throws {
         
         guard dataFileName != nil else {
             return
         }
         
-        let data = NSMutableData()
-        let archiver = NSKeyedArchiver(forWritingWith: data)
+        let archiver = NSKeyedArchiver(requiringSecureCoding: true)
         archiver.encode(choices, forKey: "Choices")
-        archiver.finishEncoding()
-        data.write(toFile: dataFilePath(), atomically: true)
+        let data = archiver.encodedData
+        try data.write(to: URL(fileURLWithPath: dataFilePath()), options: .atomic)
     }
     
     // Replace data in the choices array with data
@@ -95,8 +94,12 @@ class ChoiceList  {
         
         if FileManager.default.fileExists(atPath: path)  {
             if let data = try? Data(contentsOf: URL(fileURLWithPath: path))  {
-                let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
-                choices = unarchiver.decodeObject(forKey: "Choices") as! [String]
+                do  {
+                    if let unarchiver = try? NSKeyedUnarchiver(forReadingFrom: data)  {
+                        choices = unarchiver.decodeDecodable([String].self, forKey: "Choices") ?? []
+                    }
+                }
+                
             }
         }
     }

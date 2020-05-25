@@ -12,6 +12,16 @@ import UIKit
 private let reuseIdentifier = "ColorCell"
 
 
+protocol ColorCollectionViewControllerDelegate  {
+    // This protocol allows a delegate (currently the main menu) to
+    // respond to color selections instantly.
+    // This is useful when views are visible at the same time
+    // as the color selector controller, as with sheet and popup
+    // modal presentation styles in iOS and iPadOS 13
+    
+    func colorDidChange() // generic notification that the color has changed
+}
+
 // This controller is the replacement for the ColorTableViewController.
 // It displays the color schemes in a collection view, using the
 // ColorCollectionViewCell class.
@@ -20,6 +30,8 @@ private let reuseIdentifier = "ColorCell"
 //       to handle selection, deselection, and redrawing of cell views
 class ColorCollectionViewController: UICollectionViewController {
 
+    var delegate: ColorCollectionViewControllerDelegate?
+    
     let appDelegate = UIApplication.shared.delegate as? AppDelegate
     let gradientBackground = ResolverGradientView()
     
@@ -103,6 +115,9 @@ class ColorCollectionViewController: UICollectionViewController {
             // update the color scheme for all views allocated later
             appDelegate?.backgroundGradient = selectedColor
           
+            // tell the delegate that the color has been updated
+            delegate?.colorDidChange()
+                   
             // store color scheme as user preference
             UserDefaults.standard.set((indexPath as NSIndexPath).row, forKey: "ColorPreference")
         }

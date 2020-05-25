@@ -183,7 +183,7 @@ RecentItemDelegate {
         // also update and save the recent list if necessary
         if !recentList.choices.contains(choice)  {
             recentList.choices.append(choice)
-            recentList.save()
+            try? recentList.save()
         }
         
         // make sure the choose button is enabled, as we now have at least 1 item
@@ -217,7 +217,7 @@ RecentItemDelegate {
         // also update and save the recent list if necessary
         if !recentList.choices.contains(choice)  {
             recentList.choices.append(choice)
-            recentList.save()
+            try? recentList.save()
         }
         
     }
