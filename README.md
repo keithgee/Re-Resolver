@@ -5,7 +5,7 @@ making app created in Iceland - from oblivion by system updates. The code is ope
 
 ![Decide Screen. Yes. Passion Color](docs/images/ocean_menu.png)
 
-## Requirements
+## Device Requirements
 
 ### Build Requirements
 - Xcode 11.4 or higher
