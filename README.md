@@ -5,7 +5,7 @@ making app created in Iceland - from oblivion by system updates. The code is ope
 
 ![Decide Screen. Yes. Passion Color](docs/images/ocean_menu.png)
 
-## Device Requirements
+## Requirements
 
 ### Build Requirements
 - Xcode 11.4 or higher
@@ -21,7 +21,7 @@ You may also obtain a recent version of the app
 Continuous integration testing infrastructure and tools have been generously provided by [CircleCI](https://circleci.com/).
 -->
 
-### Requirements
+### Device Requirements
 
 - Any iPhone, iPad, or iPod touch running a version of iOS or iPadOS greater than or equal to 13.4.
 - You can also build the app to run on MacOS Catalina, but this is not a supported configuration due to UI/UX issues.
