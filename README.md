@@ -8,23 +8,23 @@ making app created in Iceland - from oblivion by system updates. The code is ope
 ## Requirements
 
 ### Build Requirements
-- Xcode 11 (Except for Xcode 11.2, which has a severe [bug](https://forums.developer.apple.com/thread/125287) when TextViews are used in storyboards)
+- Xcode 11.4 or higher
 - Swift 5.x (included with Xcode 11)
 
 You may also obtain a recent version of the app 
 [from the App Store](https://itunes.apple.com/us/app/reresolver/id1137642671?mt=8).
 
+<!-- Integration with CircleCI is currently broken - it appears there is a problem with the account
 #### Build Status
 [![CircleCI](https://circleci.com/gh/keithgee/Re-Resolver.svg?style=svg)](https://circleci.com/gh/keithgee/Re-Resolver)
 
 Continuous integration testing infrastructure and tools have been generously provided by [CircleCI](https://circleci.com/).
+-->
 
 ### Requirements
 
-- Any iPhone, iPad, or iPod touch running a version of iOS or iPadOS from iOS 10 through iOS 13.
+- Any iPhone, iPad, or iPod touch running a version of iOS or iPadOS greater than or equal to 13.4.
 - You can also build the app to run on MacOS Catalina, but this is not a supported configuration due to UI/UX issues.
- 
- **Important! There is a bug in iOS 13.0 that can cause the app to stop responding, especially on the "Ask" screen. For iOS 13 use, please upgrade to iOS 13.1 or higher** 
  
 ## Disclaimer
 
