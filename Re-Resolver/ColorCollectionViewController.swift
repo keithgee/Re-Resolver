@@ -194,11 +194,11 @@ class ColorCollectionViewController: UICollectionViewController {
         // the transition.
         // But which one?
         coordinator.animate(alongsideTransition: { [unowned self] _ in
-            if let selectedColorIndex = self.collectionView?.indexPathsForSelectedItems?[0]  { // Is this unsafe in case of empty array?
+            if let selectedColorIndex = self.collectionView?.indexPathsForSelectedItems?.first {
                 if selectedColorIndex.row < ResolverConstants.colorList.count  {
                     self.collectionView?.scrollToItem(at: selectedColorIndex, at: .centeredHorizontally, animated: true)
                 }
-            
+
             }
         })
         
